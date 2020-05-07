@@ -1,0 +1,6 @@
+{
+	"app.description": "Translate demo",
+	"app.select": "select...",
+	"app.selectLanguage": "Select your language",
+	"app.title": "Hello {{name}} {{firstName}}"
+}

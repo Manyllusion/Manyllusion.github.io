@@ -2,19 +2,19 @@ function _get(target, property, receiver) { if (typeof Reflect !== "undefined" &
 
 function _superPropBase(object, property) { while (!Object.prototype.hasOwnProperty.call(object, property)) { object = _getPrototypeOf(object); if (object === null) break; } return object; }
 
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _toArray(arr) { return _arrayWithHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableRest(); }
 
+function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct; } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
 function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
 
-function _construct(Parent, args, Class) { if (_isNativeReflectConstruct()) { _construct = Reflect.construct; } else { _construct = function _construct(Parent, args, Class) { var a = [null]; a.push.apply(a, args); var Constructor = Function.bind.apply(Parent, a); var instance = new Constructor(); if (Class) _setPrototypeOf(instance, Class.prototype); return instance; }; } return _construct.apply(null, arguments); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
 
 function _createForOfIteratorHelper(o) { if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (o = _unsupportedIterableToArray(o))) { var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e2) { throw _e2; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var it, normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e3) { didErr = true; err = _e3; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
 
@@ -9744,6 +9744,4051 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   },
 
   /***/
+  "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js":
+  /*!********************************************************************!*\
+    !*** ./node_modules/@angular/common/__ivy_ngcc__/fesm2015/http.js ***!
+    \********************************************************************/
+
+  /*! exports provided: HTTP_INTERCEPTORS, HttpBackend, HttpClient, HttpClientJsonpModule, HttpClientModule, HttpClientXsrfModule, HttpErrorResponse, HttpEventType, HttpHandler, HttpHeaderResponse, HttpHeaders, HttpParams, HttpRequest, HttpResponse, HttpResponseBase, HttpUrlEncodingCodec, HttpXhrBackend, HttpXsrfTokenExtractor, JsonpClientBackend, JsonpInterceptor, XhrFactory, ɵHttpInterceptingHandler, ɵangular_packages_common_http_http_a, ɵangular_packages_common_http_http_b, ɵangular_packages_common_http_http_c, ɵangular_packages_common_http_http_d, ɵangular_packages_common_http_http_e, ɵangular_packages_common_http_http_f, ɵangular_packages_common_http_http_g, ɵangular_packages_common_http_http_h */
+
+  /***/
+  function node_modulesAngularCommon__ivy_ngcc__Fesm2015HttpJs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HTTP_INTERCEPTORS", function () {
+      return HTTP_INTERCEPTORS;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HttpBackend", function () {
+      return HttpBackend;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HttpClient", function () {
+      return HttpClient;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HttpClientJsonpModule", function () {
+      return HttpClientJsonpModule;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HttpClientModule", function () {
+      return HttpClientModule;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HttpClientXsrfModule", function () {
+      return HttpClientXsrfModule;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HttpErrorResponse", function () {
+      return HttpErrorResponse;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HttpEventType", function () {
+      return HttpEventType;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HttpHandler", function () {
+      return HttpHandler;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HttpHeaderResponse", function () {
+      return HttpHeaderResponse;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HttpHeaders", function () {
+      return HttpHeaders;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HttpParams", function () {
+      return HttpParams;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HttpRequest", function () {
+      return HttpRequest;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HttpResponse", function () {
+      return HttpResponse;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HttpResponseBase", function () {
+      return HttpResponseBase;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HttpUrlEncodingCodec", function () {
+      return HttpUrlEncodingCodec;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HttpXhrBackend", function () {
+      return HttpXhrBackend;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "HttpXsrfTokenExtractor", function () {
+      return HttpXsrfTokenExtractor;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "JsonpClientBackend", function () {
+      return JsonpClientBackend;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "JsonpInterceptor", function () {
+      return JsonpInterceptor;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "XhrFactory", function () {
+      return XhrFactory;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵHttpInterceptingHandler", function () {
+      return HttpInterceptingHandler;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵangular_packages_common_http_http_a", function () {
+      return NoopInterceptor;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵangular_packages_common_http_http_b", function () {
+      return JsonpCallbackContext;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵangular_packages_common_http_http_c", function () {
+      return jsonpCallbackContext;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵangular_packages_common_http_http_d", function () {
+      return BrowserXhr;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵangular_packages_common_http_http_e", function () {
+      return XSRF_COOKIE_NAME;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵangular_packages_common_http_http_f", function () {
+      return XSRF_HEADER_NAME;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵangular_packages_common_http_http_g", function () {
+      return HttpXsrfCookieExtractor;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "ɵangular_packages_common_http_http_h", function () {
+      return HttpXsrfInterceptor;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
+    /* harmony import */
+
+
+    var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! @angular/common */
+    "./node_modules/@angular/common/__ivy_ngcc__/fesm2015/common.js");
+    /**
+     * @license Angular v9.1.4
+     * (c) 2010-2020 Google LLC. https://angular.io/
+     * License: MIT
+     */
+
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/common/http/src/backend.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @license
+     * Copyright Google Inc. All Rights Reserved.
+     *
+     * Use of this source code is governed by an MIT-style license that can be
+     * found in the LICENSE file at https://angular.io/license
+     */
+
+    /**
+     * Transforms an `HttpRequest` into a stream of `HttpEvent`s, one of which will likely be a
+     * `HttpResponse`.
+     *
+     * `HttpHandler` is injectable. When injected, the handler instance dispatches requests to the
+     * first interceptor in the chain, which dispatches to the second, etc, eventually reaching the
+     * `HttpBackend`.
+     *
+     * In an `HttpInterceptor`, the `HttpHandler` parameter is the next interceptor in the chain.
+     *
+     * \@publicApi
+     * @abstract
+     */
+
+
+    var HttpHandler = function HttpHandler() {
+      _classCallCheck(this, HttpHandler);
+    };
+
+    if (false) {}
+    /**
+     * A final `HttpHandler` which will dispatch the request via browser HTTP APIs to a backend.
+     *
+     * Interceptors sit between the `HttpClient` interface and the `HttpBackend`.
+     *
+     * When injected, `HttpBackend` dispatches requests directly to the backend, without going
+     * through the interceptor chain.
+     *
+     * \@publicApi
+     * @abstract
+     */
+
+
+    var HttpBackend = function HttpBackend() {
+      _classCallCheck(this, HttpBackend);
+    };
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/common/http/src/headers.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @license
+     * Copyright Google Inc. All Rights Reserved.
+     *
+     * Use of this source code is governed by an MIT-style license that can be
+     * found in the LICENSE file at https://angular.io/license
+     */
+
+    /**
+     * @record
+     */
+
+
+    function Update() {}
+
+    if (false) {}
+    /**
+     * Represents the header configuration options for an HTTP request.
+     * Instances are immutable. Modifying methods return a cloned
+     * instance with the change. The original object is never changed.
+     *
+     * \@publicApi
+     */
+
+
+    var HttpHeaders = /*#__PURE__*/function () {
+      /**
+       * Constructs a new HTTP header object with the given values.
+       * @param {?=} headers
+       */
+      function HttpHeaders(headers) {
+        var _this16 = this;
+
+        _classCallCheck(this, HttpHeaders);
+
+        /**
+         * Internal map of lowercased header names to the normalized
+         * form of the name (the form seen first).
+         */
+        this.normalizedNames = new Map();
+        /**
+         * Queued updates to be materialized the next initialization.
+         */
+
+        this.lazyUpdate = null;
+
+        if (!headers) {
+          this.headers = new Map();
+        } else if (typeof headers === 'string') {
+          this.lazyInit =
+          /**
+          * @return {?}
+          */
+          function () {
+            _this16.headers = new Map();
+            headers.split('\n').forEach(
+            /**
+            * @param {?} line
+            * @return {?}
+            */
+            function (line) {
+              /** @type {?} */
+              var index = line.indexOf(':');
+
+              if (index > 0) {
+                /** @type {?} */
+                var name = line.slice(0, index);
+                /** @type {?} */
+
+                var key = name.toLowerCase();
+                /** @type {?} */
+
+                var value = line.slice(index + 1).trim();
+
+                _this16.maybeSetNormalizedName(name, key);
+
+                if (_this16.headers.has(key)) {
+                  /** @type {?} */
+                  _this16.headers.get(key).push(value);
+                } else {
+                  _this16.headers.set(key, [value]);
+                }
+              }
+            });
+          };
+        } else {
+          this.lazyInit =
+          /**
+          * @return {?}
+          */
+          function () {
+            _this16.headers = new Map();
+            Object.keys(headers).forEach(
+            /**
+            * @param {?} name
+            * @return {?}
+            */
+            function (name) {
+              /** @type {?} */
+              var values = headers[name];
+              /** @type {?} */
+
+              var key = name.toLowerCase();
+
+              if (typeof values === 'string') {
+                values = [values];
+              }
+
+              if (values.length > 0) {
+                _this16.headers.set(key, values);
+
+                _this16.maybeSetNormalizedName(name, key);
+              }
+            });
+          };
+        }
+      }
+      /**
+       * Checks for existence of a given header.
+       *
+       * @param {?} name The header name to check for existence.
+       *
+       * @return {?} True if the header exists, false otherwise.
+       */
+
+
+      _createClass2(HttpHeaders, [{
+        key: "has",
+        value: function has(name) {
+          this.init();
+          return this.headers.has(name.toLowerCase());
+        }
+        /**
+         * Retrieves the first value of a given header.
+         *
+         * @param {?} name The header name.
+         *
+         * @return {?} The value string if the header exists, null otherwise
+         */
+
+      }, {
+        key: "get",
+        value: function get(name) {
+          this.init();
+          /** @type {?} */
+
+          var values = this.headers.get(name.toLowerCase());
+          return values && values.length > 0 ? values[0] : null;
+        }
+        /**
+         * Retrieves the names of the headers.
+         *
+         * @return {?} A list of header names.
+         */
+
+      }, {
+        key: "keys",
+        value: function keys() {
+          this.init();
+          return Array.from(this.normalizedNames.values());
+        }
+        /**
+         * Retrieves a list of values for a given header.
+         *
+         * @param {?} name The header name from which to retrieve values.
+         *
+         * @return {?} A string of values if the header exists, null otherwise.
+         */
+
+      }, {
+        key: "getAll",
+        value: function getAll(name) {
+          this.init();
+          return this.headers.get(name.toLowerCase()) || null;
+        }
+        /**
+         * Appends a new value to the existing set of values for a header
+         * and returns them in a clone of the original instance.
+         *
+         * @param {?} name The header name for which to append the values.
+         * @param {?} value The value to append.
+         *
+         * @return {?} A clone of the HTTP headers object with the value appended to the given header.
+         */
+
+      }, {
+        key: "append",
+        value: function append(name, value) {
+          return this.clone({
+            name: name,
+            value: value,
+            op: 'a'
+          });
+        }
+        /**
+         * Sets or modifies a value for a given header in a clone of the original instance.
+         * If the header already exists, its value is replaced with the given value
+         * in the returned object.
+         *
+         * @param {?} name The header name.
+         * @param {?} value The value or values to set or overide for the given header.
+         *
+         * @return {?} A clone of the HTTP headers object with the newly set header value.
+         */
+
+      }, {
+        key: "set",
+        value: function set(name, value) {
+          return this.clone({
+            name: name,
+            value: value,
+            op: 's'
+          });
+        }
+        /**
+         * Deletes values for a given header in a clone of the original instance.
+         *
+         * @param {?} name The header name.
+         * @param {?=} value The value or values to delete for the given header.
+         *
+         * @return {?} A clone of the HTTP headers object with the given value deleted.
+         */
+
+      }, {
+        key: "delete",
+        value: function _delete(name, value) {
+          return this.clone({
+            name: name,
+            value: value,
+            op: 'd'
+          });
+        }
+        /**
+         * @private
+         * @param {?} name
+         * @param {?} lcName
+         * @return {?}
+         */
+
+      }, {
+        key: "maybeSetNormalizedName",
+        value: function maybeSetNormalizedName(name, lcName) {
+          if (!this.normalizedNames.has(lcName)) {
+            this.normalizedNames.set(lcName, name);
+          }
+        }
+        /**
+         * @private
+         * @return {?}
+         */
+
+      }, {
+        key: "init",
+        value: function init() {
+          var _this17 = this;
+
+          if (!!this.lazyInit) {
+            if (this.lazyInit instanceof HttpHeaders) {
+              this.copyFrom(this.lazyInit);
+            } else {
+              this.lazyInit();
+            }
+
+            this.lazyInit = null;
+
+            if (!!this.lazyUpdate) {
+              this.lazyUpdate.forEach(
+              /**
+              * @param {?} update
+              * @return {?}
+              */
+              function (update) {
+                return _this17.applyUpdate(update);
+              });
+              this.lazyUpdate = null;
+            }
+          }
+        }
+        /**
+         * @private
+         * @param {?} other
+         * @return {?}
+         */
+
+      }, {
+        key: "copyFrom",
+        value: function copyFrom(other) {
+          var _this18 = this;
+
+          other.init();
+          Array.from(other.headers.keys()).forEach(
+          /**
+          * @param {?} key
+          * @return {?}
+          */
+          function (key) {
+            _this18.headers.set(key,
+            /** @type {?} */
+            other.headers.get(key));
+
+            _this18.normalizedNames.set(key,
+            /** @type {?} */
+            other.normalizedNames.get(key));
+          });
+        }
+        /**
+         * @private
+         * @param {?} update
+         * @return {?}
+         */
+
+      }, {
+        key: "clone",
+        value: function clone(update) {
+          /** @type {?} */
+          var clone = new HttpHeaders();
+          clone.lazyInit = !!this.lazyInit && this.lazyInit instanceof HttpHeaders ? this.lazyInit : this;
+          clone.lazyUpdate = (this.lazyUpdate || []).concat([update]);
+          return clone;
+        }
+        /**
+         * @private
+         * @param {?} update
+         * @return {?}
+         */
+
+      }, {
+        key: "applyUpdate",
+        value: function applyUpdate(update) {
+          /** @type {?} */
+          var key = update.name.toLowerCase();
+
+          switch (update.op) {
+            case 'a':
+            case 's':
+              /** @type {?} */
+              var value =
+              /** @type {?} */
+              update.value;
+
+              if (typeof value === 'string') {
+                value = [value];
+              }
+
+              if (value.length === 0) {
+                return;
+              }
+
+              this.maybeSetNormalizedName(update.name, key);
+              /** @type {?} */
+
+              var base = (update.op === 'a' ? this.headers.get(key) : undefined) || [];
+              base.push.apply(base, _toConsumableArray(value));
+              this.headers.set(key, base);
+              break;
+
+            case 'd':
+              /** @type {?} */
+              var toDelete =
+              /** @type {?} */
+              update.value;
+
+              if (!toDelete) {
+                this.headers["delete"](key);
+                this.normalizedNames["delete"](key);
+              } else {
+                /** @type {?} */
+                var existing = this.headers.get(key);
+
+                if (!existing) {
+                  return;
+                }
+
+                existing = existing.filter(
+                /**
+                * @param {?} value
+                * @return {?}
+                */
+                function (value) {
+                  return toDelete.indexOf(value) === -1;
+                });
+
+                if (existing.length === 0) {
+                  this.headers["delete"](key);
+                  this.normalizedNames["delete"](key);
+                } else {
+                  this.headers.set(key, existing);
+                }
+              }
+
+              break;
+          }
+        }
+        /**
+         * \@internal
+         * @param {?} fn
+         * @return {?}
+         */
+
+      }, {
+        key: "forEach",
+        value: function forEach(fn) {
+          var _this19 = this;
+
+          this.init();
+          Array.from(this.normalizedNames.keys()).forEach(
+          /**
+          * @param {?} key
+          * @return {?}
+          */
+          function (key) {
+            return fn(
+            /** @type {?} */
+            _this19.normalizedNames.get(key),
+            /** @type {?} */
+            _this19.headers.get(key));
+          });
+        }
+      }]);
+
+      return HttpHeaders;
+    }();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/common/http/src/params.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @license
+     * Copyright Google Inc. All Rights Reserved.
+     *
+     * Use of this source code is governed by an MIT-style license that can be
+     * found in the LICENSE file at https://angular.io/license
+     */
+
+    /**
+     * A codec for encoding and decoding parameters in URLs.
+     *
+     * Used by `HttpParams`.
+     *
+     * \@publicApi
+     *
+     * @record
+     */
+
+
+    function HttpParameterCodec() {}
+
+    if (false) {}
+    /**
+     * Provides encoding and decoding of URL parameter and query-string values.
+     *
+     * Serializes and parses URL parameter keys and values to encode and decode them.
+     * If you pass URL query parameters without encoding,
+     * the query parameters can be misinterpreted at the receiving end.
+     *
+     *
+     * \@publicApi
+     */
+
+
+    var HttpUrlEncodingCodec = /*#__PURE__*/function () {
+      function HttpUrlEncodingCodec() {
+        _classCallCheck(this, HttpUrlEncodingCodec);
+      }
+
+      _createClass2(HttpUrlEncodingCodec, [{
+        key: "encodeKey",
+
+        /**
+         * Encodes a key name for a URL parameter or query-string.
+         * @param {?} key The key name.
+         * @return {?} The encoded key name.
+         */
+        value: function encodeKey(key) {
+          return standardEncoding(key);
+        }
+        /**
+         * Encodes the value of a URL parameter or query-string.
+         * @param {?} value The value.
+         * @return {?} The encoded value.
+         */
+
+      }, {
+        key: "encodeValue",
+        value: function encodeValue(value) {
+          return standardEncoding(value);
+        }
+        /**
+         * Decodes an encoded URL parameter or query-string key.
+         * @param {?} key The encoded key name.
+         * @return {?} The decoded key name.
+         */
+
+      }, {
+        key: "decodeKey",
+        value: function decodeKey(key) {
+          return decodeURIComponent(key);
+        }
+        /**
+         * Decodes an encoded URL parameter or query-string value.
+         * @param {?} value The encoded value.
+         * @return {?} The decoded value.
+         */
+
+      }, {
+        key: "decodeValue",
+        value: function decodeValue(value) {
+          return decodeURIComponent(value);
+        }
+      }]);
+
+      return HttpUrlEncodingCodec;
+    }();
+    /**
+     * @param {?} rawParams
+     * @param {?} codec
+     * @return {?}
+     */
+
+
+    function paramParser(rawParams, codec) {
+      /** @type {?} */
+      var map = new Map();
+
+      if (rawParams.length > 0) {
+        /** @type {?} */
+        var params = rawParams.split('&');
+        params.forEach(
+        /**
+        * @param {?} param
+        * @return {?}
+        */
+        function (param) {
+          /** @type {?} */
+          var eqIdx = param.indexOf('=');
+
+          var _ref4 = eqIdx == -1 ? [codec.decodeKey(param), ''] : [codec.decodeKey(param.slice(0, eqIdx)), codec.decodeValue(param.slice(eqIdx + 1))],
+              _ref5 = _slicedToArray(_ref4, 2),
+              key = _ref5[0],
+              val = _ref5[1];
+          /** @type {?} */
+
+
+          var list = map.get(key) || [];
+          list.push(val);
+          map.set(key, list);
+        });
+      }
+
+      return map;
+    }
+    /**
+     * @param {?} v
+     * @return {?}
+     */
+
+
+    function standardEncoding(v) {
+      return encodeURIComponent(v).replace(/%40/gi, '@').replace(/%3A/gi, ':').replace(/%24/gi, '$').replace(/%2C/gi, ',').replace(/%3B/gi, ';').replace(/%2B/gi, '+').replace(/%3D/gi, '=').replace(/%3F/gi, '?').replace(/%2F/gi, '/');
+    }
+    /**
+     * @record
+     */
+
+
+    function Update$1() {}
+
+    if (false) {}
+    /**
+     * Options used to construct an `HttpParams` instance.
+     *
+     * \@publicApi
+     * @record
+     */
+
+
+    function HttpParamsOptions() {}
+
+    if (false) {}
+    /**
+     * An HTTP request/response body that represents serialized parameters,
+     * per the MIME type `application/x-www-form-urlencoded`.
+     *
+     * This class is immutable; all mutation operations return a new instance.
+     *
+     * \@publicApi
+     */
+
+
+    var HttpParams = /*#__PURE__*/function () {
+      /**
+       * @param {?=} options
+       */
+      function HttpParams() {
+        var _this20 = this;
+
+        var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] :
+        /** @type {?} */
+        {};
+
+        _classCallCheck(this, HttpParams);
+
+        this.updates = null;
+        this.cloneFrom = null;
+        this.encoder = options.encoder || new HttpUrlEncodingCodec();
+
+        if (!!options.fromString) {
+          if (!!options.fromObject) {
+            throw new Error("Cannot specify both fromString and fromObject.");
+          }
+
+          this.map = paramParser(options.fromString, this.encoder);
+        } else if (!!options.fromObject) {
+          this.map = new Map();
+          Object.keys(options.fromObject).forEach(
+          /**
+          * @param {?} key
+          * @return {?}
+          */
+          function (key) {
+            /** @type {?} */
+            var value =
+            /** @type {?} */
+            options.fromObject[key];
+
+            /** @type {?} */
+            _this20.map.set(key, Array.isArray(value) ? value : [value]);
+          });
+        } else {
+          this.map = null;
+        }
+      }
+      /**
+       * Reports whether the body includes one or more values for a given parameter.
+       * @param {?} param The parameter name.
+       * @return {?} True if the parameter has one or more values,
+       * false if it has no value or is not present.
+       */
+
+
+      _createClass2(HttpParams, [{
+        key: "has",
+        value: function has(param) {
+          this.init();
+          return (
+            /** @type {?} */
+            this.map.has(param)
+          );
+        }
+        /**
+         * Retrieves the first value for a parameter.
+         * @param {?} param The parameter name.
+         * @return {?} The first value of the given parameter,
+         * or `null` if the parameter is not present.
+         */
+
+      }, {
+        key: "get",
+        value: function get(param) {
+          this.init();
+          /** @type {?} */
+
+          var res =
+          /** @type {?} */
+          this.map.get(param);
+          return !!res ? res[0] : null;
+        }
+        /**
+         * Retrieves all values for a  parameter.
+         * @param {?} param The parameter name.
+         * @return {?} All values in a string array,
+         * or `null` if the parameter not present.
+         */
+
+      }, {
+        key: "getAll",
+        value: function getAll(param) {
+          this.init();
+          return (
+            /** @type {?} */
+            this.map.get(param) || null
+          );
+        }
+        /**
+         * Retrieves all the parameters for this body.
+         * @return {?} The parameter names in a string array.
+         */
+
+      }, {
+        key: "keys",
+        value: function keys() {
+          this.init();
+          return Array.from(
+          /** @type {?} */
+          this.map.keys());
+        }
+        /**
+         * Appends a new value to existing values for a parameter.
+         * @param {?} param The parameter name.
+         * @param {?} value The new value to add.
+         * @return {?} A new body with the appended value.
+         */
+
+      }, {
+        key: "append",
+        value: function append(param, value) {
+          return this.clone({
+            param: param,
+            value: value,
+            op: 'a'
+          });
+        }
+        /**
+         * Replaces the value for a parameter.
+         * @param {?} param The parameter name.
+         * @param {?} value The new value.
+         * @return {?} A new body with the new value.
+         */
+
+      }, {
+        key: "set",
+        value: function set(param, value) {
+          return this.clone({
+            param: param,
+            value: value,
+            op: 's'
+          });
+        }
+        /**
+         * Removes a given value or all values from a parameter.
+         * @param {?} param The parameter name.
+         * @param {?=} value The value to remove, if provided.
+         * @return {?} A new body with the given value removed, or with all values
+         * removed if no value is specified.
+         */
+
+      }, {
+        key: "delete",
+        value: function _delete(param, value) {
+          return this.clone({
+            param: param,
+            value: value,
+            op: 'd'
+          });
+        }
+        /**
+         * Serializes the body to an encoded string, where key-value pairs (separated by `=`) are
+         * separated by `&`s.
+         * @return {?}
+         */
+
+      }, {
+        key: "toString",
+        value: function toString() {
+          var _this21 = this;
+
+          this.init();
+          return this.keys().map(
+          /**
+          * @param {?} key
+          * @return {?}
+          */
+          function (key) {
+            /** @type {?} */
+            var eKey = _this21.encoder.encodeKey(key); // `a: ['1']` produces `'a=1'`
+            // `b: []` produces `''`
+            // `c: ['1', '2']` produces `'c=1&c=2'`
+
+
+            return (
+              /** @type {?} */
+
+              /** @type {?} */
+              _this21.map.get(key).map(
+              /**
+              * @param {?} value
+              * @return {?}
+              */
+              function (value) {
+                return eKey + '=' + _this21.encoder.encodeValue(value);
+              }).join('&')
+            );
+          }) // filter out empty values because `b: []` produces `''`
+          // which results in `a=1&&c=1&c=2` instead of `a=1&c=1&c=2` if we don't
+          .filter(
+          /**
+          * @param {?} param
+          * @return {?}
+          */
+          function (param) {
+            return param !== '';
+          }).join('&');
+        }
+        /**
+         * @private
+         * @param {?} update
+         * @return {?}
+         */
+
+      }, {
+        key: "clone",
+        value: function clone(update) {
+          /** @type {?} */
+          var clone = new HttpParams(
+          /** @type {?} */
+          {
+            encoder: this.encoder
+          });
+          clone.cloneFrom = this.cloneFrom || this;
+          clone.updates = (this.updates || []).concat([update]);
+          return clone;
+        }
+        /**
+         * @private
+         * @return {?}
+         */
+
+      }, {
+        key: "init",
+        value: function init() {
+          var _this22 = this;
+
+          if (this.map === null) {
+            this.map = new Map();
+          }
+
+          if (this.cloneFrom !== null) {
+            this.cloneFrom.init();
+            this.cloneFrom.keys().forEach(
+            /**
+            * @param {?} key
+            * @return {?}
+            */
+            function (key) {
+              return (
+                /** @type {?} */
+                _this22.map.set(key,
+                /** @type {?} */
+
+                /** @type {?} */
+
+                /** @type {?} */
+                _this22.cloneFrom.map.get(key))
+              );
+            });
+
+            /** @type {?} */
+            this.updates.forEach(
+            /**
+            * @param {?} update
+            * @return {?}
+            */
+            function (update) {
+              switch (update.op) {
+                case 'a':
+                case 's':
+                  /** @type {?} */
+                  var base = (update.op === 'a' ?
+                  /** @type {?} */
+                  _this22.map.get(update.param) : undefined) || [];
+                  base.push(
+                  /** @type {?} */
+                  update.value);
+
+                  /** @type {?} */
+                  _this22.map.set(update.param, base);
+
+                  break;
+
+                case 'd':
+                  if (update.value !== undefined) {
+                    /** @type {?} */
+                    var _base =
+                    /** @type {?} */
+                    _this22.map.get(update.param) || [];
+                    /** @type {?} */
+
+
+                    var idx = _base.indexOf(update.value);
+
+                    if (idx !== -1) {
+                      _base.splice(idx, 1);
+                    }
+
+                    if (_base.length > 0) {
+                      /** @type {?} */
+                      _this22.map.set(update.param, _base);
+                    } else {
+                      /** @type {?} */
+                      _this22.map["delete"](update.param);
+                    }
+                  } else {
+                    /** @type {?} */
+                    _this22.map["delete"](update.param);
+
+                    break;
+                  }
+
+              }
+            });
+            this.cloneFrom = this.updates = null;
+          }
+        }
+      }]);
+
+      return HttpParams;
+    }();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/common/http/src/request.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * Construction interface for `HttpRequest`s.
+     *
+     * All values are optional and will override default values if provided.
+     * @record
+     */
+
+
+    function HttpRequestInit() {}
+
+    if (false) {}
+    /**
+     * Determine whether the given HTTP method may include a body.
+     * @param {?} method
+     * @return {?}
+     */
+
+
+    function mightHaveBody(method) {
+      switch (method) {
+        case 'DELETE':
+        case 'GET':
+        case 'HEAD':
+        case 'OPTIONS':
+        case 'JSONP':
+          return false;
+
+        default:
+          return true;
+      }
+    }
+    /**
+     * Safely assert whether the given value is an ArrayBuffer.
+     *
+     * In some execution environments ArrayBuffer is not defined.
+     * @param {?} value
+     * @return {?}
+     */
+
+
+    function isArrayBuffer(value) {
+      return typeof ArrayBuffer !== 'undefined' && value instanceof ArrayBuffer;
+    }
+    /**
+     * Safely assert whether the given value is a Blob.
+     *
+     * In some execution environments Blob is not defined.
+     * @param {?} value
+     * @return {?}
+     */
+
+
+    function isBlob(value) {
+      return typeof Blob !== 'undefined' && value instanceof Blob;
+    }
+    /**
+     * Safely assert whether the given value is a FormData instance.
+     *
+     * In some execution environments FormData is not defined.
+     * @param {?} value
+     * @return {?}
+     */
+
+
+    function isFormData(value) {
+      return typeof FormData !== 'undefined' && value instanceof FormData;
+    }
+    /**
+     * An outgoing HTTP request with an optional typed body.
+     *
+     * `HttpRequest` represents an outgoing request, including URL, method,
+     * headers, body, and other request configuration options. Instances should be
+     * assumed to be immutable. To modify a `HttpRequest`, the `clone`
+     * method should be used.
+     *
+     * \@publicApi
+     * @template T
+     */
+
+
+    var HttpRequest = /*#__PURE__*/function () {
+      /**
+       * @param {?} method
+       * @param {?} url
+       * @param {?=} third
+       * @param {?=} fourth
+       */
+      function HttpRequest(method, url, third, fourth) {
+        _classCallCheck(this, HttpRequest);
+
+        this.url = url;
+        /**
+         * The request body, or `null` if one isn't set.
+         *
+         * Bodies are not enforced to be immutable, as they can include a reference to any
+         * user-defined data type. However, interceptors should take care to preserve
+         * idempotence by treating them as such.
+         */
+
+        this.body = null;
+        /**
+         * Whether this request should be made in a way that exposes progress events.
+         *
+         * Progress events are expensive (change detection runs on each event) and so
+         * they should only be requested if the consumer intends to monitor them.
+         */
+
+        this.reportProgress = false;
+        /**
+         * Whether this request should be sent with outgoing credentials (cookies).
+         */
+
+        this.withCredentials = false;
+        /**
+         * The expected response type of the server.
+         *
+         * This is used to parse the response appropriately before returning it to
+         * the requestee.
+         */
+
+        this.responseType = 'json';
+        this.method = method.toUpperCase(); // Next, need to figure out which argument holds the HttpRequestInit
+        // options, if any.
+
+        /** @type {?} */
+
+        var options; // Check whether a body argument is expected. The only valid way to omit
+        // the body argument is to use a known no-body method like GET.
+
+        if (mightHaveBody(this.method) || !!fourth) {
+          // Body is the third argument, options are the fourth.
+          this.body = third !== undefined ?
+          /** @type {?} */
+          third : null;
+          options = fourth;
+        } else {
+          // No body required, options are the third argument. The body stays null.
+          options =
+          /** @type {?} */
+          third;
+        } // If options have been passed, interpret them.
+
+
+        if (options) {
+          // Normalize reportProgress and withCredentials.
+          this.reportProgress = !!options.reportProgress;
+          this.withCredentials = !!options.withCredentials; // Override default response type of 'json' if one is provided.
+
+          if (!!options.responseType) {
+            this.responseType = options.responseType;
+          } // Override headers if they're provided.
+
+
+          if (!!options.headers) {
+            this.headers = options.headers;
+          }
+
+          if (!!options.params) {
+            this.params = options.params;
+          }
+        } // If no headers have been passed in, construct a new HttpHeaders instance.
+
+
+        if (!this.headers) {
+          this.headers = new HttpHeaders();
+        } // If no parameters have been passed in, construct a new HttpUrlEncodedParams instance.
+
+
+        if (!this.params) {
+          this.params = new HttpParams();
+          this.urlWithParams = url;
+        } else {
+          // Encode the parameters to a string in preparation for inclusion in the URL.
+
+          /** @type {?} */
+          var params = this.params.toString();
+
+          if (params.length === 0) {
+            // No parameters, the visible URL is just the URL given at creation time.
+            this.urlWithParams = url;
+          } else {
+            // Does the URL already have query parameters? Look for '?'.
+
+            /** @type {?} */
+            var qIdx = url.indexOf('?'); // There are 3 cases to handle:
+            // 1) No existing parameters -> append '?' followed by params.
+            // 2) '?' exists and is followed by existing query string ->
+            //    append '&' followed by params.
+            // 3) '?' exists at the end of the url -> append params directly.
+            // This basically amounts to determining the character, if any, with
+            // which to join the URL and parameters.
+
+            /** @type {?} */
+
+            var sep = qIdx === -1 ? '?' : qIdx < url.length - 1 ? '&' : '';
+            this.urlWithParams = url + sep + params;
+          }
+        }
+      }
+      /**
+       * Transform the free-form body into a serialized format suitable for
+       * transmission to the server.
+       * @return {?}
+       */
+
+
+      _createClass2(HttpRequest, [{
+        key: "serializeBody",
+        value: function serializeBody() {
+          // If no body is present, no need to serialize it.
+          if (this.body === null) {
+            return null;
+          } // Check whether the body is already in a serialized form. If so,
+          // it can just be returned directly.
+
+
+          if (isArrayBuffer(this.body) || isBlob(this.body) || isFormData(this.body) || typeof this.body === 'string') {
+            return this.body;
+          } // Check whether the body is an instance of HttpUrlEncodedParams.
+
+
+          if (this.body instanceof HttpParams) {
+            return this.body.toString();
+          } // Check whether the body is an object or array, and serialize with JSON if so.
+
+
+          if (typeof this.body === 'object' || typeof this.body === 'boolean' || Array.isArray(this.body)) {
+            return JSON.stringify(this.body);
+          } // Fall back on toString() for everything else.
+
+
+          return (
+            /** @type {?} */
+            this.body.toString()
+          );
+        }
+        /**
+         * Examine the body and attempt to infer an appropriate MIME type
+         * for it.
+         *
+         * If no such type can be inferred, this method will return `null`.
+         * @return {?}
+         */
+
+      }, {
+        key: "detectContentTypeHeader",
+        value: function detectContentTypeHeader() {
+          // An empty body has no content type.
+          if (this.body === null) {
+            return null;
+          } // FormData bodies rely on the browser's content type assignment.
+
+
+          if (isFormData(this.body)) {
+            return null;
+          } // Blobs usually have their own content type. If it doesn't, then
+          // no type can be inferred.
+
+
+          if (isBlob(this.body)) {
+            return this.body.type || null;
+          } // Array buffers have unknown contents and thus no type can be inferred.
+
+
+          if (isArrayBuffer(this.body)) {
+            return null;
+          } // Technically, strings could be a form of JSON data, but it's safe enough
+          // to assume they're plain strings.
+
+
+          if (typeof this.body === 'string') {
+            return 'text/plain';
+          } // `HttpUrlEncodedParams` has its own content-type.
+
+
+          if (this.body instanceof HttpParams) {
+            return 'application/x-www-form-urlencoded;charset=UTF-8';
+          } // Arrays, objects, and numbers will be encoded as JSON.
+
+
+          if (typeof this.body === 'object' || typeof this.body === 'number' || Array.isArray(this.body)) {
+            return 'application/json';
+          } // No type could be inferred.
+
+
+          return null;
+        }
+        /**
+         * @param {?=} update
+         * @return {?}
+         */
+
+      }, {
+        key: "clone",
+        value: function clone() {
+          var update = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+          // For method, url, and responseType, take the current value unless
+          // it is overridden in the update hash.
+
+          /** @type {?} */
+          var method = update.method || this.method;
+          /** @type {?} */
+
+          var url = update.url || this.url;
+          /** @type {?} */
+
+          var responseType = update.responseType || this.responseType; // The body is somewhat special - a `null` value in update.body means
+          // whatever current body is present is being overridden with an empty
+          // body, whereas an `undefined` value in update.body implies no
+          // override.
+
+          /** @type {?} */
+
+          var body = update.body !== undefined ? update.body : this.body; // Carefully handle the boolean options to differentiate between
+          // `false` and `undefined` in the update args.
+
+          /** @type {?} */
+
+          var withCredentials = update.withCredentials !== undefined ? update.withCredentials : this.withCredentials;
+          /** @type {?} */
+
+          var reportProgress = update.reportProgress !== undefined ? update.reportProgress : this.reportProgress; // Headers and params may be appended to if `setHeaders` or
+          // `setParams` are used.
+
+          /** @type {?} */
+
+          var headers = update.headers || this.headers;
+          /** @type {?} */
+
+          var params = update.params || this.params; // Check whether the caller has asked to add headers.
+
+          if (update.setHeaders !== undefined) {
+            // Set every requested header.
+            headers = Object.keys(update.setHeaders).reduce(
+            /**
+            * @param {?} headers
+            * @param {?} name
+            * @return {?}
+            */
+            function (headers, name) {
+              return headers.set(name,
+              /** @type {?} */
+              update.setHeaders[name]);
+            }, headers);
+          } // Check whether the caller has asked to set params.
+
+
+          if (update.setParams) {
+            // Set every requested param.
+            params = Object.keys(update.setParams).reduce(
+            /**
+            * @param {?} params
+            * @param {?} param
+            * @return {?}
+            */
+            function (params, param) {
+              return params.set(param,
+              /** @type {?} */
+              update.setParams[param]);
+            }, params);
+          } // Finally, construct the new HttpRequest using the pieces from above.
+
+
+          return new HttpRequest(method, url, body, {
+            params: params,
+            headers: headers,
+            reportProgress: reportProgress,
+            responseType: responseType,
+            withCredentials: withCredentials
+          });
+        }
+      }]);
+
+      return HttpRequest;
+    }();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/common/http/src/response.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @enum {number} */
+
+
+    var HttpEventType = {
+      /**
+       * The request was sent out over the wire.
+       */
+      Sent: 0,
+
+      /**
+       * An upload progress event was received.
+       */
+      UploadProgress: 1,
+
+      /**
+       * The response status code and headers were received.
+       */
+      ResponseHeader: 2,
+
+      /**
+       * A download progress event was received.
+       */
+      DownloadProgress: 3,
+
+      /**
+       * The full response including the body was received.
+       */
+      Response: 4,
+
+      /**
+       * A custom event from an interceptor or a backend.
+       */
+      User: 5
+    };
+    HttpEventType[HttpEventType.Sent] = 'Sent';
+    HttpEventType[HttpEventType.UploadProgress] = 'UploadProgress';
+    HttpEventType[HttpEventType.ResponseHeader] = 'ResponseHeader';
+    HttpEventType[HttpEventType.DownloadProgress] = 'DownloadProgress';
+    HttpEventType[HttpEventType.Response] = 'Response';
+    HttpEventType[HttpEventType.User] = 'User';
+    /**
+     * Base interface for progress events.
+     *
+     * \@publicApi
+     * @record
+     */
+
+    function HttpProgressEvent() {}
+
+    if (false) {}
+    /**
+     * A download progress event.
+     *
+     * \@publicApi
+     * @record
+     */
+
+
+    function HttpDownloadProgressEvent() {}
+
+    if (false) {}
+    /**
+     * An upload progress event.
+     *
+     * \@publicApi
+     * @record
+     */
+
+
+    function HttpUploadProgressEvent() {}
+
+    if (false) {}
+    /**
+     * An event indicating that the request was sent to the server. Useful
+     * when a request may be retried multiple times, to distinguish between
+     * retries on the final event stream.
+     *
+     * \@publicApi
+     * @record
+     */
+
+
+    function HttpSentEvent() {}
+
+    if (false) {}
+    /**
+     * A user-defined event.
+     *
+     * Grouping all custom events under this type ensures they will be handled
+     * and forwarded by all implementations of interceptors.
+     *
+     * \@publicApi
+     * @record
+     * @template T
+     */
+
+
+    function HttpUserEvent() {}
+
+    if (false) {}
+    /**
+     * An error that represents a failed attempt to JSON.parse text coming back
+     * from the server.
+     *
+     * It bundles the Error object with the actual response body that failed to parse.
+     *
+     *
+     * @record
+     */
+
+
+    function HttpJsonParseError() {}
+
+    if (false) {}
+    /**
+     * Base class for both `HttpResponse` and `HttpHeaderResponse`.
+     *
+     * \@publicApi
+     * @abstract
+     */
+
+
+    var HttpResponseBase =
+    /**
+     * Super-constructor for all responses.
+     *
+     * The single parameter accepted is an initialization hash. Any properties
+     * of the response passed there will override the default values.
+     * @param {?} init
+     * @param {?=} defaultStatus
+     * @param {?=} defaultStatusText
+     */
+    function HttpResponseBase(init) {
+      var defaultStatus = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 200;
+      var defaultStatusText = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'OK';
+
+      _classCallCheck(this, HttpResponseBase);
+
+      // If the hash has values passed, use them to initialize the response.
+      // Otherwise use the default values.
+      this.headers = init.headers || new HttpHeaders();
+      this.status = init.status !== undefined ? init.status : defaultStatus;
+      this.statusText = init.statusText || defaultStatusText;
+      this.url = init.url || null; // Cache the ok value to avoid defining a getter.
+
+      this.ok = this.status >= 200 && this.status < 300;
+    };
+
+    if (false) {}
+    /**
+     * A partial HTTP response which only includes the status and header data,
+     * but no response body.
+     *
+     * `HttpHeaderResponse` is a `HttpEvent` available on the response
+     * event stream, only when progress events are requested.
+     *
+     * \@publicApi
+     */
+
+
+    var HttpHeaderResponse = /*#__PURE__*/function (_HttpResponseBase) {
+      _inherits(HttpHeaderResponse, _HttpResponseBase);
+
+      var _super5 = _createSuper(HttpHeaderResponse);
+
+      /**
+       * Create a new `HttpHeaderResponse` with the given parameters.
+       * @param {?=} init
+       */
+      function HttpHeaderResponse() {
+        var _this23;
+
+        var init = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+        _classCallCheck(this, HttpHeaderResponse);
+
+        _this23 = _super5.call(this, init);
+        _this23.type = HttpEventType.ResponseHeader;
+        return _this23;
+      }
+      /**
+       * Copy this `HttpHeaderResponse`, overriding its contents with the
+       * given parameter hash.
+       * @param {?=} update
+       * @return {?}
+       */
+
+
+      _createClass2(HttpHeaderResponse, [{
+        key: "clone",
+        value: function clone() {
+          var update = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+          // Perform a straightforward initialization of the new HttpHeaderResponse,
+          // overriding the current parameters with new ones if given.
+          return new HttpHeaderResponse({
+            headers: update.headers || this.headers,
+            status: update.status !== undefined ? update.status : this.status,
+            statusText: update.statusText || this.statusText,
+            url: update.url || this.url || undefined
+          });
+        }
+      }]);
+
+      return HttpHeaderResponse;
+    }(HttpResponseBase);
+
+    if (false) {}
+    /**
+     * A full HTTP response, including a typed response body (which may be `null`
+     * if one was not returned).
+     *
+     * `HttpResponse` is a `HttpEvent` available on the response event
+     * stream.
+     *
+     * \@publicApi
+     * @template T
+     */
+
+
+    var HttpResponse = /*#__PURE__*/function (_HttpResponseBase2) {
+      _inherits(HttpResponse, _HttpResponseBase2);
+
+      var _super6 = _createSuper(HttpResponse);
+
+      /**
+       * Construct a new `HttpResponse`.
+       * @param {?=} init
+       */
+      function HttpResponse() {
+        var _this24;
+
+        var init = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+        _classCallCheck(this, HttpResponse);
+
+        _this24 = _super6.call(this, init);
+        _this24.type = HttpEventType.Response;
+        _this24.body = init.body !== undefined ? init.body : null;
+        return _this24;
+      }
+      /**
+       * @param {?=} update
+       * @return {?}
+       */
+
+
+      _createClass2(HttpResponse, [{
+        key: "clone",
+        value: function clone() {
+          var update = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+          return new HttpResponse({
+            body: update.body !== undefined ? update.body : this.body,
+            headers: update.headers || this.headers,
+            status: update.status !== undefined ? update.status : this.status,
+            statusText: update.statusText || this.statusText,
+            url: update.url || this.url || undefined
+          });
+        }
+      }]);
+
+      return HttpResponse;
+    }(HttpResponseBase);
+
+    if (false) {}
+    /**
+     * A response that represents an error or failure, either from a
+     * non-successful HTTP status, an error while executing the request,
+     * or some other failure which occurred during the parsing of the response.
+     *
+     * Any error returned on the `Observable` response stream will be
+     * wrapped in an `HttpErrorResponse` to provide additional context about
+     * the state of the HTTP layer when the error occurred. The error property
+     * will contain either a wrapped Error object or the error response returned
+     * from the server.
+     *
+     * \@publicApi
+     */
+
+
+    var HttpErrorResponse = /*#__PURE__*/function (_HttpResponseBase3) {
+      _inherits(HttpErrorResponse, _HttpResponseBase3);
+
+      var _super7 = _createSuper(HttpErrorResponse);
+
+      /**
+       * @param {?} init
+       */
+      function HttpErrorResponse(init) {
+        var _this25;
+
+        _classCallCheck(this, HttpErrorResponse);
+
+        // Initialize with a default status of 0 / Unknown Error.
+        _this25 = _super7.call(this, init, 0, 'Unknown Error');
+        _this25.name = 'HttpErrorResponse';
+        /**
+         * Errors are never okay, even when the status code is in the 2xx success range.
+         */
+
+        _this25.ok = false; // If the response was successful, then this was a parse error. Otherwise, it was
+        // a protocol-level failure of some sort. Either the request failed in transit
+        // or the server returned an unsuccessful status code.
+
+        if (_this25.status >= 200 && _this25.status < 300) {
+          _this25.message = "Http failure during parsing for ".concat(init.url || '(unknown url)');
+        } else {
+          _this25.message = "Http failure response for ".concat(init.url || '(unknown url)', ": ").concat(init.status, " ").concat(init.statusText);
+        }
+
+        _this25.error = init.error || null;
+        return _this25;
+      }
+
+      return HttpErrorResponse;
+    }(HttpResponseBase);
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/common/http/src/client.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * Constructs an instance of `HttpRequestOptions<T>` from a source `HttpMethodOptions` and
+     * the given `body`. This function clones the object and adds the body.
+     *
+     * Note that the `responseType` *options* value is a String that identifies the
+     * single data type of the response.
+     * A single overload version of the method handles each response type.
+     * The value of `responseType` cannot be a union, as the combined signature could imply.
+     *
+     * @template T
+     * @param {?} options
+     * @param {?} body
+     * @return {?}
+     */
+
+
+    function addBody(options, body) {
+      return {
+        body: body,
+        headers: options.headers,
+        observe: options.observe,
+        params: options.params,
+        reportProgress: options.reportProgress,
+        responseType: options.responseType,
+        withCredentials: options.withCredentials
+      };
+    }
+    /**
+     * Performs HTTP requests.
+     * This service is available as an injectable class, with methods to perform HTTP requests.
+     * Each request method has multiple signatures, and the return type varies based on
+     * the signature that is called (mainly the values of `observe` and `responseType`).
+     *
+     * Note that the `responseType` *options* value is a String that identifies the
+     * single data type of the response.
+     * A single overload version of the method handles each response type.
+     * The value of `responseType` cannot be a union, as the combined signature could imply.
+     *
+     * \@usageNotes
+     * Sample HTTP requests for the [Tour of Heroes](/tutorial/toh-pt0) application.
+     *
+     * ### HTTP Request Example
+     *
+     * ```
+     *  // GET heroes whose name contains search term
+     * searchHeroes(term: string): observable<Hero[]>{
+     *
+     *  const params = new HttpParams({fromString: 'name=term'});
+     *    return this.httpClient.request('GET', this.heroesUrl, {responseType:'json', params});
+     * }
+     * ```
+     * ### JSONP Example
+     * ```
+     * requestJsonp(url, callback = 'callback') {
+     *  return this.httpClient.jsonp(this.heroesURL, callback);
+     * }
+     * ```
+     *
+     * ### PATCH Example
+     * ```
+     * // PATCH one of the heroes' name
+     * patchHero (id: number, heroName: string): Observable<{}> {
+     * const url = `${this.heroesUrl}/${id}`;   // PATCH api/heroes/42
+     *  return this.httpClient.patch(url, {name: heroName}, httpOptions)
+     *    .pipe(catchError(this.handleError('patchHero')));
+     * }
+     * ```
+     *
+     * @see [HTTP Guide](guide/http)
+     *
+     * \@publicApi
+     */
+
+
+    var HttpClient = /*#__PURE__*/function () {
+      /**
+       * @param {?} handler
+       */
+      function HttpClient(handler) {
+        _classCallCheck(this, HttpClient);
+
+        this.handler = handler;
+      }
+      /**
+       * Constructs an observable for a generic HTTP request that, when subscribed,
+       * fires the request through the chain of registered interceptors and on to the
+       * server.
+       *
+       * You can pass an `HttpRequest` directly as the only parameter. In this case,
+       * the call returns an observable of the raw `HttpEvent` stream.
+       *
+       * Alternatively you can pass an HTTP method as the first parameter,
+       * a URL string as the second, and an options hash containing the request body as the third.
+       * See `addBody()`. In this case, the specified `responseType` and `observe` options determine the
+       * type of returned observable.
+       *   * The `responseType` value determines how a successful response body is parsed.
+       *   * If `responseType` is the default `json`, you can pass a type interface for the resulting
+       * object as a type parameter to the call.
+       *
+       * The `observe` value determines the return type, according to what you are interested in
+       * observing.
+       *   * An `observe` value of events returns an observable of the raw `HttpEvent` stream, including
+       * progress events by default.
+       *   * An `observe` value of response returns an observable of `HttpResponse<T>`,
+       * where the `T` parameter depends on the `responseType` and any optionally provided type
+       * parameter.
+       *   * An `observe` value of body returns an observable of `<T>` with the same `T` body type.
+       *
+       * @param {?} first
+       * @param {?=} url
+       * @param {?=} options
+       * @return {?}
+       */
+
+
+      _createClass2(HttpClient, [{
+        key: "request",
+        value: function request(first, url) {
+          var _this26 = this;
+
+          var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+          /** @type {?} */
+          var req; // First, check whether the primary argument is an instance of `HttpRequest`.
+
+          if (first instanceof HttpRequest) {
+            // It is. The other arguments must be undefined (per the signatures) and can be
+            // ignored.
+            req = first;
+          } else {
+            // It's a string, so it represents a URL. Construct a request based on it,
+            // and incorporate the remaining arguments (assuming `GET` unless a method is
+            // provided.
+            // Figure out the headers.
+
+            /** @type {?} */
+            var headers = undefined;
+
+            if (options.headers instanceof HttpHeaders) {
+              headers = options.headers;
+            } else {
+              headers = new HttpHeaders(options.headers);
+            } // Sort out parameters.
+
+            /** @type {?} */
+
+
+            var params = undefined;
+
+            if (!!options.params) {
+              if (options.params instanceof HttpParams) {
+                params = options.params;
+              } else {
+                params = new HttpParams(
+                /** @type {?} */
+                {
+                  fromObject: options.params
+                });
+              }
+            } // Construct the request.
+
+
+            req = new HttpRequest(first,
+            /** @type {?} */
+            url, options.body !== undefined ? options.body : null, {
+              headers: headers,
+              params: params,
+              reportProgress: options.reportProgress,
+              // By default, JSON is assumed to be returned for all calls.
+              responseType: options.responseType || 'json',
+              withCredentials: options.withCredentials
+            });
+          } // Start with an Observable.of() the initial request, and run the handler (which
+          // includes all interceptors) inside a concatMap(). This way, the handler runs
+          // inside an Observable chain, which causes interceptors to be re-run on every
+          // subscription (this also makes retries re-run the handler, including interceptors).
+
+          /** @type {?} */
+
+
+          var events$ = Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(req).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["concatMap"])(
+          /**
+          * @param {?} req
+          * @return {?}
+          */
+          function (req) {
+            return _this26.handler.handle(req);
+          })); // If coming via the API signature which accepts a previously constructed HttpRequest,
+          // the only option is to get the event stream. Otherwise, return the event stream if
+          // that is what was requested.
+
+          if (first instanceof HttpRequest || options.observe === 'events') {
+            return events$;
+          } // The requested stream contains either the full response or the body. In either
+          // case, the first step is to filter the event stream to extract a stream of
+          // responses(s).
+
+          /** @type {?} */
+
+
+          var res$ =
+          /** @type {?} */
+          events$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["filter"])(
+          /**
+          * @param {?} event
+          * @return {?}
+          */
+          function (event) {
+            return event instanceof HttpResponse;
+          })); // Decide which stream to return.
+
+          switch (options.observe || 'body') {
+            case 'body':
+              // The requested stream is the body. Map the response stream to the response
+              // body. This could be done more simply, but a misbehaving interceptor might
+              // transform the response body into a different format and ignore the requested
+              // responseType. Guard against this by validating that the response is of the
+              // requested type.
+              switch (req.responseType) {
+                case 'arraybuffer':
+                  return res$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(
+                  /**
+                  * @param {?} res
+                  * @return {?}
+                  */
+                  function (res) {
+                    // Validate that the body is an ArrayBuffer.
+                    if (res.body !== null && !(res.body instanceof ArrayBuffer)) {
+                      throw new Error('Response is not an ArrayBuffer.');
+                    }
+
+                    return res.body;
+                  }));
+
+                case 'blob':
+                  return res$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(
+                  /**
+                  * @param {?} res
+                  * @return {?}
+                  */
+                  function (res) {
+                    // Validate that the body is a Blob.
+                    if (res.body !== null && !(res.body instanceof Blob)) {
+                      throw new Error('Response is not a Blob.');
+                    }
+
+                    return res.body;
+                  }));
+
+                case 'text':
+                  return res$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(
+                  /**
+                  * @param {?} res
+                  * @return {?}
+                  */
+                  function (res) {
+                    // Validate that the body is a string.
+                    if (res.body !== null && typeof res.body !== 'string') {
+                      throw new Error('Response is not a string.');
+                    }
+
+                    return res.body;
+                  }));
+
+                case 'json':
+                default:
+                  // No validation needed for JSON responses, as they can be of any type.
+                  return res$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(
+                  /**
+                  * @param {?} res
+                  * @return {?}
+                  */
+                  function (res) {
+                    return res.body;
+                  }));
+              }
+
+            case 'response':
+              // The response stream was requested directly, so return it.
+              return res$;
+
+            default:
+              // Guard against new future observe types being added.
+              throw new Error("Unreachable: unhandled observe type ".concat(options.observe, "}"));
+          }
+        }
+        /**
+         * Constructs an observable that, when subscribed, causes the configured
+         * `DELETE` request to execute on the server. See the individual overloads for
+         * details on the return type.
+         *
+         * @param {?} url     The endpoint URL.
+         * @param {?=} options The HTTP options to send with the request.
+         *
+         * @return {?}
+         */
+
+      }, {
+        key: "delete",
+        value: function _delete(url) {
+          var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+          return this.request('DELETE', url,
+          /** @type {?} */
+          options);
+        }
+        /**
+         * Constructs an observable that, when subscribed, causes the configured
+         * `GET` request to execute on the server. See the individual overloads for
+         * details on the return type.
+         * @param {?} url
+         * @param {?=} options
+         * @return {?}
+         */
+
+      }, {
+        key: "get",
+        value: function get(url) {
+          var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+          return this.request('GET', url,
+          /** @type {?} */
+          options);
+        }
+        /**
+         * Constructs an observable that, when subscribed, causes the configured
+         * `HEAD` request to execute on the server. The `HEAD` method returns
+         * meta information about the resource without transferring the
+         * resource itself. See the individual overloads for
+         * details on the return type.
+         * @param {?} url
+         * @param {?=} options
+         * @return {?}
+         */
+
+      }, {
+        key: "head",
+        value: function head(url) {
+          var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+          return this.request('HEAD', url,
+          /** @type {?} */
+          options);
+        }
+        /**
+         * Constructs an `Observable` that, when subscribed, causes a request with the special method
+         * `JSONP` to be dispatched via the interceptor pipeline.
+         * The [JSONP pattern](https://en.wikipedia.org/wiki/JSONP) works around limitations of certain
+         * API endpoints that don't support newer,
+         * and preferable [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) protocol.
+         * JSONP treats the endpoint API as a JavaScript file and tricks the browser to process the
+         * requests even if the API endpoint is not located on the same domain (origin) as the client-side
+         * application making the request.
+         * The endpoint API must support JSONP callback for JSONP requests to work.
+         * The resource API returns the JSON response wrapped in a callback function.
+         * You can pass the callback function name as one of the query parameters.
+         * Note that JSONP requests can only be used with `GET` requests.
+         *
+         * @template T
+         * @param {?} url The resource URL.
+         * @param {?} callbackParam The callback function name.
+         *
+         * @return {?}
+         */
+
+      }, {
+        key: "jsonp",
+        value: function jsonp(url, callbackParam) {
+          return this.request('JSONP', url, {
+            params: new HttpParams().append(callbackParam, 'JSONP_CALLBACK'),
+            observe: 'body',
+            responseType: 'json'
+          });
+        }
+        /**
+         * Constructs an `Observable` that, when subscribed, causes the configured
+         * `OPTIONS` request to execute on the server. This method allows the client
+         * to determine the supported HTTP methods and other capabilites of an endpoint,
+         * without implying a resource action. See the individual overloads for
+         * details on the return type.
+         * @param {?} url
+         * @param {?=} options
+         * @return {?}
+         */
+
+      }, {
+        key: "options",
+        value: function options(url) {
+          var _options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+          return this.request('OPTIONS', url,
+          /** @type {?} */
+          _options);
+        }
+        /**
+         * Constructs an observable that, when subscribed, causes the configured
+         * `PATCH` request to execute on the server. See the individual overloads for
+         * details on the return type.
+         * @param {?} url
+         * @param {?} body
+         * @param {?=} options
+         * @return {?}
+         */
+
+      }, {
+        key: "patch",
+        value: function patch(url, body) {
+          var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+          return this.request('PATCH', url, addBody(options, body));
+        }
+        /**
+         * Constructs an observable that, when subscribed, causes the configured
+         * `POST` request to execute on the server. The server responds with the location of
+         * the replaced resource. See the individual overloads for
+         * details on the return type.
+         * @param {?} url
+         * @param {?} body
+         * @param {?=} options
+         * @return {?}
+         */
+
+      }, {
+        key: "post",
+        value: function post(url, body) {
+          var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+          return this.request('POST', url, addBody(options, body));
+        }
+        /**
+         * Constructs an observable that, when subscribed, causes the configured
+         * `PUT` request to execute on the server. The `PUT` method replaces an existing resource
+         * with a new set of values.
+         * See the individual overloads for details on the return type.
+         * @param {?} url
+         * @param {?} body
+         * @param {?=} options
+         * @return {?}
+         */
+
+      }, {
+        key: "put",
+        value: function put(url, body) {
+          var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+          return this.request('PUT', url, addBody(options, body));
+        }
+      }]);
+
+      return HttpClient;
+    }();
+
+    HttpClient.ɵfac = function HttpClient_Factory(t) {
+      return new (t || HttpClient)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](HttpHandler));
+    };
+
+    HttpClient.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: HttpClient,
+      factory: HttpClient.ɵfac
+    });
+    /** @nocollapse */
+
+    HttpClient.ctorParameters = function () {
+      return [{
+        type: HttpHandler
+      }];
+    };
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HttpClient, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], function () {
+        return [{
+          type: HttpHandler
+        }];
+      }, null);
+    })();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/common/http/src/interceptor.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * Intercepts and handles an `HttpRequest` or `HttpResponse`.
+     *
+     * Most interceptors transform the outgoing request before passing it to the
+     * next interceptor in the chain, by calling `next.handle(transformedReq)`.
+     * An interceptor may transform the
+     * response event stream as well, by applying additional RxJS operators on the stream
+     * returned by `next.handle()`.
+     *
+     * More rarely, an interceptor may handle the request entirely,
+     * and compose a new event stream instead of invoking `next.handle()`. This is an
+     * acceptable behavior, but keep in mind that further interceptors will be skipped entirely.
+     *
+     * It is also rare but valid for an interceptor to return multiple responses on the
+     * event stream for a single request.
+     *
+     * \@publicApi
+     *
+     * @see [HTTP Guide](guide/http#intercepting-requests-and-responses)
+     *
+     * \@usageNotes
+     *
+     * To use the same instance of `HttpInterceptors` for the entire app, import the `HttpClientModule`
+     * only in your `AppModule`, and add the interceptors to the root application injector .
+     * If you import `HttpClientModule` multiple times across different modules (for example, in lazy
+     * loading modules), each import creates a new copy of the `HttpClientModule`, which overwrites the
+     * interceptors provided in the root module.
+     *
+     * @record
+     */
+
+
+    function HttpInterceptor() {}
+
+    if (false) {}
+    /**
+     * `HttpHandler` which applies an `HttpInterceptor` to an `HttpRequest`.
+     *
+     *
+     */
+
+
+    var HttpInterceptorHandler = /*#__PURE__*/function () {
+      /**
+       * @param {?} next
+       * @param {?} interceptor
+       */
+      function HttpInterceptorHandler(next, interceptor) {
+        _classCallCheck(this, HttpInterceptorHandler);
+
+        this.next = next;
+        this.interceptor = interceptor;
+      }
+      /**
+       * @param {?} req
+       * @return {?}
+       */
+
+
+      _createClass2(HttpInterceptorHandler, [{
+        key: "handle",
+        value: function handle(req) {
+          return this.interceptor.intercept(req, this.next);
+        }
+      }]);
+
+      return HttpInterceptorHandler;
+    }();
+
+    if (false) {}
+    /**
+     * A multi-provider token that represents the array of registered
+     * `HttpInterceptor` objects.
+     *
+     * \@publicApi
+     * @type {?}
+     */
+
+
+    var HTTP_INTERCEPTORS = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('HTTP_INTERCEPTORS');
+
+    var NoopInterceptor = /*#__PURE__*/function () {
+      function NoopInterceptor() {
+        _classCallCheck(this, NoopInterceptor);
+      }
+
+      _createClass2(NoopInterceptor, [{
+        key: "intercept",
+
+        /**
+         * @param {?} req
+         * @param {?} next
+         * @return {?}
+         */
+        value: function intercept(req, next) {
+          return next.handle(req);
+        }
+      }]);
+
+      return NoopInterceptor;
+    }();
+
+    NoopInterceptor.ɵfac = function NoopInterceptor_Factory(t) {
+      return new (t || NoopInterceptor)();
+    };
+
+    NoopInterceptor.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: NoopInterceptor,
+      factory: NoopInterceptor.ɵfac
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](NoopInterceptor, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], null, null);
+    })();
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/common/http/src/jsonp.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+    // Every request made through JSONP needs a callback name that's unique across the
+    // whole page. Each request is assigned an id and the callback name is constructed
+    // from that. The next id to be assigned is tracked in a global variable here that
+    // is shared among all applications on the page.
+
+    /** @type {?} */
+
+
+    var nextRequestId = 0; // Error text given when a JSONP script is injected, but doesn't invoke the callback
+    // passed in its URL.
+
+    /** @type {?} */
+
+    var JSONP_ERR_NO_CALLBACK = 'JSONP injected script did not invoke callback.'; // Error text given when a request is passed to the JsonpClientBackend that doesn't
+    // have a request method JSONP.
+
+    /** @type {?} */
+
+    var JSONP_ERR_WRONG_METHOD = 'JSONP requests must use JSONP request method.';
+    /** @type {?} */
+
+    var JSONP_ERR_WRONG_RESPONSE_TYPE = 'JSONP requests must use Json response type.';
+    /**
+     * DI token/abstract type representing a map of JSONP callbacks.
+     *
+     * In the browser, this should always be the `window` object.
+     *
+     *
+     * @abstract
+     */
+
+    var JsonpCallbackContext = function JsonpCallbackContext() {
+      _classCallCheck(this, JsonpCallbackContext);
+    };
+    /**
+     * Processes an `HttpRequest` with the JSONP method,
+     * by performing JSONP style requests.
+     * @see `HttpHandler`
+     * @see `HttpXhrBackend`
+     *
+     * \@publicApi
+     */
+
+
+    var JsonpClientBackend = /*#__PURE__*/function () {
+      /**
+       * @param {?} callbackMap
+       * @param {?} document
+       */
+      function JsonpClientBackend(callbackMap, document) {
+        _classCallCheck(this, JsonpClientBackend);
+
+        this.callbackMap = callbackMap;
+        this.document = document;
+      }
+      /**
+       * Get the name of the next callback method, by incrementing the global `nextRequestId`.
+       * @private
+       * @return {?}
+       */
+
+
+      _createClass2(JsonpClientBackend, [{
+        key: "nextCallback",
+        value: function nextCallback() {
+          return "ng_jsonp_callback_".concat(nextRequestId++);
+        }
+        /**
+         * Processes a JSONP request and returns an event stream of the results.
+         * @param {?} req The request object.
+         * @return {?} An observable of the response events.
+         *
+         */
+
+      }, {
+        key: "handle",
+        value: function handle(req) {
+          var _this27 = this;
+
+          // Firstly, check both the method and response type. If either doesn't match
+          // then the request was improperly routed here and cannot be handled.
+          if (req.method !== 'JSONP') {
+            throw new Error(JSONP_ERR_WRONG_METHOD);
+          } else if (req.responseType !== 'json') {
+            throw new Error(JSONP_ERR_WRONG_RESPONSE_TYPE);
+          } // Everything else happens inside the Observable boundary.
+
+
+          return new rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"](
+          /**
+          * @param {?} observer
+          * @return {?}
+          */
+          function (observer) {
+            // The first step to make a request is to generate the callback name, and replace the
+            // callback placeholder in the URL with the name. Care has to be taken here to ensure
+            // a trailing &, if matched, gets inserted back into the URL in the correct place.
+
+            /** @type {?} */
+            var callback = _this27.nextCallback();
+            /** @type {?} */
+
+
+            var url = req.urlWithParams.replace(/=JSONP_CALLBACK(&|$)/, "=".concat(callback, "$1")); // Construct the <script> tag and point it at the URL.
+
+            /** @type {?} */
+
+            var node = _this27.document.createElement('script');
+
+            node.src = url; // A JSONP request requires waiting for multiple callbacks. These variables
+            // are closed over and track state across those callbacks.
+            // The response object, if one has been received, or null otherwise.
+
+            /** @type {?} */
+
+            var body = null; // Whether the response callback has been called.
+
+            /** @type {?} */
+
+            var finished = false; // Whether the request has been cancelled (and thus any other callbacks)
+            // should be ignored.
+
+            /** @type {?} */
+
+            var cancelled = false; // Set the response callback in this.callbackMap (which will be the window
+            // object in the browser. The script being loaded via the <script> tag will
+            // eventually call this callback.
+
+            _this27.callbackMap[callback] =
+            /**
+            * @param {?=} data
+            * @return {?}
+            */
+            function (data) {
+              // Data has been received from the JSONP script. Firstly, delete this callback.
+              delete _this27.callbackMap[callback]; // Next, make sure the request wasn't cancelled in the meantime.
+
+              if (cancelled) {
+                return;
+              } // Set state to indicate data was received.
+
+
+              body = data;
+              finished = true;
+            }; // cleanup() is a utility closure that removes the <script> from the page and
+            // the response callback from the window. This logic is used in both the
+            // success, error, and cancellation paths, so it's extracted out for convenience.
+
+            /** @type {?} */
+
+
+            var cleanup =
+            /**
+            * @return {?}
+            */
+            function cleanup() {
+              // Remove the <script> tag if it's still on the page.
+              if (node.parentNode) {
+                node.parentNode.removeChild(node);
+              } // Remove the response callback from the callbackMap (window object in the
+              // browser).
+
+
+              delete _this27.callbackMap[callback];
+            }; // onLoad() is the success callback which runs after the response callback
+            // if the JSONP script loads successfully. The event itself is unimportant.
+            // If something went wrong, onLoad() may run without the response callback
+            // having been invoked.
+
+            /** @type {?} */
+
+
+            var onLoad =
+            /**
+            * @param {?} event
+            * @return {?}
+            */
+            function onLoad(event) {
+              // Do nothing if the request has been cancelled.
+              if (cancelled) {
+                return;
+              } // Cleanup the page.
+
+
+              cleanup(); // Check whether the response callback has run.
+
+              if (!finished) {
+                // It hasn't, something went wrong with the request. Return an error via
+                // the Observable error path. All JSONP errors have status 0.
+                observer.error(new HttpErrorResponse({
+                  url: url,
+                  status: 0,
+                  statusText: 'JSONP Error',
+                  error: new Error(JSONP_ERR_NO_CALLBACK)
+                }));
+                return;
+              } // Success. body either contains the response body or null if none was
+              // returned.
+
+
+              observer.next(new HttpResponse({
+                body: body,
+                status: 200,
+                statusText: 'OK',
+                url: url
+              })); // Complete the stream, the response is over.
+
+              observer.complete();
+            }; // onError() is the error callback, which runs if the script returned generates
+            // a Javascript error. It emits the error via the Observable error channel as
+            // a HttpErrorResponse.
+
+            /** @type {?} */
+
+
+            var onError =
+            /**
+            * @param {?} error
+            * @return {?}
+            */
+            function onError(error) {
+              // If the request was already cancelled, no need to emit anything.
+              if (cancelled) {
+                return;
+              }
+
+              cleanup(); // Wrap the error in a HttpErrorResponse.
+
+              observer.error(new HttpErrorResponse({
+                error: error,
+                status: 0,
+                statusText: 'JSONP Error',
+                url: url
+              }));
+            }; // Subscribe to both the success (load) and error events on the <script> tag,
+            // and add it to the page.
+
+
+            node.addEventListener('load', onLoad);
+            node.addEventListener('error', onError);
+
+            _this27.document.body.appendChild(node); // The request has now been successfully sent.
+
+
+            observer.next({
+              type: HttpEventType.Sent
+            }); // Cancellation handler.
+
+            return (
+              /**
+              * @return {?}
+              */
+              function () {
+                // Track the cancellation so event listeners won't do anything even if already scheduled.
+                cancelled = true; // Remove the event listeners so they won't run if the events later fire.
+
+                node.removeEventListener('load', onLoad);
+                node.removeEventListener('error', onError); // And finally, clean up the page.
+
+                cleanup();
+              }
+            );
+          });
+        }
+      }]);
+
+      return JsonpClientBackend;
+    }();
+
+    JsonpClientBackend.ɵfac = function JsonpClientBackend_Factory(t) {
+      return new (t || JsonpClientBackend)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](JsonpCallbackContext), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common__WEBPACK_IMPORTED_MODULE_3__["DOCUMENT"]));
+    };
+
+    JsonpClientBackend.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: JsonpClientBackend,
+      factory: JsonpClientBackend.ɵfac
+    });
+    /** @nocollapse */
+
+    JsonpClientBackend.ctorParameters = function () {
+      return [{
+        type: JsonpCallbackContext
+      }, {
+        type: undefined,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["DOCUMENT"]]
+        }]
+      }];
+    };
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](JsonpClientBackend, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], function () {
+        return [{
+          type: JsonpCallbackContext
+        }, {
+          type: undefined,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["DOCUMENT"]]
+          }]
+        }];
+      }, null);
+    })();
+
+    if (false) {}
+    /**
+     * Identifies requests with the method JSONP and
+     * shifts them to the `JsonpClientBackend`.
+     *
+     * @see `HttpInterceptor`
+     *
+     * \@publicApi
+     */
+
+
+    var JsonpInterceptor = /*#__PURE__*/function () {
+      /**
+       * @param {?} jsonp
+       */
+      function JsonpInterceptor(jsonp) {
+        _classCallCheck(this, JsonpInterceptor);
+
+        this.jsonp = jsonp;
+      }
+      /**
+       * Identifies and handles a given JSONP request.
+       * @param {?} req The outgoing request object to handle.
+       * @param {?} next The next interceptor in the chain, or the backend
+       * if no interceptors remain in the chain.
+       * @return {?} An observable of the event stream.
+       */
+
+
+      _createClass2(JsonpInterceptor, [{
+        key: "intercept",
+        value: function intercept(req, next) {
+          if (req.method === 'JSONP') {
+            return this.jsonp.handle(
+            /** @type {?} */
+            req);
+          } // Fall through for normal HTTP requests.
+
+
+          return next.handle(req);
+        }
+      }]);
+
+      return JsonpInterceptor;
+    }();
+
+    JsonpInterceptor.ɵfac = function JsonpInterceptor_Factory(t) {
+      return new (t || JsonpInterceptor)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](JsonpClientBackend));
+    };
+
+    JsonpInterceptor.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: JsonpInterceptor,
+      factory: JsonpInterceptor.ɵfac
+    });
+    /** @nocollapse */
+
+    JsonpInterceptor.ctorParameters = function () {
+      return [{
+        type: JsonpClientBackend
+      }];
+    };
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](JsonpInterceptor, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], function () {
+        return [{
+          type: JsonpClientBackend
+        }];
+      }, null);
+    })();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/common/http/src/xhr.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+
+    var XSSI_PREFIX = /^\)\]\}',?\n/;
+    /**
+     * Determine an appropriate URL for the response, by checking either
+     * XMLHttpRequest.responseURL or the X-Request-URL header.
+     * @param {?} xhr
+     * @return {?}
+     */
+
+    function getResponseUrl(xhr) {
+      if ('responseURL' in xhr && xhr.responseURL) {
+        return xhr.responseURL;
+      }
+
+      if (/^X-Request-URL:/m.test(xhr.getAllResponseHeaders())) {
+        return xhr.getResponseHeader('X-Request-URL');
+      }
+
+      return null;
+    }
+    /**
+     * A wrapper around the `XMLHttpRequest` constructor.
+     *
+     * \@publicApi
+     * @abstract
+     */
+
+
+    var XhrFactory = function XhrFactory() {
+      _classCallCheck(this, XhrFactory);
+    };
+
+    if (false) {}
+    /**
+     * A factory for `HttpXhrBackend` that uses the `XMLHttpRequest` browser API.
+     *
+     */
+
+
+    var BrowserXhr = /*#__PURE__*/function () {
+      function BrowserXhr() {
+        _classCallCheck(this, BrowserXhr);
+      }
+      /**
+       * @return {?}
+       */
+
+
+      _createClass2(BrowserXhr, [{
+        key: "build",
+        value: function build() {
+          return (
+            /** @type {?} */
+            new XMLHttpRequest()
+          );
+        }
+      }]);
+
+      return BrowserXhr;
+    }();
+
+    BrowserXhr.ɵfac = function BrowserXhr_Factory(t) {
+      return new (t || BrowserXhr)();
+    };
+
+    BrowserXhr.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: BrowserXhr,
+      factory: BrowserXhr.ɵfac
+    });
+    /** @nocollapse */
+
+    BrowserXhr.ctorParameters = function () {
+      return [];
+    };
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](BrowserXhr, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], function () {
+        return [];
+      }, null);
+    })();
+    /**
+     * Tracks a response from the server that does not yet have a body.
+     * @record
+     */
+
+
+    function PartialResponse() {}
+
+    if (false) {}
+    /**
+     * Uses `XMLHttpRequest` to send requests to a backend server.
+     * @see `HttpHandler`
+     * @see `JsonpClientBackend`
+     *
+     * \@publicApi
+     */
+
+
+    var HttpXhrBackend = /*#__PURE__*/function () {
+      /**
+       * @param {?} xhrFactory
+       */
+      function HttpXhrBackend(xhrFactory) {
+        _classCallCheck(this, HttpXhrBackend);
+
+        this.xhrFactory = xhrFactory;
+      }
+      /**
+       * Processes a request and returns a stream of response events.
+       * @param {?} req The request object.
+       * @return {?} An observable of the response events.
+       */
+
+
+      _createClass2(HttpXhrBackend, [{
+        key: "handle",
+        value: function handle(req) {
+          var _this28 = this;
+
+          // Quick check to give a better error message when a user attempts to use
+          // HttpClient.jsonp() without installing the JsonpClientModule
+          if (req.method === 'JSONP') {
+            throw new Error("Attempted to construct Jsonp request without JsonpClientModule installed.");
+          } // Everything happens on Observable subscription.
+
+
+          return new rxjs__WEBPACK_IMPORTED_MODULE_1__["Observable"](
+          /**
+          * @param {?} observer
+          * @return {?}
+          */
+          function (observer) {
+            // Start by setting up the XHR object with request method, URL, and withCredentials flag.
+
+            /** @type {?} */
+            var xhr = _this28.xhrFactory.build();
+
+            xhr.open(req.method, req.urlWithParams);
+
+            if (!!req.withCredentials) {
+              xhr.withCredentials = true;
+            } // Add all the requested headers.
+
+
+            req.headers.forEach(
+            /**
+            * @param {?} name
+            * @param {?} values
+            * @return {?}
+            */
+            function (name, values) {
+              return xhr.setRequestHeader(name, values.join(','));
+            }); // Add an Accept header if one isn't present already.
+
+            if (!req.headers.has('Accept')) {
+              xhr.setRequestHeader('Accept', 'application/json, text/plain, */*');
+            } // Auto-detect the Content-Type header if one isn't present already.
+
+
+            if (!req.headers.has('Content-Type')) {
+              /** @type {?} */
+              var detectedType = req.detectContentTypeHeader(); // Sometimes Content-Type detection fails.
+
+              if (detectedType !== null) {
+                xhr.setRequestHeader('Content-Type', detectedType);
+              }
+            } // Set the responseType if one was requested.
+
+
+            if (req.responseType) {
+              /** @type {?} */
+              var responseType = req.responseType.toLowerCase(); // JSON responses need to be processed as text. This is because if the server
+              // returns an XSSI-prefixed JSON response, the browser will fail to parse it,
+              // xhr.response will be null, and xhr.responseText cannot be accessed to
+              // retrieve the prefixed JSON data in order to strip the prefix. Thus, all JSON
+              // is parsed by first requesting text and then applying JSON.parse.
+
+              xhr.responseType =
+              /** @type {?} */
+              responseType !== 'json' ? responseType : 'text';
+            } // Serialize the request body if one is present. If not, this will be set to null.
+
+            /** @type {?} */
+
+
+            var reqBody = req.serializeBody(); // If progress events are enabled, response headers will be delivered
+            // in two events - the HttpHeaderResponse event and the full HttpResponse
+            // event. However, since response headers don't change in between these
+            // two events, it doesn't make sense to parse them twice. So headerResponse
+            // caches the data extracted from the response whenever it's first parsed,
+            // to ensure parsing isn't duplicated.
+
+            /** @type {?} */
+
+            var headerResponse = null; // partialFromXhr extracts the HttpHeaderResponse from the current XMLHttpRequest
+            // state, and memoizes it into headerResponse.
+
+            /** @type {?} */
+
+            var partialFromXhr =
+            /**
+            * @return {?}
+            */
+            function partialFromXhr() {
+              if (headerResponse !== null) {
+                return headerResponse;
+              } // Read status and normalize an IE9 bug (http://bugs.jquery.com/ticket/1450).
+
+              /** @type {?} */
+
+
+              var status = xhr.status === 1223 ? 204 : xhr.status;
+              /** @type {?} */
+
+              var statusText = xhr.statusText || 'OK'; // Parse headers from XMLHttpRequest - this step is lazy.
+
+              /** @type {?} */
+
+              var headers = new HttpHeaders(xhr.getAllResponseHeaders()); // Read the response URL from the XMLHttpResponse instance and fall back on the
+              // request URL.
+
+              /** @type {?} */
+
+              var url = getResponseUrl(xhr) || req.url; // Construct the HttpHeaderResponse and memoize it.
+
+              headerResponse = new HttpHeaderResponse({
+                headers: headers,
+                status: status,
+                statusText: statusText,
+                url: url
+              });
+              return headerResponse;
+            }; // Next, a few closures are defined for the various events which XMLHttpRequest can
+            // emit. This allows them to be unregistered as event listeners later.
+            // First up is the load event, which represents a response being fully available.
+
+            /** @type {?} */
+
+
+            var onLoad =
+            /**
+            * @return {?}
+            */
+            function onLoad() {
+              // Read response state from the memoized partial data.
+              var _partialFromXhr = partialFromXhr(),
+                  headers = _partialFromXhr.headers,
+                  status = _partialFromXhr.status,
+                  statusText = _partialFromXhr.statusText,
+                  url = _partialFromXhr.url; // The body will be read out if present.
+
+              /** @type {?} */
+
+
+              var body = null;
+
+              if (status !== 204) {
+                // Use XMLHttpRequest.response if set, responseText otherwise.
+                body = typeof xhr.response === 'undefined' ? xhr.responseText : xhr.response;
+              } // Normalize another potential bug (this one comes from CORS).
+
+
+              if (status === 0) {
+                status = !!body ? 200 : 0;
+              } // ok determines whether the response will be transmitted on the event or
+              // error channel. Unsuccessful status codes (not 2xx) will always be errors,
+              // but a successful status code can still result in an error if the user
+              // asked for JSON data and the body cannot be parsed as such.
+
+              /** @type {?} */
+
+
+              var ok = status >= 200 && status < 300; // Check whether the body needs to be parsed as JSON (in many cases the browser
+              // will have done that already).
+
+              if (req.responseType === 'json' && typeof body === 'string') {
+                // Save the original body, before attempting XSSI prefix stripping.
+
+                /** @type {?} */
+                var originalBody = body;
+                body = body.replace(XSSI_PREFIX, '');
+
+                try {
+                  // Attempt the parse. If it fails, a parse error should be delivered to the user.
+                  body = body !== '' ? JSON.parse(body) : null;
+                } catch (error) {
+                  // Since the JSON.parse failed, it's reasonable to assume this might not have been a
+                  // JSON response. Restore the original body (including any XSSI prefix) to deliver
+                  // a better error response.
+                  body = originalBody; // If this was an error request to begin with, leave it as a string, it probably
+                  // just isn't JSON. Otherwise, deliver the parsing error to the user.
+
+                  if (ok) {
+                    // Even though the response status was 2xx, this is still an error.
+                    ok = false; // The parse error contains the text of the body that failed to parse.
+
+                    body =
+                    /** @type {?} */
+                    {
+                      error: error,
+                      text: body
+                    };
+                  }
+                }
+              }
+
+              if (ok) {
+                // A successful response is delivered on the event stream.
+                observer.next(new HttpResponse({
+                  body: body,
+                  headers: headers,
+                  status: status,
+                  statusText: statusText,
+                  url: url || undefined
+                })); // The full body has been received and delivered, no further events
+                // are possible. This request is complete.
+
+                observer.complete();
+              } else {
+                // An unsuccessful request is delivered on the error channel.
+                observer.error(new HttpErrorResponse({
+                  // The error in this case is the response body (error from the server).
+                  error: body,
+                  headers: headers,
+                  status: status,
+                  statusText: statusText,
+                  url: url || undefined
+                }));
+              }
+            }; // The onError callback is called when something goes wrong at the network level.
+            // Connection timeout, DNS error, offline, etc. These are actual errors, and are
+            // transmitted on the error channel.
+
+            /** @type {?} */
+
+
+            var onError =
+            /**
+            * @param {?} error
+            * @return {?}
+            */
+            function onError(error) {
+              var _partialFromXhr2 = partialFromXhr(),
+                  url = _partialFromXhr2.url;
+              /** @type {?} */
+
+
+              var res = new HttpErrorResponse({
+                error: error,
+                status: xhr.status || 0,
+                statusText: xhr.statusText || 'Unknown Error',
+                url: url || undefined
+              });
+              observer.error(res);
+            }; // The sentHeaders flag tracks whether the HttpResponseHeaders event
+            // has been sent on the stream. This is necessary to track if progress
+            // is enabled since the event will be sent on only the first download
+            // progerss event.
+
+            /** @type {?} */
+
+
+            var sentHeaders = false; // The download progress event handler, which is only registered if
+            // progress events are enabled.
+
+            /** @type {?} */
+
+            var onDownProgress =
+            /**
+            * @param {?} event
+            * @return {?}
+            */
+            function onDownProgress(event) {
+              // Send the HttpResponseHeaders event if it hasn't been sent already.
+              if (!sentHeaders) {
+                observer.next(partialFromXhr());
+                sentHeaders = true;
+              } // Start building the download progress event to deliver on the response
+              // event stream.
+
+              /** @type {?} */
+
+
+              var progressEvent = {
+                type: HttpEventType.DownloadProgress,
+                loaded: event.loaded
+              }; // Set the total number of bytes in the event if it's available.
+
+              if (event.lengthComputable) {
+                progressEvent.total = event.total;
+              } // If the request was for text content and a partial response is
+              // available on XMLHttpRequest, include it in the progress event
+              // to allow for streaming reads.
+
+
+              if (req.responseType === 'text' && !!xhr.responseText) {
+                progressEvent.partialText = xhr.responseText;
+              } // Finally, fire the event.
+
+
+              observer.next(progressEvent);
+            }; // The upload progress event handler, which is only registered if
+            // progress events are enabled.
+
+            /** @type {?} */
+
+
+            var onUpProgress =
+            /**
+            * @param {?} event
+            * @return {?}
+            */
+            function onUpProgress(event) {
+              // Upload progress events are simpler. Begin building the progress
+              // event.
+
+              /** @type {?} */
+              var progress = {
+                type: HttpEventType.UploadProgress,
+                loaded: event.loaded
+              }; // If the total number of bytes being uploaded is available, include
+              // it.
+
+              if (event.lengthComputable) {
+                progress.total = event.total;
+              } // Send the event.
+
+
+              observer.next(progress);
+            }; // By default, register for load and error events.
+
+
+            xhr.addEventListener('load', onLoad);
+            xhr.addEventListener('error', onError); // Progress events are only enabled if requested.
+
+            if (req.reportProgress) {
+              // Download progress is always enabled if requested.
+              xhr.addEventListener('progress', onDownProgress); // Upload progress depends on whether there is a body to upload.
+
+              if (reqBody !== null && xhr.upload) {
+                xhr.upload.addEventListener('progress', onUpProgress);
+              }
+            } // Fire the request, and notify the event stream that it was fired.
+
+
+            xhr.send(
+            /** @type {?} */
+            reqBody);
+            observer.next({
+              type: HttpEventType.Sent
+            }); // This is the return from the Observable function, which is the
+            // request cancellation handler.
+
+            return (
+              /**
+              * @return {?}
+              */
+              function () {
+                // On a cancellation, remove all registered event listeners.
+                xhr.removeEventListener('error', onError);
+                xhr.removeEventListener('load', onLoad);
+
+                if (req.reportProgress) {
+                  xhr.removeEventListener('progress', onDownProgress);
+
+                  if (reqBody !== null && xhr.upload) {
+                    xhr.upload.removeEventListener('progress', onUpProgress);
+                  }
+                } // Finally, abort the in-flight request.
+
+
+                xhr.abort();
+              }
+            );
+          });
+        }
+      }]);
+
+      return HttpXhrBackend;
+    }();
+
+    HttpXhrBackend.ɵfac = function HttpXhrBackend_Factory(t) {
+      return new (t || HttpXhrBackend)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](XhrFactory));
+    };
+
+    HttpXhrBackend.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: HttpXhrBackend,
+      factory: HttpXhrBackend.ɵfac
+    });
+    /** @nocollapse */
+
+    HttpXhrBackend.ctorParameters = function () {
+      return [{
+        type: XhrFactory
+      }];
+    };
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HttpXhrBackend, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], function () {
+        return [{
+          type: XhrFactory
+        }];
+      }, null);
+    })();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/common/http/src/xsrf.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+
+    var XSRF_COOKIE_NAME = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('XSRF_COOKIE_NAME');
+    /** @type {?} */
+
+    var XSRF_HEADER_NAME = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('XSRF_HEADER_NAME');
+    /**
+     * Retrieves the current XSRF token to use with the next outgoing request.
+     *
+     * \@publicApi
+     * @abstract
+     */
+
+    var HttpXsrfTokenExtractor = function HttpXsrfTokenExtractor() {
+      _classCallCheck(this, HttpXsrfTokenExtractor);
+    };
+
+    if (false) {}
+    /**
+     * `HttpXsrfTokenExtractor` which retrieves the token from a cookie.
+     */
+
+
+    var HttpXsrfCookieExtractor = /*#__PURE__*/function () {
+      /**
+       * @param {?} doc
+       * @param {?} platform
+       * @param {?} cookieName
+       */
+      function HttpXsrfCookieExtractor(doc, platform, cookieName) {
+        _classCallCheck(this, HttpXsrfCookieExtractor);
+
+        this.doc = doc;
+        this.platform = platform;
+        this.cookieName = cookieName;
+        this.lastCookieString = '';
+        this.lastToken = null;
+        /**
+         * \@internal for testing
+         */
+
+        this.parseCount = 0;
+      }
+      /**
+       * @return {?}
+       */
+
+
+      _createClass2(HttpXsrfCookieExtractor, [{
+        key: "getToken",
+        value: function getToken() {
+          if (this.platform === 'server') {
+            return null;
+          }
+          /** @type {?} */
+
+
+          var cookieString = this.doc.cookie || '';
+
+          if (cookieString !== this.lastCookieString) {
+            this.parseCount++;
+            this.lastToken = Object(_angular_common__WEBPACK_IMPORTED_MODULE_3__["ɵparseCookieValue"])(cookieString, this.cookieName);
+            this.lastCookieString = cookieString;
+          }
+
+          return this.lastToken;
+        }
+      }]);
+
+      return HttpXsrfCookieExtractor;
+    }();
+
+    HttpXsrfCookieExtractor.ɵfac = function HttpXsrfCookieExtractor_Factory(t) {
+      return new (t || HttpXsrfCookieExtractor)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common__WEBPACK_IMPORTED_MODULE_3__["DOCUMENT"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](XSRF_COOKIE_NAME));
+    };
+
+    HttpXsrfCookieExtractor.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: HttpXsrfCookieExtractor,
+      factory: HttpXsrfCookieExtractor.ɵfac
+    });
+    /** @nocollapse */
+
+    HttpXsrfCookieExtractor.ctorParameters = function () {
+      return [{
+        type: undefined,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["DOCUMENT"]]
+        }]
+      }, {
+        type: String,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"]]
+        }]
+      }, {
+        type: String,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [XSRF_COOKIE_NAME]
+        }]
+      }];
+    };
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HttpXsrfCookieExtractor, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], function () {
+        return [{
+          type: undefined,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [_angular_common__WEBPACK_IMPORTED_MODULE_3__["DOCUMENT"]]
+          }]
+        }, {
+          type: String,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [_angular_core__WEBPACK_IMPORTED_MODULE_0__["PLATFORM_ID"]]
+          }]
+        }, {
+          type: String,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [XSRF_COOKIE_NAME]
+          }]
+        }];
+      }, null);
+    })();
+
+    if (false) {}
+    /**
+     * `HttpInterceptor` which adds an XSRF token to eligible outgoing requests.
+     */
+
+
+    var HttpXsrfInterceptor = /*#__PURE__*/function () {
+      /**
+       * @param {?} tokenService
+       * @param {?} headerName
+       */
+      function HttpXsrfInterceptor(tokenService, headerName) {
+        _classCallCheck(this, HttpXsrfInterceptor);
+
+        this.tokenService = tokenService;
+        this.headerName = headerName;
+      }
+      /**
+       * @param {?} req
+       * @param {?} next
+       * @return {?}
+       */
+
+
+      _createClass2(HttpXsrfInterceptor, [{
+        key: "intercept",
+        value: function intercept(req, next) {
+          /** @type {?} */
+          var lcUrl = req.url.toLowerCase(); // Skip both non-mutating requests and absolute URLs.
+          // Non-mutating requests don't require a token, and absolute URLs require special handling
+          // anyway as the cookie set
+          // on our origin is not the same as the token expected by another origin.
+
+          if (req.method === 'GET' || req.method === 'HEAD' || lcUrl.startsWith('http://') || lcUrl.startsWith('https://')) {
+            return next.handle(req);
+          }
+          /** @type {?} */
+
+
+          var token = this.tokenService.getToken(); // Be careful not to overwrite an existing header of the same name.
+
+          if (token !== null && !req.headers.has(this.headerName)) {
+            req = req.clone({
+              headers: req.headers.set(this.headerName, token)
+            });
+          }
+
+          return next.handle(req);
+        }
+      }]);
+
+      return HttpXsrfInterceptor;
+    }();
+
+    HttpXsrfInterceptor.ɵfac = function HttpXsrfInterceptor_Factory(t) {
+      return new (t || HttpXsrfInterceptor)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](HttpXsrfTokenExtractor), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](XSRF_HEADER_NAME));
+    };
+
+    HttpXsrfInterceptor.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: HttpXsrfInterceptor,
+      factory: HttpXsrfInterceptor.ɵfac
+    });
+    /** @nocollapse */
+
+    HttpXsrfInterceptor.ctorParameters = function () {
+      return [{
+        type: HttpXsrfTokenExtractor
+      }, {
+        type: String,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [XSRF_HEADER_NAME]
+        }]
+      }];
+    };
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HttpXsrfInterceptor, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], function () {
+        return [{
+          type: HttpXsrfTokenExtractor
+        }, {
+          type: String,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [XSRF_HEADER_NAME]
+          }]
+        }];
+      }, null);
+    })();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/common/http/src/module.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * An injectable `HttpHandler` that applies multiple interceptors
+     * to a request before passing it to the given `HttpBackend`.
+     *
+     * The interceptors are loaded lazily from the injector, to allow
+     * interceptors to themselves inject classes depending indirectly
+     * on `HttpInterceptingHandler` itself.
+     * @see `HttpInterceptor`
+     */
+
+
+    var HttpInterceptingHandler = /*#__PURE__*/function () {
+      /**
+       * @param {?} backend
+       * @param {?} injector
+       */
+      function HttpInterceptingHandler(backend, injector) {
+        _classCallCheck(this, HttpInterceptingHandler);
+
+        this.backend = backend;
+        this.injector = injector;
+        this.chain = null;
+      }
+      /**
+       * @param {?} req
+       * @return {?}
+       */
+
+
+      _createClass2(HttpInterceptingHandler, [{
+        key: "handle",
+        value: function handle(req) {
+          if (this.chain === null) {
+            /** @type {?} */
+            var interceptors = this.injector.get(HTTP_INTERCEPTORS, []);
+            this.chain = interceptors.reduceRight(
+            /**
+            * @param {?} next
+            * @param {?} interceptor
+            * @return {?}
+            */
+            function (next, interceptor) {
+              return new HttpInterceptorHandler(next, interceptor);
+            }, this.backend);
+          }
+
+          return this.chain.handle(req);
+        }
+      }]);
+
+      return HttpInterceptingHandler;
+    }();
+
+    HttpInterceptingHandler.ɵfac = function HttpInterceptingHandler_Factory(t) {
+      return new (t || HttpInterceptingHandler)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](HttpBackend), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]));
+    };
+
+    HttpInterceptingHandler.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: HttpInterceptingHandler,
+      factory: HttpInterceptingHandler.ɵfac
+    });
+    /** @nocollapse */
+
+    HttpInterceptingHandler.ctorParameters = function () {
+      return [{
+        type: HttpBackend
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]
+      }];
+    };
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HttpInterceptingHandler, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], function () {
+        return [{
+          type: HttpBackend
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injector"]
+        }];
+      }, null);
+    })();
+
+    if (false) {}
+    /**
+     * Constructs an `HttpHandler` that applies interceptors
+     * to a request before passing it to the given `HttpBackend`.
+     *
+     * Use as a factory function within `HttpClientModule`.
+     *
+     *
+     * @param {?} backend
+     * @param {?=} interceptors
+     * @return {?}
+     */
+
+
+    function interceptingHandler(backend) {
+      var interceptors = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+
+      if (!interceptors) {
+        return backend;
+      }
+
+      return interceptors.reduceRight(
+      /**
+      * @param {?} next
+      * @param {?} interceptor
+      * @return {?}
+      */
+      function (next, interceptor) {
+        return new HttpInterceptorHandler(next, interceptor);
+      }, backend);
+    }
+    /**
+     * Factory function that determines where to store JSONP callbacks.
+     *
+     * Ordinarily JSONP callbacks are stored on the `window` object, but this may not exist
+     * in test environments. In that case, callbacks are stored on an anonymous object instead.
+     *
+     *
+     * @return {?}
+     */
+
+
+    function jsonpCallbackContext() {
+      if (typeof window === 'object') {
+        return window;
+      }
+
+      return {};
+    }
+    /**
+     * Configures XSRF protection support for outgoing requests.
+     *
+     * For a server that supports a cookie-based XSRF protection system,
+     * use directly to configure XSRF protection with the correct
+     * cookie and header names.
+     *
+     * If no names are supplied, the default cookie name is `XSRF-TOKEN`
+     * and the default header name is `X-XSRF-TOKEN`.
+     *
+     * \@publicApi
+     */
+
+
+    var HttpClientXsrfModule = /*#__PURE__*/function () {
+      function HttpClientXsrfModule() {
+        _classCallCheck(this, HttpClientXsrfModule);
+      }
+
+      _createClass2(HttpClientXsrfModule, null, [{
+        key: "disable",
+
+        /**
+         * Disable the default XSRF protection.
+         * @return {?}
+         */
+        value: function disable() {
+          return {
+            ngModule: HttpClientXsrfModule,
+            providers: [{
+              provide: HttpXsrfInterceptor,
+              useClass: NoopInterceptor
+            }]
+          };
+        }
+        /**
+         * Configure XSRF protection.
+         * @param {?=} options An object that can specify either or both
+         * cookie name or header name.
+         * - Cookie name default is `XSRF-TOKEN`.
+         * - Header name default is `X-XSRF-TOKEN`.
+         *
+         * @return {?}
+         */
+
+      }, {
+        key: "withOptions",
+        value: function withOptions() {
+          var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+          return {
+            ngModule: HttpClientXsrfModule,
+            providers: [options.cookieName ? {
+              provide: XSRF_COOKIE_NAME,
+              useValue: options.cookieName
+            } : [], options.headerName ? {
+              provide: XSRF_HEADER_NAME,
+              useValue: options.headerName
+            } : []]
+          };
+        }
+      }]);
+
+      return HttpClientXsrfModule;
+    }();
+
+    HttpClientXsrfModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
+      type: HttpClientXsrfModule
+    });
+    HttpClientXsrfModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
+      factory: function HttpClientXsrfModule_Factory(t) {
+        return new (t || HttpClientXsrfModule)();
+      },
+      providers: [HttpXsrfInterceptor, {
+        provide: HTTP_INTERCEPTORS,
+        useExisting: HttpXsrfInterceptor,
+        multi: true
+      }, {
+        provide: HttpXsrfTokenExtractor,
+        useClass: HttpXsrfCookieExtractor
+      }, {
+        provide: XSRF_COOKIE_NAME,
+        useValue: 'XSRF-TOKEN'
+      }, {
+        provide: XSRF_HEADER_NAME,
+        useValue: 'X-XSRF-TOKEN'
+      }]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HttpClientXsrfModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+          providers: [HttpXsrfInterceptor, {
+            provide: HTTP_INTERCEPTORS,
+            useExisting: HttpXsrfInterceptor,
+            multi: true
+          }, {
+            provide: HttpXsrfTokenExtractor,
+            useClass: HttpXsrfCookieExtractor
+          }, {
+            provide: XSRF_COOKIE_NAME,
+            useValue: 'XSRF-TOKEN'
+          }, {
+            provide: XSRF_HEADER_NAME,
+            useValue: 'X-XSRF-TOKEN'
+          }]
+        }]
+      }], null, null);
+    })();
+    /**
+     * Configures the [dependency injector](guide/glossary#injector) for `HttpClient`
+     * with supporting services for XSRF. Automatically imported by `HttpClientModule`.
+     *
+     * You can add interceptors to the chain behind `HttpClient` by binding them to the
+     * multiprovider for built-in [DI token](guide/glossary#di-token) `HTTP_INTERCEPTORS`.
+     *
+     * \@publicApi
+     */
+
+
+    var HttpClientModule = function HttpClientModule() {
+      _classCallCheck(this, HttpClientModule);
+    };
+
+    HttpClientModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
+      type: HttpClientModule
+    });
+    HttpClientModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
+      factory: function HttpClientModule_Factory(t) {
+        return new (t || HttpClientModule)();
+      },
+      providers: [HttpClient, {
+        provide: HttpHandler,
+        useClass: HttpInterceptingHandler
+      }, HttpXhrBackend, {
+        provide: HttpBackend,
+        useExisting: HttpXhrBackend
+      }, BrowserXhr, {
+        provide: XhrFactory,
+        useExisting: BrowserXhr
+      }],
+      imports: [[HttpClientXsrfModule.withOptions({
+        cookieName: 'XSRF-TOKEN',
+        headerName: 'X-XSRF-TOKEN'
+      })]]
+    });
+
+    (function () {
+      (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](HttpClientModule, {
+        imports: [HttpClientXsrfModule]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HttpClientModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+          /**
+           * Optional configuration for XSRF protection.
+           */
+          imports: [HttpClientXsrfModule.withOptions({
+            cookieName: 'XSRF-TOKEN',
+            headerName: 'X-XSRF-TOKEN'
+          })],
+
+          /**
+           * Configures the [dependency injector](guide/glossary#injector) where it is imported
+           * with supporting services for HTTP communications.
+           */
+          providers: [HttpClient, {
+            provide: HttpHandler,
+            useClass: HttpInterceptingHandler
+          }, HttpXhrBackend, {
+            provide: HttpBackend,
+            useExisting: HttpXhrBackend
+          }, BrowserXhr, {
+            provide: XhrFactory,
+            useExisting: BrowserXhr
+          }]
+        }]
+      }], null, null);
+    })();
+    /**
+     * Configures the [dependency injector](guide/glossary#injector) for `HttpClient`
+     * with supporting services for JSONP.
+     * Without this module, Jsonp requests reach the backend
+     * with method JSONP, where they are rejected.
+     *
+     * You can add interceptors to the chain behind `HttpClient` by binding them to the
+     * multiprovider for built-in [DI token](guide/glossary#di-token) `HTTP_INTERCEPTORS`.
+     *
+     * \@publicApi
+     */
+
+
+    var HttpClientJsonpModule = function HttpClientJsonpModule() {
+      _classCallCheck(this, HttpClientJsonpModule);
+    };
+
+    HttpClientJsonpModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
+      type: HttpClientJsonpModule
+    });
+    HttpClientJsonpModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
+      factory: function HttpClientJsonpModule_Factory(t) {
+        return new (t || HttpClientJsonpModule)();
+      },
+      providers: [JsonpClientBackend, {
+        provide: JsonpCallbackContext,
+        useFactory: jsonpCallbackContext
+      }, {
+        provide: HTTP_INTERCEPTORS,
+        useClass: JsonpInterceptor,
+        multi: true
+      }]
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](HttpClientJsonpModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+          providers: [JsonpClientBackend, {
+            provide: JsonpCallbackContext,
+            useFactory: jsonpCallbackContext
+          }, {
+            provide: HTTP_INTERCEPTORS,
+            useClass: JsonpInterceptor,
+            multi: true
+          }]
+        }]
+      }], null, null);
+    })();
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/common/http/public_api.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @fileoverview added by tsickle
+     * Generated from: packages/common/http/index.ts
+     * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * Generated bundle index. Do not edit.
+     */
+    //# sourceMappingURL=http.js.map
+
+    /***/
+
+  },
+
+  /***/
   "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js":
   /*!******************************************************************!*\
     !*** ./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js ***!
@@ -19197,12 +23242,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SafeHtmlImpl = /*#__PURE__*/function (_SafeValueImpl) {
       _inherits(SafeHtmlImpl, _SafeValueImpl);
 
-      var _super5 = _createSuper(SafeHtmlImpl);
+      var _super8 = _createSuper(SafeHtmlImpl);
 
       function SafeHtmlImpl() {
         _classCallCheck(this, SafeHtmlImpl);
 
-        return _super5.apply(this, arguments);
+        return _super8.apply(this, arguments);
       }
 
       _createClass2(SafeHtmlImpl, [{
@@ -19224,12 +23269,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SafeStyleImpl = /*#__PURE__*/function (_SafeValueImpl2) {
       _inherits(SafeStyleImpl, _SafeValueImpl2);
 
-      var _super6 = _createSuper(SafeStyleImpl);
+      var _super9 = _createSuper(SafeStyleImpl);
 
       function SafeStyleImpl() {
         _classCallCheck(this, SafeStyleImpl);
 
-        return _super6.apply(this, arguments);
+        return _super9.apply(this, arguments);
       }
 
       _createClass2(SafeStyleImpl, [{
@@ -19251,12 +23296,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SafeScriptImpl = /*#__PURE__*/function (_SafeValueImpl3) {
       _inherits(SafeScriptImpl, _SafeValueImpl3);
 
-      var _super7 = _createSuper(SafeScriptImpl);
+      var _super10 = _createSuper(SafeScriptImpl);
 
       function SafeScriptImpl() {
         _classCallCheck(this, SafeScriptImpl);
 
-        return _super7.apply(this, arguments);
+        return _super10.apply(this, arguments);
       }
 
       _createClass2(SafeScriptImpl, [{
@@ -19278,12 +23323,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SafeUrlImpl = /*#__PURE__*/function (_SafeValueImpl4) {
       _inherits(SafeUrlImpl, _SafeValueImpl4);
 
-      var _super8 = _createSuper(SafeUrlImpl);
+      var _super11 = _createSuper(SafeUrlImpl);
 
       function SafeUrlImpl() {
         _classCallCheck(this, SafeUrlImpl);
 
-        return _super8.apply(this, arguments);
+        return _super11.apply(this, arguments);
       }
 
       _createClass2(SafeUrlImpl, [{
@@ -19305,12 +23350,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SafeResourceUrlImpl = /*#__PURE__*/function (_SafeValueImpl5) {
       _inherits(SafeResourceUrlImpl, _SafeValueImpl5);
 
-      var _super9 = _createSuper(SafeResourceUrlImpl);
+      var _super12 = _createSuper(SafeResourceUrlImpl);
 
       function SafeResourceUrlImpl() {
         _classCallCheck(this, SafeResourceUrlImpl);
 
-        return _super9.apply(this, arguments);
+        return _super12.apply(this, arguments);
       }
 
       _createClass2(SafeResourceUrlImpl, [{
@@ -29767,19 +33812,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RootViewRef = /*#__PURE__*/function (_ViewRef) {
       _inherits(RootViewRef, _ViewRef);
 
-      var _super10 = _createSuper(RootViewRef);
+      var _super13 = _createSuper(RootViewRef);
 
       /**
        * @param {?} _view
        */
       function RootViewRef(_view) {
-        var _this16;
+        var _this29;
 
         _classCallCheck(this, RootViewRef);
 
-        _this16 = _super10.call(this, _view);
-        _this16._view = _view;
-        return _this16;
+        _this29 = _super13.call(this, _view);
+        _this29._view = _view;
+        return _this29;
       }
       /**
        * @return {?}
@@ -29944,12 +33989,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         R3ElementRef = /*#__PURE__*/function (_ElementRefToken) {
           _inherits(ElementRef, _ElementRefToken);
 
-          var _super11 = _createSuper(ElementRef);
+          var _super14 = _createSuper(ElementRef);
 
           function ElementRef() {
             _classCallCheck(this, ElementRef);
 
-            return _super11.apply(this, arguments);
+            return _super14.apply(this, arguments);
           }
 
           return ElementRef;
@@ -29993,7 +34038,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         R3TemplateRef = /*#__PURE__*/function (_TemplateRefToken) {
           _inherits(TemplateRef, _TemplateRefToken);
 
-          var _super12 = _createSuper(TemplateRef);
+          var _super15 = _createSuper(TemplateRef);
 
           /**
            * @param {?} _declarationView
@@ -30001,15 +34046,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
            * @param {?} elementRef
            */
           function TemplateRef(_declarationView, _declarationTContainer, elementRef) {
-            var _this17;
+            var _this30;
 
             _classCallCheck(this, TemplateRef);
 
-            _this17 = _super12.call(this);
-            _this17._declarationView = _declarationView;
-            _this17._declarationTContainer = _declarationTContainer;
-            _this17.elementRef = elementRef;
-            return _this17;
+            _this30 = _super15.call(this);
+            _this30._declarationView = _declarationView;
+            _this30._declarationTContainer = _declarationTContainer;
+            _this30.elementRef = elementRef;
+            return _this30;
           }
           /**
            * @param {?} context
@@ -30104,7 +34149,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         R3ViewContainerRef = /*#__PURE__*/function (_ViewContainerRefToke) {
           _inherits(ViewContainerRef, _ViewContainerRefToke);
 
-          var _super13 = _createSuper(ViewContainerRef);
+          var _super16 = _createSuper(ViewContainerRef);
 
           /**
            * @param {?} _lContainer
@@ -30112,15 +34157,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
            * @param {?} _hostView
            */
           function ViewContainerRef(_lContainer, _hostTNode, _hostView) {
-            var _this18;
+            var _this31;
 
             _classCallCheck(this, ViewContainerRef);
 
-            _this18 = _super13.call(this);
-            _this18._lContainer = _lContainer;
-            _this18._hostTNode = _hostTNode;
-            _this18._hostView = _hostView;
-            return _this18;
+            _this31 = _super16.call(this);
+            _this31._lContainer = _lContainer;
+            _this31._hostTNode = _hostTNode;
+            _this31._hostView = _hostView;
+            return _this31;
           }
           /**
            * @return {?}
@@ -31675,7 +35720,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} source
        */
       function R3Injector(def, additionalProviders, parent) {
-        var _this19 = this;
+        var _this32 = this;
 
         var source = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
 
@@ -31712,7 +35757,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function (provider) {
-          return _this19.processProvider(provider, def, additionalProviders);
+          return _this32.processProvider(provider, def, additionalProviders);
         });
         deepForEach([def],
         /**
@@ -31720,7 +35765,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function (injectorDef) {
-          return _this19.processInjectorType(injectorDef, [], dedupStack);
+          return _this32.processInjectorType(injectorDef, [], dedupStack);
         }); // Make sure the INJECTOR token provides this injector.
 
         this.records.set(INJECTOR, makeRecord(undefined, this)); // Detect whether this injector has the APP_ROOT_SCOPE token and thus should provide
@@ -31862,7 +35907,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_resolveInjectorDefTypes",
         value: function _resolveInjectorDefTypes() {
-          var _this20 = this;
+          var _this33 = this;
 
           this.injectorDefTypes.forEach(
           /**
@@ -31870,7 +35915,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (defType) {
-            return _this20.get(defType);
+            return _this33.get(defType);
           });
         }
         /**
@@ -31928,7 +35973,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "processInjectorType",
         value: function processInjectorType(defOrWrappedDef, parents, dedupStack) {
-          var _this21 = this;
+          var _this34 = this;
 
           defOrWrappedDef = resolveForwardRef(defOrWrappedDef);
           if (!defOrWrappedDef) return false; // Either the defOrWrappedDef is an InjectorType (with injector def) or an
@@ -32001,7 +36046,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function (imported) {
-                if (_this21.processInjectorType(imported, parents, dedupStack)) {
+                if (_this34.processInjectorType(imported, parents, dedupStack)) {
                   if (importTypesWithProviders === undefined) importTypesWithProviders = []; // If the processed import is an injector type with providers, we store it in the
                   // list of import types with providers, so that we can process those afterwards.
 
@@ -32029,7 +36074,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 * @return {?}
                 */
                 function (provider) {
-                  return _this21.processProvider(provider, ngModule, providers || EMPTY_ARRAY$2);
+                  return _this34.processProvider(provider, ngModule, providers || EMPTY_ARRAY$2);
                 });
               };
 
@@ -32059,7 +36104,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (provider) {
-              return _this21.processProvider(provider, injectorType, defProviders);
+              return _this34.processProvider(provider, injectorType, defProviders);
             });
           }
 
@@ -34393,7 +38438,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_instantiate",
         value: function _instantiate(provider, ResolvedReflectiveFactory) {
-          var _this22 = this;
+          var _this35 = this;
 
           /** @type {?} */
           var factory = ResolvedReflectiveFactory.factory;
@@ -34408,7 +38453,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (dep) {
-              return _this22._getByReflectiveDependency(dep);
+              return _this35._getByReflectiveDependency(dep);
             });
           } catch (e) {
             if (e.addKey) {
@@ -44545,26 +48590,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ComponentFactoryBoundToModule = /*#__PURE__*/function (_ComponentFactory) {
       _inherits(ComponentFactoryBoundToModule, _ComponentFactory);
 
-      var _super14 = _createSuper(ComponentFactoryBoundToModule);
+      var _super17 = _createSuper(ComponentFactoryBoundToModule);
 
       /**
        * @param {?} factory
        * @param {?} ngModule
        */
       function ComponentFactoryBoundToModule(factory, ngModule) {
-        var _this23;
+        var _this36;
 
         _classCallCheck(this, ComponentFactoryBoundToModule);
 
-        _this23 = _super14.call(this);
-        _this23.factory = factory;
-        _this23.ngModule = ngModule;
-        _this23.selector = factory.selector;
-        _this23.componentType = factory.componentType;
-        _this23.ngContentSelectors = factory.ngContentSelectors;
-        _this23.inputs = factory.inputs;
-        _this23.outputs = factory.outputs;
-        return _this23;
+        _this36 = _super17.call(this);
+        _this36.factory = factory;
+        _this36.ngModule = ngModule;
+        _this36.selector = factory.selector;
+        _this36.componentType = factory.componentType;
+        _this36.ngContentSelectors = factory.ngContentSelectors;
+        _this36.inputs = factory.inputs;
+        _this36.outputs = factory.outputs;
+        return _this36;
       }
       /**
        * @param {?} injector
@@ -45119,7 +49164,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "check",
         value: function check(collection) {
-          var _this24 = this;
+          var _this37 = this;
 
           this._reset();
           /** @type {?} */
@@ -45169,18 +49214,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (item) {
-              itemTrackBy = _this24._trackByFn(index, item);
+              itemTrackBy = _this37._trackByFn(index, item);
 
               if (record === null || !looseIdentical(record.trackById, itemTrackBy)) {
-                record = _this24._mismatch(record, item, itemTrackBy, index);
+                record = _this37._mismatch(record, item, itemTrackBy, index);
                 mayBeDirty = true;
               } else {
                 if (mayBeDirty) {
                   // TODO(misko): can we limit this to duplicates only?
-                  record = _this24._verifyReinsertion(record, item, itemTrackBy, index);
+                  record = _this37._verifyReinsertion(record, item, itemTrackBy, index);
                 }
 
-                if (!looseIdentical(record.item, item)) _this24._addIdentityChange(record, item);
+                if (!looseIdentical(record.item, item)) _this37._addIdentityChange(record, item);
               }
 
               record = record._next;
@@ -46171,7 +50216,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "check",
         value: function check(map) {
-          var _this25 = this;
+          var _this38 = this;
 
           this._reset();
           /** @type {?} */
@@ -46188,15 +50233,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (value, key) {
             if (insertBefore && insertBefore.key === key) {
-              _this25._maybeAddToChanges(insertBefore, value);
+              _this38._maybeAddToChanges(insertBefore, value);
 
-              _this25._appendAfter = insertBefore;
+              _this38._appendAfter = insertBefore;
               insertBefore = insertBefore._next;
             } else {
               /** @type {?} */
-              var record = _this25._getOrCreateRecordForKey(key, value);
+              var record = _this38._getOrCreateRecordForKey(key, value);
 
-              insertBefore = _this25._insertBeforeOrAppend(insertBefore, record);
+              insertBefore = _this38._insertBeforeOrAppend(insertBefore, record);
             }
           }); // Items remaining at the end of the list have been deleted
 
@@ -48098,10 +52143,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @param {?} __0
         * @return {?}
         */
-        function (_ref4) {
-          var _ref5 = _slicedToArray(_ref4, 2),
-              queryId = _ref5[0],
-              valueType = _ref5[1];
+        function (_ref6) {
+          var _ref7 = _slicedToArray(_ref6, 2),
+              queryId = _ref7[0],
+              valueType = _ref7[1];
 
           if (typeof queryId === 'number') {
             matchedQueries[queryId] = valueType;
@@ -49282,7 +53327,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ComponentFactory_ = /*#__PURE__*/function (_ComponentFactory2) {
       _inherits(ComponentFactory_, _ComponentFactory2);
 
-      var _super15 = _createSuper(ComponentFactory_);
+      var _super18 = _createSuper(ComponentFactory_);
 
       /**
        * @param {?} selector
@@ -49293,20 +53338,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} ngContentSelectors
        */
       function ComponentFactory_(selector, componentType, viewDefFactory, _inputs, _outputs, ngContentSelectors) {
-        var _this26;
+        var _this39;
 
         _classCallCheck(this, ComponentFactory_);
 
         // Attention: this ctor is called as top level function.
         // Putting any logic in here will destroy closure tree shaking!
-        _this26 = _super15.call(this);
-        _this26.selector = selector;
-        _this26.componentType = componentType;
-        _this26._inputs = _inputs;
-        _this26._outputs = _outputs;
-        _this26.ngContentSelectors = ngContentSelectors;
-        _this26.viewDefFactory = viewDefFactory;
-        return _this26;
+        _this39 = _super18.call(this);
+        _this39.selector = selector;
+        _this39.componentType = componentType;
+        _this39._inputs = _inputs;
+        _this39._outputs = _outputs;
+        _this39.ngContentSelectors = ngContentSelectors;
+        _this39.viewDefFactory = viewDefFactory;
+        return _this39;
       }
       /**
        * @return {?}
@@ -49405,7 +53450,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ComponentRef_ = /*#__PURE__*/function (_ComponentRef) {
       _inherits(ComponentRef_, _ComponentRef);
 
-      var _super16 = _createSuper(ComponentRef_);
+      var _super19 = _createSuper(ComponentRef_);
 
       /**
        * @param {?} _view
@@ -49413,19 +53458,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _component
        */
       function ComponentRef_(_view, _viewRef, _component) {
-        var _this27;
+        var _this40;
 
         _classCallCheck(this, ComponentRef_);
 
-        _this27 = _super16.call(this);
-        _this27._view = _view;
-        _this27._viewRef = _viewRef;
-        _this27._component = _component;
-        _this27._elDef = _this27._view.def.nodes[0];
-        _this27.hostView = _viewRef;
-        _this27.changeDetectorRef = _viewRef;
-        _this27.instance = _component;
-        return _this27;
+        _this40 = _super19.call(this);
+        _this40._view = _view;
+        _this40._viewRef = _viewRef;
+        _this40._component = _component;
+        _this40._elDef = _this40._view.def.nodes[0];
+        _this40.hostView = _viewRef;
+        _this40.changeDetectorRef = _viewRef;
+        _this40.instance = _component;
+        return _this40;
       }
       /**
        * @return {?}
@@ -49939,21 +53984,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TemplateRef_ = /*#__PURE__*/function (_TemplateRef) {
       _inherits(TemplateRef_, _TemplateRef);
 
-      var _super17 = _createSuper(TemplateRef_);
+      var _super20 = _createSuper(TemplateRef_);
 
       /**
        * @param {?} _parentView
        * @param {?} _def
        */
       function TemplateRef_(_parentView, _def) {
-        var _this28;
+        var _this41;
 
         _classCallCheck(this, TemplateRef_);
 
-        _this28 = _super17.call(this);
-        _this28._parentView = _parentView;
-        _this28._def = _def;
-        return _this28;
+        _this41 = _super20.call(this);
+        _this41._parentView = _parentView;
+        _this41._def = _def;
+        return _this41;
       }
       /**
        * @param {?} context
@@ -51223,19 +55268,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ComponentFactoryResolver$1 = /*#__PURE__*/function (_ComponentFactoryReso) {
       _inherits(ComponentFactoryResolver$1, _ComponentFactoryReso);
 
-      var _super18 = _createSuper(ComponentFactoryResolver$1);
+      var _super21 = _createSuper(ComponentFactoryResolver$1);
 
       /**
        * @param {?=} ngModule The NgModuleRef to which all resolved factories are bound.
        */
       function ComponentFactoryResolver$1(ngModule) {
-        var _this29;
+        var _this42;
 
         _classCallCheck(this, ComponentFactoryResolver$1);
 
-        _this29 = _super18.call(this);
-        _this29.ngModule = ngModule;
-        return _this29;
+        _this42 = _super21.call(this);
+        _this42.ngModule = ngModule;
+        return _this42;
       }
       /**
        * @template T
@@ -51356,25 +55401,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ComponentFactory$1 = /*#__PURE__*/function (_ComponentFactory3) {
       _inherits(ComponentFactory$1, _ComponentFactory3);
 
-      var _super19 = _createSuper(ComponentFactory$1);
+      var _super22 = _createSuper(ComponentFactory$1);
 
       /**
        * @param {?} componentDef The component definition.
        * @param {?=} ngModule The NgModuleRef to which the factory is bound.
        */
       function ComponentFactory$1(componentDef, ngModule) {
-        var _this30;
+        var _this43;
 
         _classCallCheck(this, ComponentFactory$1);
 
-        _this30 = _super19.call(this);
-        _this30.componentDef = componentDef;
-        _this30.ngModule = ngModule;
-        _this30.componentType = componentDef.type;
-        _this30.selector = stringifyCSSSelectorList(componentDef.selectors);
-        _this30.ngContentSelectors = componentDef.ngContentSelectors ? componentDef.ngContentSelectors : [];
-        _this30.isBoundToModule = !!ngModule;
-        return _this30;
+        _this43 = _super22.call(this);
+        _this43.componentDef = componentDef;
+        _this43.ngModule = ngModule;
+        _this43.componentType = componentDef.type;
+        _this43.selector = stringifyCSSSelectorList(componentDef.selectors);
+        _this43.ngContentSelectors = componentDef.ngContentSelectors ? componentDef.ngContentSelectors : [];
+        _this43.isBoundToModule = !!ngModule;
+        return _this43;
       }
       /**
        * @return {?}
@@ -51575,7 +55620,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ComponentRef$1 = /*#__PURE__*/function (_ComponentRef2) {
       _inherits(ComponentRef$1, _ComponentRef2);
 
-      var _super20 = _createSuper(ComponentRef$1);
+      var _super23 = _createSuper(ComponentRef$1);
 
       /**
        * @param {?} componentType
@@ -51585,20 +55630,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _tNode
        */
       function ComponentRef$1(componentType, instance, location, _rootLView, _tNode) {
-        var _this31;
+        var _this44;
 
         _classCallCheck(this, ComponentRef$1);
 
-        _this31 = _super20.call(this);
-        _this31.location = location;
-        _this31._rootLView = _rootLView;
-        _this31._tNode = _tNode;
-        _this31.destroyCbs = [];
-        _this31.instance = instance;
-        _this31.hostView = _this31.changeDetectorRef = new RootViewRef(_rootLView);
-        _this31.hostView._tViewNode = assignTViewNodeToLView(_rootLView[TVIEW], null, -1, _rootLView);
-        _this31.componentType = componentType;
-        return _this31;
+        _this44 = _super23.call(this);
+        _this44.location = location;
+        _this44._rootLView = _rootLView;
+        _this44._tNode = _tNode;
+        _this44.destroyCbs = [];
+        _this44.instance = instance;
+        _this44.hostView = _this44.changeDetectorRef = new RootViewRef(_rootLView);
+        _this44.hostView._tViewNode = assignTViewNodeToLView(_rootLView[TVIEW], null, -1, _rootLView);
+        _this44.componentType = componentType;
+        return _this44;
       }
       /**
        * @return {?}
@@ -54325,30 +58370,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var NgModuleRef$1 = /*#__PURE__*/function (_NgModuleRef) {
       _inherits(NgModuleRef$1, _NgModuleRef);
 
-      var _super21 = _createSuper(NgModuleRef$1);
+      var _super24 = _createSuper(NgModuleRef$1);
 
       /**
        * @param {?} ngModuleType
        * @param {?} _parent
        */
       function NgModuleRef$1(ngModuleType, _parent) {
-        var _this32;
+        var _this45;
 
         _classCallCheck(this, NgModuleRef$1);
 
-        _this32 = _super21.call(this);
-        _this32._parent = _parent; // tslint:disable-next-line:require-internal-with-underscore
+        _this45 = _super24.call(this);
+        _this45._parent = _parent; // tslint:disable-next-line:require-internal-with-underscore
 
-        _this32._bootstrapComponents = [];
-        _this32.injector = _assertThisInitialized(_this32);
-        _this32.destroyCbs = []; // When bootstrapping a module we have a dependency graph that looks like this:
+        _this45._bootstrapComponents = [];
+        _this45.injector = _assertThisInitialized(_this45);
+        _this45.destroyCbs = []; // When bootstrapping a module we have a dependency graph that looks like this:
         // ApplicationRef -> ComponentFactoryResolver -> NgModuleRef. The problem is that if the
         // module being resolved tries to inject the ComponentFactoryResolver, it'll create a
         // circular dependency which will result in a runtime error, because the injector doesn't
         // exist yet. We work around the issue by creating the ComponentFactoryResolver ourselves
         // and providing it, rather than letting the injector resolve it.
 
-        _this32.componentFactoryResolver = new ComponentFactoryResolver$1(_assertThisInitialized(_this32));
+        _this45.componentFactoryResolver = new ComponentFactoryResolver$1(_assertThisInitialized(_this45));
         /** @type {?} */
 
         var ngModuleDef = getNgModuleDef(ngModuleType);
@@ -54357,25 +58402,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         var ngLocaleIdDef = getNgLocaleIdDef(ngModuleType);
         ngLocaleIdDef && setLocaleId(ngLocaleIdDef);
-        _this32._bootstrapComponents = maybeUnwrapFn(
+        _this45._bootstrapComponents = maybeUnwrapFn(
         /** @type {?} */
         ngModuleDef.bootstrap);
-        _this32._r3Injector =
+        _this45._r3Injector =
         /** @type {?} */
         createInjectorWithoutInjectorInstances(ngModuleType, _parent, [{
           provide: NgModuleRef,
-          useValue: _assertThisInitialized(_this32)
+          useValue: _assertThisInitialized(_this45)
         }, {
           provide: ComponentFactoryResolver,
-          useValue: _this32.componentFactoryResolver
+          useValue: _this45.componentFactoryResolver
         }], stringify(ngModuleType)); // We need to resolve the injector types separately from the injector creation, because
         // the module might be trying to use this ref in its contructor for DI which will cause a
         // circular error that will eventually error out, because the injector isn't created yet.
 
-        _this32._r3Injector._resolveInjectorDefTypes();
+        _this45._r3Injector._resolveInjectorDefTypes();
 
-        _this32.instance = _this32.get(ngModuleType);
-        return _this32;
+        _this45.instance = _this45.get(ngModuleType);
+        return _this45;
       }
       /**
        * @param {?} token
@@ -54448,18 +58493,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var NgModuleFactory$1 = /*#__PURE__*/function (_NgModuleFactory) {
       _inherits(NgModuleFactory$1, _NgModuleFactory);
 
-      var _super22 = _createSuper(NgModuleFactory$1);
+      var _super25 = _createSuper(NgModuleFactory$1);
 
       /**
        * @param {?} moduleType
        */
       function NgModuleFactory$1(moduleType) {
-        var _this33;
+        var _this46;
 
         _classCallCheck(this, NgModuleFactory$1);
 
-        _this33 = _super22.call(this);
-        _this33.moduleType = moduleType;
+        _this46 = _super25.call(this);
+        _this46.moduleType = moduleType;
         /** @type {?} */
 
         var ngModuleDef = getNgModuleDef(moduleType);
@@ -54493,7 +58538,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           moduleType);
         }
 
-        return _this33;
+        return _this46;
       }
       /**
        * @param {?} parentInjector
@@ -55210,7 +59255,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var EventEmitter = /*#__PURE__*/function (_rxjs__WEBPACK_IMPORT) {
       _inherits(EventEmitter, _rxjs__WEBPACK_IMPORT);
 
-      var _super23 = _createSuper(EventEmitter);
+      var _super26 = _createSuper(EventEmitter);
 
       // tslint:disable-line
 
@@ -55222,15 +59267,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        *
        */
       function EventEmitter() {
-        var _this34;
+        var _this47;
 
         var isAsync = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
 
         _classCallCheck(this, EventEmitter);
 
-        _this34 = _super23.call(this);
-        _this34.__isAsync = isAsync;
-        return _this34;
+        _this47 = _super26.call(this);
+        _this47.__isAsync = isAsync;
+        return _this47;
       }
       /**
        * Emits an event containing a given value.
@@ -59046,7 +63091,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} appInits
        */
       function ApplicationInitStatus(appInits) {
-        var _this35 = this;
+        var _this48 = this;
 
         _classCallCheck(this, ApplicationInitStatus);
 
@@ -59060,8 +63105,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function (res, rej) {
-          _this35.resolve = res;
-          _this35.reject = rej;
+          _this48.resolve = res;
+          _this48.reject = rej;
         });
       }
       /**
@@ -59073,7 +63118,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(ApplicationInitStatus, [{
         key: "runInitializers",
         value: function runInitializers() {
-          var _this36 = this;
+          var _this49 = this;
 
           if (this.initialized) {
             return;
@@ -59090,9 +63135,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function complete() {
             /** @type {?} */
-            _this36.done = true;
+            _this49.done = true;
 
-            _this36.resolve();
+            _this49.resolve();
           };
 
           if (this.appInits) {
@@ -59118,7 +63163,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (e) {
-            _this36.reject(e);
+            _this49.reject(e);
           });
 
           if (asyncInitPromises.length === 0) {
@@ -59857,11 +63902,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /**
        * @param {?} __0
        */
-      function NgZone(_ref6) {
-        var _ref6$enableLongStack = _ref6.enableLongStackTrace,
-            enableLongStackTrace = _ref6$enableLongStack === void 0 ? false : _ref6$enableLongStack,
-            _ref6$shouldCoalesceE = _ref6.shouldCoalesceEventChangeDetection,
-            shouldCoalesceEventChangeDetection = _ref6$shouldCoalesceE === void 0 ? false : _ref6$shouldCoalesceE;
+      function NgZone(_ref8) {
+        var _ref8$enableLongStack = _ref8.enableLongStackTrace,
+            enableLongStackTrace = _ref8$enableLongStack === void 0 ? false : _ref8$enableLongStack,
+            _ref8$shouldCoalesceE = _ref8.shouldCoalesceEventChangeDetection,
+            shouldCoalesceEventChangeDetection = _ref8$shouldCoalesceE === void 0 ? false : _ref8$shouldCoalesceE;
 
         _classCallCheck(this, NgZone);
 
@@ -60436,7 +64481,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _ngZone
        */
       function Testability(_ngZone) {
-        var _this37 = this;
+        var _this50 = this;
 
         _classCallCheck(this, Testability);
 
@@ -60461,7 +64506,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function () {
-          _this37.taskTrackingZone = typeof Zone == 'undefined' ? null : Zone.current.get('TaskTrackingZone');
+          _this50.taskTrackingZone = typeof Zone == 'undefined' ? null : Zone.current.get('TaskTrackingZone');
         });
       }
       /**
@@ -60473,7 +64518,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(Testability, [{
         key: "_watchAngularEvents",
         value: function _watchAngularEvents() {
-          var _this38 = this;
+          var _this51 = this;
 
           this._ngZone.onUnstable.subscribe({
             next:
@@ -60481,8 +64526,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function next() {
-              _this38._didWork = true;
-              _this38._isZoneStable = false;
+              _this51._didWork = true;
+              _this51._isZoneStable = false;
             }
           });
 
@@ -60491,7 +64536,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            _this38._ngZone.onStable.subscribe({
+            _this51._ngZone.onStable.subscribe({
               next:
               /**
               * @return {?}
@@ -60503,9 +64548,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 * @return {?}
                 */
                 function () {
-                  _this38._isZoneStable = true;
+                  _this51._isZoneStable = true;
 
-                  _this38._runCallbacksIfReady();
+                  _this51._runCallbacksIfReady();
                 });
               }
             });
@@ -60561,7 +64606,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "_runCallbacksIfReady",
         value: function _runCallbacksIfReady() {
-          var _this39 = this;
+          var _this52 = this;
 
           if (this.isStable()) {
             // Schedules the call backs in a new frame so that it is always async.
@@ -60570,17 +64615,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function () {
-              while (_this39._callbacks.length !== 0) {
+              while (_this52._callbacks.length !== 0) {
                 /** @type {?} */
                 var cb =
                 /** @type {?} */
-                _this39._callbacks.pop();
+                _this52._callbacks.pop();
 
                 clearTimeout(cb.timeoutId);
-                cb.doneCb(_this39._didWork);
+                cb.doneCb(_this52._didWork);
               }
 
-              _this39._didWork = false;
+              _this52._didWork = false;
             });
           } else {
             // Still not stable, send updates.
@@ -60646,7 +64691,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addCallback",
         value: function addCallback(cb, timeout, updateCb) {
-          var _this40 = this;
+          var _this53 = this;
 
           /** @type {?} */
           var timeoutId = -1;
@@ -60657,7 +64702,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function () {
-              _this40._callbacks = _this40._callbacks.filter(
+              _this53._callbacks = _this53._callbacks.filter(
               /**
               * @param {?} cb
               * @return {?}
@@ -60665,7 +64710,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               function (cb) {
                 return cb.timeoutId !== timeoutId;
               });
-              cb(_this40._didWork, _this40.getPendingTasks());
+              cb(_this53._didWork, _this53.getPendingTasks());
             }, timeout);
           }
 
@@ -61345,7 +65390,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(PlatformRef, [{
         key: "bootstrapModuleFactory",
         value: function bootstrapModuleFactory(moduleFactory, options) {
-          var _this41 = this;
+          var _this54 = this;
 
           // Note: We need to create the NgZone _before_ we instantiate the module,
           // as instantiating the module creates some providers eagerly.
@@ -61376,7 +65421,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             /** @type {?} */
             var ngZoneInjector = Injector.create({
               providers: providers,
-              parent: _this41.injector,
+              parent: _this54.injector,
               name: moduleFactory.moduleType.name
             });
             /** @type {?} */
@@ -61397,7 +65442,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function () {
-              return remove(_this41._modules, moduleRef);
+              return remove(_this54._modules, moduleRef);
             });
 
             /** @type {?} */
@@ -61443,7 +65488,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   setLocaleId(localeId || DEFAULT_LOCALE_ID);
                 }
 
-                _this41._moduleDoBootstrap(moduleRef);
+                _this54._moduleDoBootstrap(moduleRef);
 
                 return moduleRef;
               });
@@ -61474,7 +65519,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "bootstrapModule",
         value: function bootstrapModule(moduleType) {
-          var _this42 = this;
+          var _this55 = this;
 
           var compilerOptions = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
 
@@ -61486,7 +65531,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (moduleFactory) {
-            return _this42.bootstrapModuleFactory(moduleFactory, options);
+            return _this55.bootstrapModuleFactory(moduleFactory, options);
           });
         }
         /**
@@ -61809,7 +65854,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _initStatus
        */
       function ApplicationRef(_zone, _console, _injector, _exceptionHandler, _componentFactoryResolver, _initStatus) {
-        var _this43 = this;
+        var _this56 = this;
 
         _classCallCheck(this, ApplicationRef);
 
@@ -61847,12 +65892,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function next() {
-            _this43._zone.run(
+            _this56._zone.run(
             /**
             * @return {?}
             */
             function () {
-              _this43.tick();
+              _this56.tick();
             });
           }
         });
@@ -61865,14 +65910,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function (observer) {
-          _this43._stable = _this43._zone.isStable && !_this43._zone.hasPendingMacrotasks && !_this43._zone.hasPendingMicrotasks;
+          _this56._stable = _this56._zone.isStable && !_this56._zone.hasPendingMacrotasks && !_this56._zone.hasPendingMicrotasks;
 
-          _this43._zone.runOutsideAngular(
+          _this56._zone.runOutsideAngular(
           /**
           * @return {?}
           */
           function () {
-            observer.next(_this43._stable);
+            observer.next(_this56._stable);
             observer.complete();
           });
         });
@@ -61890,12 +65935,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           /** @type {?} */
           var stableSub;
 
-          _this43._zone.runOutsideAngular(
+          _this56._zone.runOutsideAngular(
           /**
           * @return {?}
           */
           function () {
-            stableSub = _this43._zone.onStable.subscribe(
+            stableSub = _this56._zone.onStable.subscribe(
             /**
             * @return {?}
             */
@@ -61908,8 +65953,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function () {
-                if (!_this43._stable && !_this43._zone.hasPendingMacrotasks && !_this43._zone.hasPendingMicrotasks) {
-                  _this43._stable = true;
+                if (!_this56._stable && !_this56._zone.hasPendingMacrotasks && !_this56._zone.hasPendingMicrotasks) {
+                  _this56._stable = true;
                   observer.next(true);
                 }
               });
@@ -61918,17 +65963,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           /** @type {?} */
 
 
-          var unstableSub = _this43._zone.onUnstable.subscribe(
+          var unstableSub = _this56._zone.onUnstable.subscribe(
           /**
           * @return {?}
           */
           function () {
             NgZone.assertInAngularZone();
 
-            if (_this43._stable) {
-              _this43._stable = false;
+            if (_this56._stable) {
+              _this56._stable = false;
 
-              _this43._zone.runOutsideAngular(
+              _this56._zone.runOutsideAngular(
               /**
               * @return {?}
               */
@@ -61977,7 +66022,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(ApplicationRef, [{
         key: "bootstrap",
         value: function bootstrap(componentOrFactory, rootSelectorOrNode) {
-          var _this44 = this;
+          var _this57 = this;
 
           if (!this._initStatus.done) {
             throw new Error('Cannot bootstrap as there are still asynchronous initializers running. Bootstrap components in the `ngDoBootstrap` method of the root module.');
@@ -62011,7 +66056,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            _this44._unloadComponent(compRef);
+            _this57._unloadComponent(compRef);
           });
           /** @type {?} */
 
@@ -62044,7 +66089,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "tick",
         value: function tick() {
-          var _this45 = this;
+          var _this58 = this;
 
           if (this._runningTick) {
             throw new Error('ApplicationRef.tick is called recursively');
@@ -62090,7 +66135,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function () {
-              return _this45._exceptionHandler.handleError(e);
+              return _this58._exceptionHandler.handleError(e);
             });
           } finally {
             this._runningTick = false;
@@ -62457,7 +66502,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "loadAndCompile",
         value: function loadAndCompile(path) {
-          var _this46 = this;
+          var _this59 = this;
 
           var _path$split = path.split(_SEPARATOR),
               _path$split2 = _slicedToArray(_path$split, 2),
@@ -62488,7 +66533,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (type) {
-            return _this46._compiler.compileModuleAsync(type);
+            return _this59._compiler.compileModuleAsync(type);
           });
         }
         /**
@@ -62611,12 +66656,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ViewRef$1 = /*#__PURE__*/function (_ChangeDetectorRef) {
       _inherits(ViewRef$1, _ChangeDetectorRef);
 
-      var _super24 = _createSuper(ViewRef$1);
+      var _super27 = _createSuper(ViewRef$1);
 
       function ViewRef$1() {
         _classCallCheck(this, ViewRef$1);
 
-        return _super24.apply(this, arguments);
+        return _super27.apply(this, arguments);
       }
 
       return ViewRef$1;
@@ -62683,12 +66728,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var EmbeddedViewRef = /*#__PURE__*/function (_ViewRef$) {
       _inherits(EmbeddedViewRef, _ViewRef$);
 
-      var _super25 = _createSuper(EmbeddedViewRef);
+      var _super28 = _createSuper(EmbeddedViewRef);
 
       function EmbeddedViewRef() {
         _classCallCheck(this, EmbeddedViewRef);
 
-        return _super25.apply(this, arguments);
+        return _super28.apply(this, arguments);
       }
 
       return EmbeddedViewRef;
@@ -62810,7 +66855,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DebugElement__PRE_R3__ = /*#__PURE__*/function (_DebugNode__PRE_R3__) {
       _inherits(DebugElement__PRE_R3__, _DebugNode__PRE_R3__);
 
-      var _super26 = _createSuper(DebugElement__PRE_R3__);
+      var _super29 = _createSuper(DebugElement__PRE_R3__);
 
       /**
        * @param {?} nativeNode
@@ -62818,18 +66863,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _debugContext
        */
       function DebugElement__PRE_R3__(nativeNode, parent, _debugContext) {
-        var _this47;
+        var _this60;
 
         _classCallCheck(this, DebugElement__PRE_R3__);
 
-        _this47 = _super26.call(this, nativeNode, parent, _debugContext);
-        _this47.properties = {};
-        _this47.attributes = {};
-        _this47.classes = {};
-        _this47.styles = {};
-        _this47.childNodes = [];
-        _this47.nativeElement = nativeNode;
-        return _this47;
+        _this60 = _super29.call(this, nativeNode, parent, _debugContext);
+        _this60.properties = {};
+        _this60.attributes = {};
+        _this60.classes = {};
+        _this60.styles = {};
+        _this60.childNodes = [];
+        _this60.nativeElement = nativeNode;
+        return _this60;
       }
       /**
        * @param {?} child
@@ -62873,7 +66918,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "insertChildrenAfter",
         value: function insertChildrenAfter(child, newChildren) {
-          var _this48 = this;
+          var _this61 = this;
 
           /** @type {?} */
           var siblingIndex = this.childNodes.indexOf(child);
@@ -62895,7 +66940,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
 
               /** @type {?} */
-              child.parent = _this48;
+              child.parent = _this61;
             });
           }
         }
@@ -63186,7 +67231,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DebugElement__POST_R3__ = /*#__PURE__*/function (_DebugNode__POST_R3__) {
       _inherits(DebugElement__POST_R3__, _DebugNode__POST_R3__);
 
-      var _super27 = _createSuper(DebugElement__POST_R3__);
+      var _super30 = _createSuper(DebugElement__POST_R3__);
 
       /**
        * @param {?} nativeNode
@@ -63195,7 +67240,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         _classCallCheck(this, DebugElement__POST_R3__);
 
         ngDevMode && assertDomNode(nativeNode);
-        return _super27.call(this, nativeNode);
+        return _super30.call(this, nativeNode);
       }
       /**
        * @return {?}
@@ -64501,10 +68546,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       * @param {?} __0
       * @return {?}
       */
-      function (_ref7) {
-        var _ref8 = _slicedToArray(_ref7, 2),
-            namespaceAndName = _ref8[0],
-            value = _ref8[1];
+      function (_ref9) {
+        var _ref10 = _slicedToArray(_ref9, 2),
+            namespaceAndName = _ref10[0],
+            value = _ref10[1];
 
         var _splitNamespace5 = splitNamespace(namespaceAndName),
             _splitNamespace6 = _slicedToArray(_splitNamespace5, 2),
@@ -69080,7 +73125,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var NgModuleFactory_ = /*#__PURE__*/function (_NgModuleFactory2) {
       _inherits(NgModuleFactory_, _NgModuleFactory2);
 
-      var _super28 = _createSuper(NgModuleFactory_);
+      var _super31 = _createSuper(NgModuleFactory_);
 
       /**
        * @param {?} moduleType
@@ -69088,17 +73133,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _ngModuleDefFactory
        */
       function NgModuleFactory_(moduleType, _bootstrapComponents, _ngModuleDefFactory) {
-        var _this49;
+        var _this62;
 
         _classCallCheck(this, NgModuleFactory_);
 
         // Attention: this ctor is called as top level function.
         // Putting any logic in here will destroy closure tree shaking!
-        _this49 = _super28.call(this);
-        _this49.moduleType = moduleType;
-        _this49._bootstrapComponents = _bootstrapComponents;
-        _this49._ngModuleDefFactory = _ngModuleDefFactory;
-        return _this49;
+        _this62 = _super31.call(this);
+        _this62.moduleType = moduleType;
+        _this62._bootstrapComponents = _bootstrapComponents;
+        _this62._ngModuleDefFactory = _ngModuleDefFactory;
+        return _this62;
       }
       /**
        * @param {?} parentInjector
@@ -69573,12 +73618,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var GenericBrowserDomAdapter = /*#__PURE__*/function (_angular_common__WEBP) {
       _inherits(GenericBrowserDomAdapter, _angular_common__WEBP);
 
-      var _super29 = _createSuper(GenericBrowserDomAdapter);
+      var _super32 = _createSuper(GenericBrowserDomAdapter);
 
       function GenericBrowserDomAdapter() {
         _classCallCheck(this, GenericBrowserDomAdapter);
 
-        return _super29.call(this);
+        return _super32.call(this);
       }
       /**
        * @return {?}
@@ -69639,12 +73684,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BrowserDomAdapter = /*#__PURE__*/function (_GenericBrowserDomAda) {
       _inherits(BrowserDomAdapter, _GenericBrowserDomAda);
 
-      var _super30 = _createSuper(BrowserDomAdapter);
+      var _super33 = _createSuper(BrowserDomAdapter);
 
       function BrowserDomAdapter() {
         _classCallCheck(this, BrowserDomAdapter);
 
-        return _super30.apply(this, arguments);
+        return _super33.apply(this, arguments);
       }
 
       _createClass2(BrowserDomAdapter, [{
@@ -70379,7 +74424,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} _zone
        */
       function EventManager(plugins, _zone) {
-        var _this50 = this;
+        var _this63 = this;
 
         _classCallCheck(this, EventManager);
 
@@ -70393,7 +74438,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {THIS}
         */
         function (p) {
-          return p.manager = _this50;
+          return p.manager = _this63;
         });
         this._plugins = plugins.slice().reverse();
       }
@@ -70588,7 +74633,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(SharedStylesHost, [{
         key: "addStyles",
         value: function addStyles(styles) {
-          var _this51 = this;
+          var _this64 = this;
 
           /** @type {?} */
           var additions = new Set();
@@ -70598,8 +74643,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (style) {
-            if (!_this51._stylesSet.has(style)) {
-              _this51._stylesSet.add(style);
+            if (!_this64._stylesSet.has(style)) {
+              _this64._stylesSet.add(style);
 
               additions.add(style);
             }
@@ -70651,24 +74696,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DomSharedStylesHost = /*#__PURE__*/function (_SharedStylesHost) {
       _inherits(DomSharedStylesHost, _SharedStylesHost);
 
-      var _super31 = _createSuper(DomSharedStylesHost);
+      var _super34 = _createSuper(DomSharedStylesHost);
 
       /**
        * @param {?} _doc
        */
       function DomSharedStylesHost(_doc) {
-        var _this52;
+        var _this65;
 
         _classCallCheck(this, DomSharedStylesHost);
 
-        _this52 = _super31.call(this);
-        _this52._doc = _doc;
-        _this52._hostNodes = new Set();
-        _this52._styleNodes = new Set();
+        _this65 = _super34.call(this);
+        _this65._doc = _doc;
+        _this65._hostNodes = new Set();
+        _this65._styleNodes = new Set();
 
-        _this52._hostNodes.add(_doc.head);
+        _this65._hostNodes.add(_doc.head);
 
-        return _this52;
+        return _this65;
       }
       /**
        * @private
@@ -70681,7 +74726,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(DomSharedStylesHost, [{
         key: "_addStylesToHost",
         value: function _addStylesToHost(styles, host) {
-          var _this53 = this;
+          var _this66 = this;
 
           styles.forEach(
           /**
@@ -70690,11 +74735,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (style) {
             /** @type {?} */
-            var styleEl = _this53._doc.createElement('style');
+            var styleEl = _this66._doc.createElement('style');
 
             styleEl.textContent = style;
 
-            _this53._styleNodes.add(host.appendChild(styleEl));
+            _this66._styleNodes.add(host.appendChild(styleEl));
           });
         }
         /**
@@ -70727,7 +74772,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "onStylesAdded",
         value: function onStylesAdded(additions) {
-          var _this54 = this;
+          var _this67 = this;
 
           this._hostNodes.forEach(
           /**
@@ -70735,7 +74780,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (hostNode) {
-            return _this54._addStylesToHost(additions, hostNode);
+            return _this67._addStylesToHost(additions, hostNode);
           });
         }
         /**
@@ -71366,7 +75411,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var EmulatedEncapsulationDomRenderer2 = /*#__PURE__*/function (_DefaultDomRenderer) {
       _inherits(EmulatedEncapsulationDomRenderer2, _DefaultDomRenderer);
 
-      var _super32 = _createSuper(EmulatedEncapsulationDomRenderer2);
+      var _super35 = _createSuper(EmulatedEncapsulationDomRenderer2);
 
       /**
        * @param {?} eventManager
@@ -71375,19 +75420,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} appId
        */
       function EmulatedEncapsulationDomRenderer2(eventManager, sharedStylesHost, component, appId) {
-        var _this55;
+        var _this68;
 
         _classCallCheck(this, EmulatedEncapsulationDomRenderer2);
 
-        _this55 = _super32.call(this, eventManager);
-        _this55.component = component;
+        _this68 = _super35.call(this, eventManager);
+        _this68.component = component;
         /** @type {?} */
 
         var styles = flattenStyles(appId + '-' + component.id, component.styles, []);
         sharedStylesHost.addStyles(styles);
-        _this55.contentAttr = shimContentAttribute(appId + '-' + component.id);
-        _this55.hostAttr = shimHostAttribute(appId + '-' + component.id);
-        return _this55;
+        _this68.contentAttr = shimContentAttribute(appId + '-' + component.id);
+        _this68.hostAttr = shimHostAttribute(appId + '-' + component.id);
+        return _this68;
       }
       /**
        * @param {?} element
@@ -71426,7 +75471,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ShadowDomRenderer = /*#__PURE__*/function (_DefaultDomRenderer2) {
       _inherits(ShadowDomRenderer, _DefaultDomRenderer2);
 
-      var _super33 = _createSuper(ShadowDomRenderer);
+      var _super36 = _createSuper(ShadowDomRenderer);
 
       /**
        * @param {?} eventManager
@@ -71435,28 +75480,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} component
        */
       function ShadowDomRenderer(eventManager, sharedStylesHost, hostEl, component) {
-        var _this56;
+        var _this69;
 
         _classCallCheck(this, ShadowDomRenderer);
 
-        _this56 = _super33.call(this, eventManager);
-        _this56.sharedStylesHost = sharedStylesHost;
-        _this56.hostEl = hostEl;
-        _this56.component = component;
+        _this69 = _super36.call(this, eventManager);
+        _this69.sharedStylesHost = sharedStylesHost;
+        _this69.hostEl = hostEl;
+        _this69.component = component;
 
         if (component.encapsulation === _angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewEncapsulation"].ShadowDom) {
-          _this56.shadowRoot =
+          _this69.shadowRoot =
           /** @type {?} */
           hostEl.attachShadow({
             mode: 'open'
           });
         } else {
-          _this56.shadowRoot =
+          _this69.shadowRoot =
           /** @type {?} */
           hostEl.createShadowRoot();
         }
 
-        _this56.sharedStylesHost.addHost(_this56.shadowRoot);
+        _this69.sharedStylesHost.addHost(_this69.shadowRoot);
         /** @type {?} */
 
 
@@ -71467,10 +75512,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var styleEl = document.createElement('style');
           styleEl.textContent = styles[i];
 
-          _this56.shadowRoot.appendChild(styleEl);
+          _this69.shadowRoot.appendChild(styleEl);
         }
 
-        return _this56;
+        return _this69;
       }
       /**
        * @private
@@ -71553,7 +75598,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DomEventsPlugin = /*#__PURE__*/function (_EventManagerPlugin) {
       _inherits(DomEventsPlugin, _EventManagerPlugin);
 
-      var _super34 = _createSuper(DomEventsPlugin);
+      var _super37 = _createSuper(DomEventsPlugin);
 
       /**
        * @param {?} doc
@@ -71561,7 +75606,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       function DomEventsPlugin(doc) {
         _classCallCheck(this, DomEventsPlugin);
 
-        return _super34.call(this, doc);
+        return _super37.call(this, doc);
       } // This plugin should come last in the list of plugins, because it accepts all
       // events.
 
@@ -71586,7 +75631,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addEventListener",
         value: function addEventListener(element, eventName, handler) {
-          var _this57 = this;
+          var _this70 = this;
 
           element.addEventListener(eventName,
           /** @type {?} */
@@ -71596,7 +75641,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function () {
-              return _this57.removeEventListener(element, eventName,
+              return _this70.removeEventListener(element, eventName,
               /** @type {?} */
               handler);
             }
@@ -71828,7 +75873,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var HammerGesturesPlugin = /*#__PURE__*/function (_EventManagerPlugin2) {
       _inherits(HammerGesturesPlugin, _EventManagerPlugin2);
 
-      var _super35 = _createSuper(HammerGesturesPlugin);
+      var _super38 = _createSuper(HammerGesturesPlugin);
 
       /**
        * @param {?} doc
@@ -71837,15 +75882,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} loader
        */
       function HammerGesturesPlugin(doc, _config, console, loader) {
-        var _this58;
+        var _this71;
 
         _classCallCheck(this, HammerGesturesPlugin);
 
-        _this58 = _super35.call(this, doc);
-        _this58._config = _config;
-        _this58.console = console;
-        _this58.loader = loader;
-        return _this58;
+        _this71 = _super38.call(this, doc);
+        _this71._config = _config;
+        _this71.console = console;
+        _this71.loader = loader;
+        return _this71;
       }
       /**
        * @param {?} eventName
@@ -71879,7 +75924,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addEventListener",
         value: function addEventListener(element, eventName, handler) {
-          var _this59 = this;
+          var _this72 = this;
 
           /** @type {?} */
           var zone = this.manager.getZone();
@@ -71914,7 +75959,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               if (!
               /** @type {?} */
               window.Hammer) {
-                _this59.console.warn("The custom HAMMER_LOADER completed, but Hammer.JS is not present.");
+                _this72.console.warn("The custom HAMMER_LOADER completed, but Hammer.JS is not present.");
 
                 deregister =
                 /**
@@ -71928,14 +75973,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               if (!cancelRegistration) {
                 // Now that Hammer is loaded and the listener is being loaded for real,
                 // the deregistration function changes from canceling registration to removal.
-                deregister = _this59.addEventListener(element, eventName, handler);
+                deregister = _this72.addEventListener(element, eventName, handler);
               }
             })["catch"](
             /**
             * @return {?}
             */
             function () {
-              _this59.console.warn("The \"".concat(eventName, "\" event cannot be bound because the custom ") + "Hammer.JS loader failed.");
+              _this72.console.warn("The \"".concat(eventName, "\" event cannot be bound because the custom ") + "Hammer.JS loader failed.");
 
               deregister =
               /**
@@ -71964,7 +76009,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             // Creating the manager bind events, must be done outside of angular
 
             /** @type {?} */
-            var mc = _this59._config.buildHammer(element);
+            var mc = _this72._config.buildHammer(element);
             /** @type {?} */
 
 
@@ -72256,7 +76301,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var KeyEventsPlugin = /*#__PURE__*/function (_EventManagerPlugin3) {
       _inherits(KeyEventsPlugin, _EventManagerPlugin3);
 
-      var _super36 = _createSuper(KeyEventsPlugin);
+      var _super39 = _createSuper(KeyEventsPlugin);
 
       /**
        * Initializes an instance of the browser plug-in.
@@ -72265,7 +76310,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       function KeyEventsPlugin(doc) {
         _classCallCheck(this, KeyEventsPlugin);
 
-        return _super36.call(this, doc);
+        return _super39.call(this, doc);
       }
       /**
        * Reports whether a named key event is supported.
@@ -72667,19 +76712,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DomSanitizerImpl = /*#__PURE__*/function (_DomSanitizer) {
       _inherits(DomSanitizerImpl, _DomSanitizer);
 
-      var _super37 = _createSuper(DomSanitizerImpl);
+      var _super40 = _createSuper(DomSanitizerImpl);
 
       /**
        * @param {?} _doc
        */
       function DomSanitizerImpl(_doc) {
-        var _this60;
+        var _this73;
 
         _classCallCheck(this, DomSanitizerImpl);
 
-        _this60 = _super37.call(this);
-        _this60._doc = _doc;
-        return _this60;
+        _this73 = _super40.call(this);
+        _this73._doc = _doc;
+        return _this73;
       }
       /**
        * @param {?} ctx
@@ -73137,7 +77182,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "addTags",
         value: function addTags(tags) {
-          var _this61 = this;
+          var _this74 = this;
 
           var forceCreation = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
           if (!tags) return [];
@@ -73149,7 +77194,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (result, tag) {
             if (tag) {
-              result.push(_this61._getOrCreateElement(tag, forceCreation));
+              result.push(_this74._getOrCreateElement(tag, forceCreation));
             }
 
             return result;
@@ -74588,7 +78633,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var NavigationStart = /*#__PURE__*/function (_RouterEvent) {
       _inherits(NavigationStart, _RouterEvent);
 
-      var _super38 = _createSuper(NavigationStart);
+      var _super41 = _createSuper(NavigationStart);
 
       /**
        * @param {?} id
@@ -74601,17 +78646,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       id,
       /** @docsNotRequired */
       url) {
-        var _this62;
+        var _this75;
 
         var navigationTrigger = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'imperative';
         var restoredState = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
 
         _classCallCheck(this, NavigationStart);
 
-        _this62 = _super38.call(this, id, url);
-        _this62.navigationTrigger = navigationTrigger;
-        _this62.restoredState = restoredState;
-        return _this62;
+        _this75 = _super41.call(this, id, url);
+        _this75.navigationTrigger = navigationTrigger;
+        _this75.restoredState = restoredState;
+        return _this75;
       }
       /**
        * \@docsNotRequired
@@ -74640,7 +78685,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var NavigationEnd = /*#__PURE__*/function (_RouterEvent2) {
       _inherits(NavigationEnd, _RouterEvent2);
 
-      var _super39 = _createSuper(NavigationEnd);
+      var _super42 = _createSuper(NavigationEnd);
 
       /**
        * @param {?} id
@@ -74652,13 +78697,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       id,
       /** @docsNotRequired */
       url, urlAfterRedirects) {
-        var _this63;
+        var _this76;
 
         _classCallCheck(this, NavigationEnd);
 
-        _this63 = _super39.call(this, id, url);
-        _this63.urlAfterRedirects = urlAfterRedirects;
-        return _this63;
+        _this76 = _super42.call(this, id, url);
+        _this76.urlAfterRedirects = urlAfterRedirects;
+        return _this76;
       }
       /**
        * \@docsNotRequired
@@ -74690,7 +78735,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var NavigationCancel = /*#__PURE__*/function (_RouterEvent3) {
       _inherits(NavigationCancel, _RouterEvent3);
 
-      var _super40 = _createSuper(NavigationCancel);
+      var _super43 = _createSuper(NavigationCancel);
 
       /**
        * @param {?} id
@@ -74702,13 +78747,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       id,
       /** @docsNotRequired */
       url, reason) {
-        var _this64;
+        var _this77;
 
         _classCallCheck(this, NavigationCancel);
 
-        _this64 = _super40.call(this, id, url);
-        _this64.reason = reason;
-        return _this64;
+        _this77 = _super43.call(this, id, url);
+        _this77.reason = reason;
+        return _this77;
       }
       /**
        * \@docsNotRequired
@@ -74737,7 +78782,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var NavigationError = /*#__PURE__*/function (_RouterEvent4) {
       _inherits(NavigationError, _RouterEvent4);
 
-      var _super41 = _createSuper(NavigationError);
+      var _super44 = _createSuper(NavigationError);
 
       /**
        * @param {?} id
@@ -74749,13 +78794,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       id,
       /** @docsNotRequired */
       url, error) {
-        var _this65;
+        var _this78;
 
         _classCallCheck(this, NavigationError);
 
-        _this65 = _super41.call(this, id, url);
-        _this65.error = error;
-        return _this65;
+        _this78 = _super44.call(this, id, url);
+        _this78.error = error;
+        return _this78;
       }
       /**
        * \@docsNotRequired
@@ -74784,7 +78829,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RoutesRecognized = /*#__PURE__*/function (_RouterEvent5) {
       _inherits(RoutesRecognized, _RouterEvent5);
 
-      var _super42 = _createSuper(RoutesRecognized);
+      var _super45 = _createSuper(RoutesRecognized);
 
       /**
        * @param {?} id
@@ -74797,14 +78842,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       id,
       /** @docsNotRequired */
       url, urlAfterRedirects, state) {
-        var _this66;
+        var _this79;
 
         _classCallCheck(this, RoutesRecognized);
 
-        _this66 = _super42.call(this, id, url);
-        _this66.urlAfterRedirects = urlAfterRedirects;
-        _this66.state = state;
-        return _this66;
+        _this79 = _super45.call(this, id, url);
+        _this79.urlAfterRedirects = urlAfterRedirects;
+        _this79.state = state;
+        return _this79;
       }
       /**
        * \@docsNotRequired
@@ -74833,7 +78878,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var GuardsCheckStart = /*#__PURE__*/function (_RouterEvent6) {
       _inherits(GuardsCheckStart, _RouterEvent6);
 
-      var _super43 = _createSuper(GuardsCheckStart);
+      var _super46 = _createSuper(GuardsCheckStart);
 
       /**
        * @param {?} id
@@ -74846,14 +78891,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       id,
       /** @docsNotRequired */
       url, urlAfterRedirects, state) {
-        var _this67;
+        var _this80;
 
         _classCallCheck(this, GuardsCheckStart);
 
-        _this67 = _super43.call(this, id, url);
-        _this67.urlAfterRedirects = urlAfterRedirects;
-        _this67.state = state;
-        return _this67;
+        _this80 = _super46.call(this, id, url);
+        _this80.urlAfterRedirects = urlAfterRedirects;
+        _this80.state = state;
+        return _this80;
       }
       /**
        * @return {?}
@@ -74881,7 +78926,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var GuardsCheckEnd = /*#__PURE__*/function (_RouterEvent7) {
       _inherits(GuardsCheckEnd, _RouterEvent7);
 
-      var _super44 = _createSuper(GuardsCheckEnd);
+      var _super47 = _createSuper(GuardsCheckEnd);
 
       /**
        * @param {?} id
@@ -74895,15 +78940,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       id,
       /** @docsNotRequired */
       url, urlAfterRedirects, state, shouldActivate) {
-        var _this68;
+        var _this81;
 
         _classCallCheck(this, GuardsCheckEnd);
 
-        _this68 = _super44.call(this, id, url);
-        _this68.urlAfterRedirects = urlAfterRedirects;
-        _this68.state = state;
-        _this68.shouldActivate = shouldActivate;
-        return _this68;
+        _this81 = _super47.call(this, id, url);
+        _this81.urlAfterRedirects = urlAfterRedirects;
+        _this81.state = state;
+        _this81.shouldActivate = shouldActivate;
+        return _this81;
       }
       /**
        * @return {?}
@@ -74934,7 +78979,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ResolveStart = /*#__PURE__*/function (_RouterEvent8) {
       _inherits(ResolveStart, _RouterEvent8);
 
-      var _super45 = _createSuper(ResolveStart);
+      var _super48 = _createSuper(ResolveStart);
 
       /**
        * @param {?} id
@@ -74947,14 +78992,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       id,
       /** @docsNotRequired */
       url, urlAfterRedirects, state) {
-        var _this69;
+        var _this82;
 
         _classCallCheck(this, ResolveStart);
 
-        _this69 = _super45.call(this, id, url);
-        _this69.urlAfterRedirects = urlAfterRedirects;
-        _this69.state = state;
-        return _this69;
+        _this82 = _super48.call(this, id, url);
+        _this82.urlAfterRedirects = urlAfterRedirects;
+        _this82.state = state;
+        return _this82;
       }
       /**
        * @return {?}
@@ -74983,7 +79028,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ResolveEnd = /*#__PURE__*/function (_RouterEvent9) {
       _inherits(ResolveEnd, _RouterEvent9);
 
-      var _super46 = _createSuper(ResolveEnd);
+      var _super49 = _createSuper(ResolveEnd);
 
       /**
        * @param {?} id
@@ -74996,14 +79041,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       id,
       /** @docsNotRequired */
       url, urlAfterRedirects, state) {
-        var _this70;
+        var _this83;
 
         _classCallCheck(this, ResolveEnd);
 
-        _this70 = _super46.call(this, id, url);
-        _this70.urlAfterRedirects = urlAfterRedirects;
-        _this70.state = state;
-        return _this70;
+        _this83 = _super49.call(this, id, url);
+        _this83.urlAfterRedirects = urlAfterRedirects;
+        _this83.state = state;
+        return _this83;
       }
       /**
        * @return {?}
@@ -76332,7 +80377,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} children
        */
       function UrlSegmentGroup(segments, children) {
-        var _this71 = this;
+        var _this84 = this;
 
         _classCallCheck(this, UrlSegmentGroup);
 
@@ -76352,7 +80397,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {THIS}
         */
         function (v, k) {
-          return v.parent = _this71;
+          return v.parent = _this84;
         });
       }
       /**
@@ -77482,7 +81527,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RouterState = /*#__PURE__*/function (_Tree) {
       _inherits(RouterState, _Tree);
 
-      var _super47 = _createSuper(RouterState);
+      var _super50 = _createSuper(RouterState);
 
       /**
        * \@internal
@@ -77490,16 +81535,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} snapshot
        */
       function RouterState(root, snapshot) {
-        var _this72;
+        var _this85;
 
         _classCallCheck(this, RouterState);
 
-        _this72 = _super47.call(this, root);
-        _this72.snapshot = snapshot;
+        _this85 = _super50.call(this, root);
+        _this85.snapshot = snapshot;
         setRouterState(
         /** @type {?} */
-        _assertThisInitialized(_this72), root);
-        return _this72;
+        _assertThisInitialized(_this85), root);
+        return _this85;
       }
       /**
        * @return {?}
@@ -77994,7 +82039,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RouterStateSnapshot = /*#__PURE__*/function (_Tree2) {
       _inherits(RouterStateSnapshot, _Tree2);
 
-      var _super48 = _createSuper(RouterStateSnapshot);
+      var _super51 = _createSuper(RouterStateSnapshot);
 
       /**
        * \@internal
@@ -78002,16 +82047,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} root
        */
       function RouterStateSnapshot(url, root) {
-        var _this73;
+        var _this86;
 
         _classCallCheck(this, RouterStateSnapshot);
 
-        _this73 = _super48.call(this, root);
-        _this73.url = url;
+        _this86 = _super51.call(this, root);
+        _this86.url = url;
         setRouterState(
         /** @type {?} */
-        _assertThisInitialized(_this73), root);
-        return _this73;
+        _assertThisInitialized(_this86), root);
+        return _this86;
       }
       /**
        * @return {?}
@@ -78907,7 +82952,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "deactivateChildRoutes",
         value: function deactivateChildRoutes(futureNode, currNode, contexts) {
-          var _this74 = this;
+          var _this87 = this;
 
           /** @type {?} */
           var children = nodeChildrenAsMap(currNode); // Recurse on the routes active in the future state to de-activate deeper children
@@ -78921,7 +82966,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             /** @type {?} */
             var childOutletName = futureChild.value.outlet;
 
-            _this74.deactivateRoutes(futureChild, children[childOutletName], contexts);
+            _this87.deactivateRoutes(futureChild, children[childOutletName], contexts);
 
             delete children[childOutletName];
           }); // De-activate the routes that will not be re-used
@@ -78933,7 +82978,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (v, childName) {
-            _this74.deactivateRouteAndItsChildren(v, contexts);
+            _this87.deactivateRouteAndItsChildren(v, contexts);
           });
         }
         /**
@@ -79027,7 +83072,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "deactivateRouteAndOutlet",
         value: function deactivateRouteAndOutlet(route, parentContexts) {
-          var _this75 = this;
+          var _this88 = this;
 
           /** @type {?} */
           var context = parentContexts.getContext(route.value.outlet);
@@ -79045,7 +83090,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (v, k) {
-              return _this75.deactivateRouteAndItsChildren(v, contexts);
+              return _this88.deactivateRouteAndItsChildren(v, contexts);
             });
 
             if (context.outlet) {
@@ -79067,7 +83112,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "activateChildRoutes",
         value: function activateChildRoutes(futureNode, currNode, contexts) {
-          var _this76 = this;
+          var _this89 = this;
 
           /** @type {?} */
           var children = nodeChildrenAsMap(currNode);
@@ -79077,9 +83122,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (c) {
-            _this76.activateRoutes(c, children[c.value.outlet], contexts);
+            _this89.activateRoutes(c, children[c.value.outlet], contexts);
 
-            _this76.forwardEvent(new ActivationEnd(c.value.snapshot));
+            _this89.forwardEvent(new ActivationEnd(c.value.snapshot));
           });
 
           if (futureNode.children.length) {
@@ -79416,7 +83461,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(ApplyRedirects, [{
         key: "apply",
         value: function apply() {
-          var _this77 = this;
+          var _this90 = this;
 
           /** @type {?} */
           var expanded$ = this.expandSegmentGroup(this.ngModule, this.config, this.urlTree.root, PRIMARY_OUTLET);
@@ -79428,9 +83473,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (rootSegmentGroup) {
-            return _this77.createUrlTree(rootSegmentGroup, _this77.urlTree.queryParams,
+            return _this90.createUrlTree(rootSegmentGroup, _this90.urlTree.queryParams,
             /** @type {?} */
-            _this77.urlTree.fragment);
+            _this90.urlTree.fragment);
           }));
           return urlTrees$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(
           /**
@@ -79440,13 +83485,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           function (e) {
             if (e instanceof AbsoluteRedirect) {
               // after an absolute redirect we do not apply any more redirects!
-              _this77.allowRedirects = false; // we need to run matching, so we can fetch all lazy-loaded modules
+              _this90.allowRedirects = false; // we need to run matching, so we can fetch all lazy-loaded modules
 
-              return _this77.match(e.urlTree);
+              return _this90.match(e.urlTree);
             }
 
             if (e instanceof NoMatch) {
-              throw _this77.noMatchError(e);
+              throw _this90.noMatchError(e);
             }
 
             throw e;
@@ -79461,7 +83506,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "match",
         value: function match(tree) {
-          var _this78 = this;
+          var _this91 = this;
 
           /** @type {?} */
           var expanded$ = this.expandSegmentGroup(this.ngModule, this.config, tree.root, PRIMARY_OUTLET);
@@ -79473,7 +83518,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (rootSegmentGroup) {
-            return _this78.createUrlTree(rootSegmentGroup, tree.queryParams,
+            return _this91.createUrlTree(rootSegmentGroup, tree.queryParams,
             /** @type {?} */
             tree.fragment);
           }));
@@ -79484,7 +83529,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (e) {
             if (e instanceof NoMatch) {
-              throw _this78.noMatchError(e);
+              throw _this91.noMatchError(e);
             }
 
             throw e;
@@ -79553,7 +83598,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "expandChildren",
         value: function expandChildren(ngModule, routes, segmentGroup) {
-          var _this79 = this;
+          var _this92 = this;
 
           return waitForMap(segmentGroup.children,
           /**
@@ -79562,7 +83607,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (childOutlet, child) {
-            return _this79.expandSegmentGroup(ngModule, routes, child, childOutlet);
+            return _this92.expandSegmentGroup(ngModule, routes, child, childOutlet);
           });
         }
         /**
@@ -79579,7 +83624,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "expandSegment",
         value: function expandSegment(ngModule, segmentGroup, routes, segments, outlet, allowRedirects) {
-          var _this80 = this;
+          var _this93 = this;
 
           return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"]).apply(void 0, _toConsumableArray(routes)).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(
           /**
@@ -79588,7 +83633,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (r) {
             /** @type {?} */
-            var expanded$ = _this80.expandSegmentAgainstRoute(ngModule, segmentGroup, routes, r, segments, outlet, allowRedirects);
+            var expanded$ = _this93.expandSegmentAgainstRoute(ngModule, segmentGroup, routes, r, segments, outlet, allowRedirects);
 
             return expanded$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(
             /**
@@ -79622,7 +83667,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function (e, _) {
             if (e instanceof rxjs__WEBPACK_IMPORTED_MODULE_2__["EmptyError"] || e.name === 'EmptyError') {
-              if (_this80.noLeftoversInUrl(segmentGroup, segments, outlet)) {
+              if (_this93.noLeftoversInUrl(segmentGroup, segments, outlet)) {
                 return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(new UrlSegmentGroup([], {}));
               }
 
@@ -79706,7 +83751,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "expandWildCardWithParamsAgainstRouteUsingRedirect",
         value: function expandWildCardWithParamsAgainstRouteUsingRedirect(ngModule, routes, route, outlet) {
-          var _this81 = this;
+          var _this94 = this;
 
           /** @type {?} */
           var newTree = this.applyRedirectCommands([],
@@ -79727,7 +83772,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           function (newSegments) {
             /** @type {?} */
             var group = new UrlSegmentGroup(newSegments, {});
-            return _this81.expandSegment(ngModule, group, routes, newSegments, outlet, false);
+            return _this94.expandSegment(ngModule, group, routes, newSegments, outlet, false);
           }));
         }
         /**
@@ -79744,7 +83789,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "expandRegularSegmentAgainstRouteUsingRedirect",
         value: function expandRegularSegmentAgainstRouteUsingRedirect(ngModule, segmentGroup, routes, route, segments, outlet) {
-          var _this82 = this;
+          var _this95 = this;
 
           var _match = match(segmentGroup, route, segments),
               matched = _match.matched,
@@ -79773,7 +83818,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (newSegments) {
-            return _this82.expandSegment(ngModule, segmentGroup, routes, newSegments.concat(segments.slice(lastChild)), outlet, false);
+            return _this95.expandSegment(ngModule, segmentGroup, routes, newSegments.concat(segments.slice(lastChild)), outlet, false);
           }));
         }
         /**
@@ -79788,7 +83833,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "matchSegmentAgainstRoute",
         value: function matchSegmentAgainstRoute(ngModule, rawSegmentGroup, route, segments) {
-          var _this83 = this;
+          var _this96 = this;
 
           if (route.path === '**') {
             if (route.loadChildren) {
@@ -79836,7 +83881,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
             if (slicedSegments.length === 0 && segmentGroup.hasChildren()) {
               /** @type {?} */
-              var _expanded$ = _this83.expandChildren(childModule, childConfig, segmentGroup);
+              var _expanded$ = _this96.expandChildren(childModule, childConfig, segmentGroup);
 
               return _expanded$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(
               /**
@@ -79854,7 +83899,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             /** @type {?} */
 
 
-            var expanded$ = _this83.expandSegment(childModule, segmentGroup, childConfig, slicedSegments, PRIMARY_OUTLET, true);
+            var expanded$ = _this96.expandSegment(childModule, segmentGroup, childConfig, slicedSegments, PRIMARY_OUTLET, true);
 
             return expanded$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(
             /**
@@ -79877,7 +83922,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getChildConfig",
         value: function getChildConfig(ngModule, route, segments) {
-          var _this84 = this;
+          var _this97 = this;
 
           if (route.children) {
             // The children belong to the same module
@@ -79897,7 +83942,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             */
             function (shouldLoad) {
               if (shouldLoad) {
-                return _this84.configLoader.load(ngModule.injector, route).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(
+                return _this97.configLoader.load(ngModule.injector, route).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(
                 /**
                 * @param {?} cfg
                 * @return {?}
@@ -80019,7 +84064,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "createSegmentGroup",
         value: function createSegmentGroup(redirectTo, group, segments, posParams) {
-          var _this85 = this;
+          var _this98 = this;
 
           /** @type {?} */
           var updatedSegments = this.createSegments(redirectTo, group.segments, segments, posParams);
@@ -80033,7 +84078,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (child, name) {
-            children[name] = _this85.createSegmentGroup(redirectTo, child, segments, posParams);
+            children[name] = _this98.createSegmentGroup(redirectTo, child, segments, posParams);
           });
           return new UrlSegmentGroup(updatedSegments, children);
         }
@@ -80049,7 +84094,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "createSegments",
         value: function createSegments(redirectTo, redirectToSegments, actualSegments, posParams) {
-          var _this86 = this;
+          var _this99 = this;
 
           return redirectToSegments.map(
           /**
@@ -80057,7 +84102,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (s) {
-            return s.path.startsWith(':') ? _this86.findPosParam(redirectTo, s, posParams) : _this86.findOrReturn(s, actualSegments);
+            return s.path.startsWith(':') ? _this99.findPosParam(redirectTo, s, posParams) : _this99.findOrReturn(s, actualSegments);
           });
         }
         /**
@@ -81211,7 +85256,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "inheritParamsAndData",
         value: function inheritParamsAndData(routeNode) {
-          var _this87 = this;
+          var _this100 = this;
 
           /** @type {?} */
           var route = routeNode.value;
@@ -81226,7 +85271,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (n) {
-            return _this87.inheritParamsAndData(n);
+            return _this100.inheritParamsAndData(n);
           });
         }
         /**
@@ -81254,7 +85299,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "processChildren",
         value: function processChildren(config, segmentGroup) {
-          var _this88 = this;
+          var _this101 = this;
 
           /** @type {?} */
           var children = mapChildrenIntoArray(segmentGroup,
@@ -81264,7 +85309,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (child, childOutlet) {
-            return _this88.processSegmentGroup(config, child, childOutlet);
+            return _this101.processSegmentGroup(config, child, childOutlet);
           });
           checkOutletNameUniqueness(children);
           sortActivatedRouteSnapshots(children);
@@ -82161,7 +86206,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(RouterConfigLoader, [{
         key: "load",
         value: function load(parentInjector, route) {
-          var _this89 = this;
+          var _this102 = this;
 
           if (this.onLoadStartListener) {
             this.onLoadStartListener(route);
@@ -82178,8 +86223,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (factory) {
-            if (_this89.onLoadEndListener) {
-              _this89.onLoadEndListener(route);
+            if (_this102.onLoadEndListener) {
+              _this102.onLoadEndListener(route);
             }
             /** @type {?} */
 
@@ -82197,7 +86242,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "loadModuleFactory",
         value: function loadModuleFactory(loadChildren) {
-          var _this90 = this;
+          var _this103 = this;
 
           if (typeof loadChildren === 'string') {
             return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["from"])(this.loader.load(loadChildren));
@@ -82211,7 +86256,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               if (t instanceof _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModuleFactory"]) {
                 return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(t);
               } else {
-                return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["from"])(_this90.compiler.compileModuleAsync(t));
+                return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["from"])(_this103.compiler.compileModuleAsync(t));
               }
             }));
           }
@@ -82377,7 +86422,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        */
       // TODO: vsavkin make internal after the final is out.
       function Router(rootComponentType, urlSerializer, rootContexts, location, injector, loader, compiler, config) {
-        var _this91 = this;
+        var _this104 = this;
 
         _classCallCheck(this, Router);
 
@@ -82479,7 +86524,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function onLoadStart(r) {
-          return _this91.triggerEvent(new RouteConfigLoadStart(r));
+          return _this104.triggerEvent(new RouteConfigLoadStart(r));
         };
         /** @type {?} */
 
@@ -82490,7 +86535,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         * @return {?}
         */
         function onLoadEnd(r) {
-          return _this91.triggerEvent(new RouteConfigLoadEnd(r));
+          return _this104.triggerEvent(new RouteConfigLoadEnd(r));
         };
 
         this.ngModule = injector.get(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModuleRef"]);
@@ -82541,7 +86586,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(Router, [{
         key: "setupNavigations",
         value: function setupNavigations(transitions) {
-          var _this92 = this;
+          var _this105 = this;
 
           /** @type {?} */
           var eventsSubject =
@@ -82568,7 +86613,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               return (
                 /** @type {?} */
                 Object.assign(Object.assign({}, t), {
-                  extractedUrl: _this92.urlHandlingStrategy.extract(t.rawUrl)
+                  extractedUrl: _this105.urlHandlingStrategy.extract(t.rawUrl)
                 })
               );
             }), // Using switchMap so we cancel executing navigations when a new one comes in
@@ -82590,13 +86635,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function (t) {
-                _this92.currentNavigation = {
+                _this105.currentNavigation = {
                   id: t.id,
                   initialUrl: t.currentRawUrl,
                   extractedUrl: t.extractedUrl,
                   trigger: t.source,
                   extras: t.extras,
-                  previousNavigation: _this92.lastSuccessfulNavigation ? Object.assign(Object.assign({}, _this92.lastSuccessfulNavigation), {
+                  previousNavigation: _this105.lastSuccessfulNavigation ? Object.assign(Object.assign({}, _this105.lastSuccessfulNavigation), {
                     previousNavigation: null
                   }) : null
                 };
@@ -82607,11 +86652,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               */
               function (t) {
                 /** @type {?} */
-                var urlTransition = !_this92.navigated || t.extractedUrl.toString() !== _this92.browserUrlTree.toString();
+                var urlTransition = !_this105.navigated || t.extractedUrl.toString() !== _this105.browserUrlTree.toString();
                 /** @type {?} */
 
 
-                var processCurrentUrl = (_this92.onSameUrlNavigation === 'reload' ? true : urlTransition) && _this92.urlHandlingStrategy.shouldProcessUrl(t.rawUrl);
+                var processCurrentUrl = (_this105.onSameUrlNavigation === 'reload' ? true : urlTransition) && _this105.urlHandlingStrategy.shouldProcessUrl(t.rawUrl);
 
                 if (processCurrentUrl) {
                   return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(t).pipe( // Fire NavigationStart event
@@ -82622,11 +86667,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   */
                   function (t) {
                     /** @type {?} */
-                    var transition = _this92.transitions.getValue();
+                    var transition = _this105.transitions.getValue();
 
-                    eventsSubject.next(new NavigationStart(t.id, _this92.serializeUrl(t.extractedUrl), t.source, t.restoredState));
+                    eventsSubject.next(new NavigationStart(t.id, _this105.serializeUrl(t.extractedUrl), t.source, t.restoredState));
 
-                    if (transition !== _this92.transitions.getValue()) {
+                    if (transition !== _this105.transitions.getValue()) {
                       return rxjs__WEBPACK_IMPORTED_MODULE_2__["EMPTY"];
                     }
 
@@ -82641,39 +86686,39 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   function (t) {
                     return Promise.resolve(t);
                   }), // ApplyRedirects
-                  applyRedirects$1(_this92.ngModule.injector, _this92.configLoader, _this92.urlSerializer, _this92.config), // Update the currentNavigation
+                  applyRedirects$1(_this105.ngModule.injector, _this105.configLoader, _this105.urlSerializer, _this105.config), // Update the currentNavigation
                   Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(
                   /**
                   * @param {?} t
                   * @return {?}
                   */
                   function (t) {
-                    _this92.currentNavigation = Object.assign(Object.assign({},
+                    _this105.currentNavigation = Object.assign(Object.assign({},
                     /** @type {?} */
-                    _this92.currentNavigation), {
+                    _this105.currentNavigation), {
                       finalUrl: t.urlAfterRedirects
                     });
                   }), // Recognize
-                  recognize$1(_this92.rootComponentType, _this92.config,
+                  recognize$1(_this105.rootComponentType, _this105.config,
                   /**
                   * @param {?} url
                   * @return {?}
                   */
                   function (url) {
-                    return _this92.serializeUrl(url);
-                  }, _this92.paramsInheritanceStrategy, _this92.relativeLinkResolution), // Update URL if in `eager` update mode
+                    return _this105.serializeUrl(url);
+                  }, _this105.paramsInheritanceStrategy, _this105.relativeLinkResolution), // Update URL if in `eager` update mode
                   Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(
                   /**
                   * @param {?} t
                   * @return {?}
                   */
                   function (t) {
-                    if (_this92.urlUpdateStrategy === 'eager') {
+                    if (_this105.urlUpdateStrategy === 'eager') {
                       if (!t.extras.skipLocationChange) {
-                        _this92.setBrowserUrl(t.urlAfterRedirects, !!t.extras.replaceUrl, t.id, t.extras.state);
+                        _this105.setBrowserUrl(t.urlAfterRedirects, !!t.extras.replaceUrl, t.id, t.extras.state);
                       }
 
-                      _this92.browserUrlTree = t.urlAfterRedirects;
+                      _this105.browserUrlTree = t.urlAfterRedirects;
                     }
                   }), // Fire RoutesRecognized
                   Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(
@@ -82683,14 +86728,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   */
                   function (t) {
                     /** @type {?} */
-                    var routesRecognized = new RoutesRecognized(t.id, _this92.serializeUrl(t.extractedUrl), _this92.serializeUrl(t.urlAfterRedirects),
+                    var routesRecognized = new RoutesRecognized(t.id, _this105.serializeUrl(t.extractedUrl), _this105.serializeUrl(t.urlAfterRedirects),
                     /** @type {?} */
                     t.targetSnapshot);
                     eventsSubject.next(routesRecognized);
                   }));
                 } else {
                   /** @type {?} */
-                  var processPreviousUrl = urlTransition && _this92.rawUrlTree && _this92.urlHandlingStrategy.shouldProcessUrl(_this92.rawUrlTree);
+                  var processPreviousUrl = urlTransition && _this105.rawUrlTree && _this105.urlHandlingStrategy.shouldProcessUrl(_this105.rawUrlTree);
                   /* When the current URL shouldn't be processed, but the previous one was,
                    * we handle this "error condition" by navigating to the previously
                    * successful URL, but leaving the URL intact.*/
@@ -82704,11 +86749,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         extras = t.extras;
                     /** @type {?} */
 
-                    var navStart = new NavigationStart(id, _this92.serializeUrl(extractedUrl), source, restoredState);
+                    var navStart = new NavigationStart(id, _this105.serializeUrl(extractedUrl), source, restoredState);
                     eventsSubject.next(navStart);
                     /** @type {?} */
 
-                    var targetSnapshot = createEmptyState(extractedUrl, _this92.rootComponentType).snapshot;
+                    var targetSnapshot = createEmptyState(extractedUrl, _this105.rootComponentType).snapshot;
                     return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(Object.assign(Object.assign({}, t), {
                       targetSnapshot: targetSnapshot,
                       urlAfterRedirects: extractedUrl,
@@ -82723,8 +86768,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                      * URL. This way the next navigation will be coming from the current URL
                      * in the browser.
                      */
-                    _this92.rawUrlTree = t.rawUrl;
-                    _this92.browserUrlTree = t.urlAfterRedirects;
+                    _this105.rawUrlTree = t.rawUrl;
+                    _this105.browserUrlTree = t.urlAfterRedirects;
                     t.resolve(null);
                     return rxjs__WEBPACK_IMPORTED_MODULE_2__["EMPTY"];
                   }
@@ -82743,7 +86788,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     _t$extras = t.extras,
                     skipLocationChange = _t$extras.skipLocationChange,
                     replaceUrl = _t$extras.replaceUrl;
-                return _this92.hooks.beforePreactivation(
+                return _this105.hooks.beforePreactivation(
                 /** @type {?} */
                 targetSnapshot, {
                   navigationId: navigationId,
@@ -82760,11 +86805,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               */
               function (t) {
                 /** @type {?} */
-                var guardsStart = new GuardsCheckStart(t.id, _this92.serializeUrl(t.extractedUrl), _this92.serializeUrl(t.urlAfterRedirects),
+                var guardsStart = new GuardsCheckStart(t.id, _this105.serializeUrl(t.extractedUrl), _this105.serializeUrl(t.urlAfterRedirects),
                 /** @type {?} */
                 t.targetSnapshot);
 
-                _this92.triggerEvent(guardsStart);
+                _this105.triggerEvent(guardsStart);
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(
               /**
               * @param {?} t
@@ -82774,15 +86819,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 return Object.assign(Object.assign({}, t), {
                   guards: getAllRouteGuards(
                   /** @type {?} */
-                  t.targetSnapshot, t.currentSnapshot, _this92.rootContexts)
+                  t.targetSnapshot, t.currentSnapshot, _this105.rootContexts)
                 });
-              }), checkGuards(_this92.ngModule.injector,
+              }), checkGuards(_this105.ngModule.injector,
               /**
               * @param {?} evt
               * @return {?}
               */
               function (evt) {
-                return _this92.triggerEvent(evt);
+                return _this105.triggerEvent(evt);
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(
               /**
               * @param {?} t
@@ -82791,7 +86836,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               function (t) {
                 if (isUrlTree(t.guardsResult)) {
                   /** @type {?} */
-                  var error = navigationCancelingError("Redirecting to \"".concat(_this92.serializeUrl(t.guardsResult), "\""));
+                  var error = navigationCancelingError("Redirecting to \"".concat(_this105.serializeUrl(t.guardsResult), "\""));
                   error.url = t.guardsResult;
                   throw error;
                 }
@@ -82802,11 +86847,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               */
               function (t) {
                 /** @type {?} */
-                var guardsEnd = new GuardsCheckEnd(t.id, _this92.serializeUrl(t.extractedUrl), _this92.serializeUrl(t.urlAfterRedirects),
+                var guardsEnd = new GuardsCheckEnd(t.id, _this105.serializeUrl(t.extractedUrl), _this105.serializeUrl(t.urlAfterRedirects),
                 /** @type {?} */
                 t.targetSnapshot, !!t.guardsResult);
 
-                _this92.triggerEvent(guardsEnd);
+                _this105.triggerEvent(guardsEnd);
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(
               /**
               * @param {?} t
@@ -82814,11 +86859,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               */
               function (t) {
                 if (!t.guardsResult) {
-                  _this92.resetUrlToCurrentUrlTree();
+                  _this105.resetUrlToCurrentUrlTree();
                   /** @type {?} */
 
 
-                  var navCancel = new NavigationCancel(t.id, _this92.serializeUrl(t.extractedUrl), '');
+                  var navCancel = new NavigationCancel(t.id, _this105.serializeUrl(t.extractedUrl), '');
                   eventsSubject.next(navCancel);
                   t.resolve(false);
                   return false;
@@ -82840,12 +86885,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   */
                   function (t) {
                     /** @type {?} */
-                    var resolveStart = new ResolveStart(t.id, _this92.serializeUrl(t.extractedUrl), _this92.serializeUrl(t.urlAfterRedirects),
+                    var resolveStart = new ResolveStart(t.id, _this105.serializeUrl(t.extractedUrl), _this105.serializeUrl(t.urlAfterRedirects),
                     /** @type {?} */
                     t.targetSnapshot);
 
-                    _this92.triggerEvent(resolveStart);
-                  }), resolveData(_this92.paramsInheritanceStrategy, _this92.ngModule.injector), //
+                    _this105.triggerEvent(resolveStart);
+                  }), resolveData(_this105.paramsInheritanceStrategy, _this105.ngModule.injector), //
                   Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])(
                   /**
                   * @param {?} t
@@ -82853,11 +86898,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   */
                   function (t) {
                     /** @type {?} */
-                    var resolveEnd = new ResolveEnd(t.id, _this92.serializeUrl(t.extractedUrl), _this92.serializeUrl(t.urlAfterRedirects),
+                    var resolveEnd = new ResolveEnd(t.id, _this105.serializeUrl(t.extractedUrl), _this105.serializeUrl(t.urlAfterRedirects),
                     /** @type {?} */
                     t.targetSnapshot);
 
-                    _this92.triggerEvent(resolveEnd);
+                    _this105.triggerEvent(resolveEnd);
                   }));
                 }
 
@@ -82876,7 +86921,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     _t$extras2 = t.extras,
                     skipLocationChange = _t$extras2.skipLocationChange,
                     replaceUrl = _t$extras2.replaceUrl;
-                return _this92.hooks.afterPreactivation(
+                return _this105.hooks.afterPreactivation(
                 /** @type {?} */
                 targetSnapshot, {
                   navigationId: navigationId,
@@ -82892,7 +86937,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               */
               function (t) {
                 /** @type {?} */
-                var targetRouterState = createRouterState(_this92.routeReuseStrategy,
+                var targetRouterState = createRouterState(_this105.routeReuseStrategy,
                 /** @type {?} */
                 t.targetSnapshot, t.currentRouterState);
                 return Object.assign(Object.assign({}, t), {
@@ -82910,28 +86955,28 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function (t) {
-                _this92.currentUrlTree = t.urlAfterRedirects;
-                _this92.rawUrlTree = _this92.urlHandlingStrategy.merge(_this92.currentUrlTree, t.rawUrl);
+                _this105.currentUrlTree = t.urlAfterRedirects;
+                _this105.rawUrlTree = _this105.urlHandlingStrategy.merge(_this105.currentUrlTree, t.rawUrl);
 
                 /** @type {?} */
-                _this92.routerState =
+                _this105.routerState =
                 /** @type {?} */
                 t.targetRouterState;
 
-                if (_this92.urlUpdateStrategy === 'deferred') {
+                if (_this105.urlUpdateStrategy === 'deferred') {
                   if (!t.extras.skipLocationChange) {
-                    _this92.setBrowserUrl(_this92.rawUrlTree, !!t.extras.replaceUrl, t.id, t.extras.state);
+                    _this105.setBrowserUrl(_this105.rawUrlTree, !!t.extras.replaceUrl, t.id, t.extras.state);
                   }
 
-                  _this92.browserUrlTree = t.urlAfterRedirects;
+                  _this105.browserUrlTree = t.urlAfterRedirects;
                 }
-              }), activateRoutes(_this92.rootContexts, _this92.routeReuseStrategy,
+              }), activateRoutes(_this105.rootContexts, _this105.routeReuseStrategy,
               /**
               * @param {?} evt
               * @return {?}
               */
               function (evt) {
-                return _this92.triggerEvent(evt);
+                return _this105.triggerEvent(evt);
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["tap"])({
                 /**
                  * @return {?}
@@ -82966,11 +87011,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   // sync code which looks for a value here in order to determine whether or
                   // not to handle a given popstate event or to leave it to the Angualr
                   // router.
-                  _this92.resetUrlToCurrentUrlTree();
+                  _this105.resetUrlToCurrentUrlTree();
                   /** @type {?} */
 
 
-                  var navCancel = new NavigationCancel(t.id, _this92.serializeUrl(t.extractedUrl), "Navigation ID ".concat(t.id, " is not equal to the current navigation id ").concat(_this92.navigationId));
+                  var navCancel = new NavigationCancel(t.id, _this105.serializeUrl(t.extractedUrl), "Navigation ID ".concat(t.id, " is not equal to the current navigation id ").concat(_this105.navigationId));
                   eventsSubject.next(navCancel);
                   t.resolve(false);
                 } // currentNavigation should always be reset to null here. If navigation was
@@ -82978,7 +87023,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 // we can safely set currentNavigation to null here.
 
 
-                _this92.currentNavigation = null;
+                _this105.currentNavigation = null;
               }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["catchError"])(
               /**
               * @param {?} e
@@ -82999,14 +87044,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     // isn't a change from the default currentUrlTree and won't navigate.
                     // This is only applicable with initial navigation, so setting
                     // `navigated` only when not redirecting resolves this scenario.
-                    _this92.navigated = true;
+                    _this105.navigated = true;
 
-                    _this92.resetStateAndUrl(t.currentRouterState, t.currentUrlTree, t.rawUrl);
+                    _this105.resetStateAndUrl(t.currentRouterState, t.currentUrlTree, t.rawUrl);
                   }
                   /** @type {?} */
 
 
-                  var navCancel = new NavigationCancel(t.id, _this92.serializeUrl(t.extractedUrl), e.message);
+                  var navCancel = new NavigationCancel(t.id, _this105.serializeUrl(t.extractedUrl), e.message);
                   eventsSubject.next(navCancel); // When redirecting, we need to delay resolving the navigation
                   // promise and push it to the redirect navigation
 
@@ -83023,15 +87068,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     */
                     function () {
                       /** @type {?} */
-                      var mergedTree = _this92.urlHandlingStrategy.merge(e.url, _this92.rawUrlTree);
+                      var mergedTree = _this105.urlHandlingStrategy.merge(e.url, _this105.rawUrlTree);
                       /** @type {?} */
 
 
                       var extras = {
                         skipLocationChange: t.extras.skipLocationChange,
-                        replaceUrl: _this92.urlUpdateStrategy === 'eager'
+                        replaceUrl: _this105.urlUpdateStrategy === 'eager'
                       };
-                      return _this92.scheduleNavigation(mergedTree, 'imperative', null, extras, {
+                      return _this105.scheduleNavigation(mergedTree, 'imperative', null, extras, {
                         resolve: t.resolve,
                         reject: t.reject,
                         promise: t.promise
@@ -83042,15 +87087,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                    * the pre-error state. */
 
                 } else {
-                  _this92.resetStateAndUrl(t.currentRouterState, t.currentUrlTree, t.rawUrl);
+                  _this105.resetStateAndUrl(t.currentRouterState, t.currentUrlTree, t.rawUrl);
                   /** @type {?} */
 
 
-                  var navError = new NavigationError(t.id, _this92.serializeUrl(t.extractedUrl), e);
+                  var navError = new NavigationError(t.id, _this105.serializeUrl(t.extractedUrl), e);
                   eventsSubject.next(navError);
 
                   try {
-                    t.resolve(_this92.errorHandler(e));
+                    t.resolve(_this105.errorHandler(e));
                   } catch (ee) {
                     t.reject(ee);
                   }
@@ -83127,7 +87172,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "setUpLocationChangeListener",
         value: function setUpLocationChangeListener() {
-          var _this93 = this;
+          var _this106 = this;
 
           // Don't need to use Zone.wrap any more, because zone.js
           // already patch onPopState, so location change callback will
@@ -83142,7 +87187,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             */
             function (change) {
               /** @type {?} */
-              var rawUrlTree = _this93.parseUrl(change['url']);
+              var rawUrlTree = _this106.parseUrl(change['url']);
               /** @type {?} */
 
 
@@ -83157,7 +87202,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               * @return {?}
               */
               function () {
-                _this93.scheduleNavigation(rawUrlTree, source, state, {
+                _this106.scheduleNavigation(rawUrlTree, source, state, {
                   replaceUrl: true
                 });
               }, 0);
@@ -83509,7 +87554,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "processNavigations",
         value: function processNavigations() {
-          var _this94 = this;
+          var _this107 = this;
 
           this.navigations.subscribe(
           /**
@@ -83517,14 +87562,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (t) {
-            _this94.navigated = true;
-            _this94.lastSuccessfulId = t.id;
+            _this107.navigated = true;
+            _this107.lastSuccessfulId = t.id;
 
             /** @type {?} */
-            _this94.events.next(new NavigationEnd(t.id, _this94.serializeUrl(t.extractedUrl), _this94.serializeUrl(_this94.currentUrlTree)));
+            _this107.events.next(new NavigationEnd(t.id, _this107.serializeUrl(t.extractedUrl), _this107.serializeUrl(_this107.currentUrlTree)));
 
-            _this94.lastSuccessfulNavigation = _this94.currentNavigation;
-            _this94.currentNavigation = null;
+            _this107.lastSuccessfulNavigation = _this107.currentNavigation;
+            _this107.currentNavigation = null;
             t.resolve(true);
           },
           /**
@@ -83532,7 +87577,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (e) {
-            _this94.console.warn("Unhandled Navigation Error: ");
+            _this107.console.warn("Unhandled Navigation Error: ");
           });
         }
         /**
@@ -84068,7 +88113,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?} locationStrategy
        */
       function RouterLinkWithHref(router, route, locationStrategy) {
-        var _this95 = this;
+        var _this108 = this;
 
         _classCallCheck(this, RouterLinkWithHref);
 
@@ -84083,7 +88128,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         */
         function (s) {
           if (s instanceof NavigationEnd) {
-            _this95.updateTargetUrlAndHref();
+            _this108.updateTargetUrlAndHref();
           }
         });
       }
@@ -84432,7 +88477,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
        * @param {?=} linkWithHref
        */
       function RouterLinkActive(router, element, renderer, link, linkWithHref) {
-        var _this96 = this;
+        var _this109 = this;
 
         _classCallCheck(this, RouterLinkActive);
 
@@ -84453,7 +88498,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         */
         function (s) {
           if (s instanceof NavigationEnd) {
-            _this96.update();
+            _this109.update();
           }
         });
       }
@@ -84465,7 +88510,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(RouterLinkActive, [{
         key: "ngAfterContentInit",
         value: function ngAfterContentInit() {
-          var _this97 = this;
+          var _this110 = this;
 
           this.links.changes.subscribe(
           /**
@@ -84473,7 +88518,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (_) {
-            return _this97.update();
+            return _this110.update();
           });
           this.linksWithHrefs.changes.subscribe(
           /**
@@ -84481,7 +88526,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function (_) {
-            return _this97.update();
+            return _this110.update();
           });
           this.update();
         }
@@ -84517,7 +88562,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "update",
         value: function update() {
-          var _this98 = this;
+          var _this111 = this;
 
           if (!this.links || !this.linksWithHrefs || !this.router.navigated) return;
           Promise.resolve().then(
@@ -84526,22 +88571,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function () {
             /** @type {?} */
-            var hasActiveLinks = _this98.hasActiveLinks();
+            var hasActiveLinks = _this111.hasActiveLinks();
 
-            if (_this98.isActive !== hasActiveLinks) {
+            if (_this111.isActive !== hasActiveLinks) {
               /** @type {?} */
-              _this98.isActive = hasActiveLinks;
+              _this111.isActive = hasActiveLinks;
 
-              _this98.classes.forEach(
+              _this111.classes.forEach(
               /**
               * @param {?} c
               * @return {?}
               */
               function (c) {
                 if (hasActiveLinks) {
-                  _this98.renderer.addClass(_this98.element.nativeElement, c);
+                  _this111.renderer.addClass(_this111.element.nativeElement, c);
                 } else {
-                  _this98.renderer.removeClass(_this98.element.nativeElement, c);
+                  _this111.renderer.removeClass(_this111.element.nativeElement, c);
                 }
               });
             }
@@ -84556,7 +88601,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "isLinkActive",
         value: function isLinkActive(router) {
-          var _this99 = this;
+          var _this112 = this;
 
           return (
             /**
@@ -84564,7 +88609,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             * @return {?}
             */
             function (link) {
-              return router.isActive(link.urlTree, _this99.routerLinkActiveOptions.exact);
+              return router.isActive(link.urlTree, _this112.routerLinkActiveOptions.exact);
             }
           );
         }
@@ -85357,7 +89402,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(RouterPreloader, [{
         key: "setUpPreloading",
         value: function setUpPreloading() {
-          var _this100 = this;
+          var _this113 = this;
 
           this.subscription = this.router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(
           /**
@@ -85371,7 +89416,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           * @return {?}
           */
           function () {
-            return _this100.preload();
+            return _this113.preload();
           })).subscribe(
           /**
           * @return {?}
@@ -85457,7 +89502,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "preloadConfig",
         value: function preloadConfig(ngModule, route) {
-          var _this101 = this;
+          var _this114 = this;
 
           return this.preloadingStrategy.preload(route,
           /**
@@ -85465,7 +89510,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           */
           function () {
             /** @type {?} */
-            var loaded$ = _this101.loader.load(ngModule.injector, route);
+            var loaded$ = _this114.loader.load(ngModule.injector, route);
 
             return loaded$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["mergeMap"])(
             /**
@@ -85474,7 +89519,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             */
             function (config) {
               route._loadedConfig = config;
-              return _this101.processRoutes(config.module, config.routes);
+              return _this114.processRoutes(config.module, config.routes);
             }));
           });
         }
@@ -85583,7 +89628,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "createScrollEvents",
         value: function createScrollEvents() {
-          var _this102 = this;
+          var _this115 = this;
 
           return this.router.events.subscribe(
           /**
@@ -85593,13 +89638,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           function (e) {
             if (e instanceof NavigationStart) {
               // store the scroll position of the current stable navigations.
-              _this102.store[_this102.lastId] = _this102.viewportScroller.getScrollPosition();
-              _this102.lastSource = e.navigationTrigger;
-              _this102.restoredId = e.restoredState ? e.restoredState.navigationId : 0;
+              _this115.store[_this115.lastId] = _this115.viewportScroller.getScrollPosition();
+              _this115.lastSource = e.navigationTrigger;
+              _this115.restoredId = e.restoredState ? e.restoredState.navigationId : 0;
             } else if (e instanceof NavigationEnd) {
-              _this102.lastId = e.id;
+              _this115.lastId = e.id;
 
-              _this102.scheduleScrollEvent(e, _this102.router.parseUrl(e.urlAfterRedirects).fragment);
+              _this115.scheduleScrollEvent(e, _this115.router.parseUrl(e.urlAfterRedirects).fragment);
             }
           });
         }
@@ -85611,7 +89656,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "consumeScrollEvents",
         value: function consumeScrollEvents() {
-          var _this103 = this;
+          var _this116 = this;
 
           return this.router.events.subscribe(
           /**
@@ -85622,17 +89667,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             if (!(e instanceof Scroll)) return; // a popstate event. The pop state event will always ignore anchor scrolling.
 
             if (e.position) {
-              if (_this103.options.scrollPositionRestoration === 'top') {
-                _this103.viewportScroller.scrollToPosition([0, 0]);
-              } else if (_this103.options.scrollPositionRestoration === 'enabled') {
-                _this103.viewportScroller.scrollToPosition(e.position);
+              if (_this116.options.scrollPositionRestoration === 'top') {
+                _this116.viewportScroller.scrollToPosition([0, 0]);
+              } else if (_this116.options.scrollPositionRestoration === 'enabled') {
+                _this116.viewportScroller.scrollToPosition(e.position);
               } // imperative navigation "forward"
 
             } else {
-              if (e.anchor && _this103.options.anchorScrolling === 'enabled') {
-                _this103.viewportScroller.scrollToAnchor(e.anchor);
-              } else if (_this103.options.scrollPositionRestoration !== 'disabled') {
-                _this103.viewportScroller.scrollToPosition([0, 0]);
+              if (e.anchor && _this116.options.anchorScrolling === 'enabled') {
+                _this116.viewportScroller.scrollToAnchor(e.anchor);
+              } else if (_this116.options.scrollPositionRestoration !== 'disabled') {
+                _this116.viewportScroller.scrollToPosition([0, 0]);
               }
             }
           });
@@ -86116,7 +90161,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       _createClass2(RouterInitializer, [{
         key: "appInitializer",
         value: function appInitializer() {
-          var _this104 = this;
+          var _this117 = this;
 
           /** @type {?} */
           var p = this.injector.get(_angular_common__WEBPACK_IMPORTED_MODULE_0__["LOCATION_INITIALIZED"], Promise.resolve(null));
@@ -86141,13 +90186,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             });
             /** @type {?} */
 
-            var router = _this104.injector.get(Router);
+            var router = _this117.injector.get(Router);
             /** @type {?} */
 
 
-            var opts = _this104.injector.get(ROUTER_CONFIGURATION);
+            var opts = _this117.injector.get(ROUTER_CONFIGURATION);
 
-            if (_this104.isLegacyDisabled(opts) || _this104.isLegacyEnabled(opts)) {
+            if (_this117.isLegacyDisabled(opts) || _this117.isLegacyEnabled(opts)) {
               resolve(true);
             } else if (opts.initialNavigation === 'disabled') {
               router.setUpLocationChangeListener();
@@ -86159,10 +90204,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               */
               function () {
                 // only the initial navigation should be delayed
-                if (!_this104.initNavigation) {
-                  _this104.initNavigation = true;
+                if (!_this117.initNavigation) {
+                  _this117.initNavigation = true;
                   resolve(true);
-                  return _this104.resultOfPreactivationDone; // subsequent navigations should not be delayed
+                  return _this117.resultOfPreactivationDone; // subsequent navigations should not be delayed
                 } else {
                   return (
                     /** @type {?} */
@@ -86367,6 +90412,2370 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     //# sourceMappingURL=router.js.map
 
     /***/
+  },
+
+  /***/
+  "./node_modules/@ngx-translate/core/__ivy_ngcc__/fesm2015/ngx-translate-core.js":
+  /*!**************************************************************************************!*\
+    !*** ./node_modules/@ngx-translate/core/__ivy_ngcc__/fesm2015/ngx-translate-core.js ***!
+    \**************************************************************************************/
+
+  /*! exports provided: DEFAULT_LANGUAGE, FakeMissingTranslationHandler, MissingTranslationHandler, TranslateCompiler, TranslateDefaultParser, TranslateDirective, TranslateFakeCompiler, TranslateFakeLoader, TranslateLoader, TranslateModule, TranslateParser, TranslatePipe, TranslateService, TranslateStore, USE_DEFAULT_LANG, USE_EXTEND, USE_STORE */
+
+  /***/
+  function node_modulesNgxTranslateCore__ivy_ngcc__Fesm2015NgxTranslateCoreJs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "DEFAULT_LANGUAGE", function () {
+      return DEFAULT_LANGUAGE;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "FakeMissingTranslationHandler", function () {
+      return FakeMissingTranslationHandler;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "MissingTranslationHandler", function () {
+      return MissingTranslationHandler;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TranslateCompiler", function () {
+      return TranslateCompiler;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TranslateDefaultParser", function () {
+      return TranslateDefaultParser;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TranslateDirective", function () {
+      return TranslateDirective;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TranslateFakeCompiler", function () {
+      return TranslateFakeCompiler;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TranslateFakeLoader", function () {
+      return TranslateFakeLoader;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TranslateLoader", function () {
+      return TranslateLoader;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TranslateModule", function () {
+      return TranslateModule;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TranslateParser", function () {
+      return TranslateParser;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TranslatePipe", function () {
+      return TranslatePipe;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TranslateService", function () {
+      return TranslateService;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TranslateStore", function () {
+      return TranslateStore;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "USE_DEFAULT_LANG", function () {
+      return USE_DEFAULT_LANG;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "USE_EXTEND", function () {
+      return USE_EXTEND;
+    });
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "USE_STORE", function () {
+      return USE_STORE;
+    });
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
+    /**
+     * @fileoverview added by tsickle
+     * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @abstract
+     */
+
+
+    var TranslateLoader = function TranslateLoader() {
+      _classCallCheck(this, TranslateLoader);
+    };
+
+    if (false) {}
+    /**
+     * This loader is just a placeholder that does nothing, in case you don't need a loader at all
+     */
+
+
+    var TranslateFakeLoader = /*#__PURE__*/function (_TranslateLoader) {
+      _inherits(TranslateFakeLoader, _TranslateLoader);
+
+      var _super52 = _createSuper(TranslateFakeLoader);
+
+      function TranslateFakeLoader() {
+        _classCallCheck(this, TranslateFakeLoader);
+
+        return _super52.apply(this, arguments);
+      }
+
+      _createClass2(TranslateFakeLoader, [{
+        key: "getTranslation",
+
+        /**
+         * @param {?} lang
+         * @return {?}
+         */
+        value: function getTranslation(lang) {
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])({});
+        }
+      }]);
+
+      return TranslateFakeLoader;
+    }(TranslateLoader);
+
+    TranslateFakeLoader.ɵfac = function TranslateFakeLoader_Factory(t) {
+      return ɵTranslateFakeLoader_BaseFactory(t || TranslateFakeLoader);
+    };
+
+    TranslateFakeLoader.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: TranslateFakeLoader,
+      factory: TranslateFakeLoader.ɵfac
+    });
+
+    var ɵTranslateFakeLoader_BaseFactory = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetInheritedFactory"](TranslateFakeLoader);
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TranslateFakeLoader, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], null, null);
+    })();
+    /**
+     * @fileoverview added by tsickle
+     * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @record
+     */
+
+
+    function MissingTranslationHandlerParams() {}
+
+    if (false) {}
+    /**
+     * @abstract
+     */
+
+
+    var MissingTranslationHandler = function MissingTranslationHandler() {
+      _classCallCheck(this, MissingTranslationHandler);
+    };
+
+    if (false) {}
+    /**
+     * This handler is just a placeholder that does nothing, in case you don't need a missing translation handler at all
+     */
+
+
+    var FakeMissingTranslationHandler = /*#__PURE__*/function () {
+      function FakeMissingTranslationHandler() {
+        _classCallCheck(this, FakeMissingTranslationHandler);
+      }
+
+      _createClass2(FakeMissingTranslationHandler, [{
+        key: "handle",
+
+        /**
+         * @param {?} params
+         * @return {?}
+         */
+        value: function handle(params) {
+          return params.key;
+        }
+      }]);
+
+      return FakeMissingTranslationHandler;
+    }();
+
+    FakeMissingTranslationHandler.ɵfac = function FakeMissingTranslationHandler_Factory(t) {
+      return new (t || FakeMissingTranslationHandler)();
+    };
+
+    FakeMissingTranslationHandler.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: FakeMissingTranslationHandler,
+      factory: FakeMissingTranslationHandler.ɵfac
+    });
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](FakeMissingTranslationHandler, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], null, null);
+    })();
+    /**
+     * @fileoverview added by tsickle
+     * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /* tslint:disable */
+
+    /**
+     * Determines if two objects or two values are equivalent.
+     *
+     * Two objects or values are considered equivalent if at least one of the following is true:
+     *
+     * * Both objects or values pass `===` comparison.
+     * * Both objects or values are of the same type and all of their properties are equal by
+     *   comparing them with `equals`.
+     *
+     * @param {?} o1 Object or value to compare.
+     * @param {?} o2 Object or value to compare.
+     * @return {?} true if arguments are equal.
+     */
+
+
+    function equals(o1, o2) {
+      if (o1 === o2) return true;
+      if (o1 === null || o2 === null) return false;
+      if (o1 !== o1 && o2 !== o2) return true; // NaN === NaN
+      // NaN === NaN
+
+      /** @type {?} */
+
+      var t1 = typeof o1;
+      /** @type {?} */
+
+      var t2 = typeof o2;
+      /** @type {?} */
+
+      var length;
+      /** @type {?} */
+
+      var key;
+      /** @type {?} */
+
+      var keySet;
+
+      if (t1 == t2 && t1 == 'object') {
+        if (Array.isArray(o1)) {
+          if (!Array.isArray(o2)) return false;
+
+          if ((length = o1.length) == o2.length) {
+            for (key = 0; key < length; key++) {
+              if (!equals(o1[key], o2[key])) return false;
+            }
+
+            return true;
+          }
+        } else {
+          if (Array.isArray(o2)) {
+            return false;
+          }
+
+          keySet = Object.create(null);
+
+          for (key in o1) {
+            if (!equals(o1[key], o2[key])) {
+              return false;
+            }
+
+            keySet[key] = true;
+          }
+
+          for (key in o2) {
+            if (!(key in keySet) && typeof o2[key] !== 'undefined') {
+              return false;
+            }
+          }
+
+          return true;
+        }
+      }
+
+      return false;
+    }
+    /* tslint:enable */
+
+    /**
+     * @param {?} value
+     * @return {?}
+     */
+
+
+    function isDefined(value) {
+      return typeof value !== 'undefined' && value !== null;
+    }
+    /**
+     * @param {?} item
+     * @return {?}
+     */
+
+
+    function isObject(item) {
+      return item && typeof item === 'object' && !Array.isArray(item);
+    }
+    /**
+     * @param {?} target
+     * @param {?} source
+     * @return {?}
+     */
+
+
+    function mergeDeep(target, source) {
+      /** @type {?} */
+      var output = Object.assign({}, target);
+
+      if (isObject(target) && isObject(source)) {
+        Object.keys(source).forEach(
+        /**
+        * @param {?} key
+        * @return {?}
+        */
+        function (key) {
+          if (isObject(source[key])) {
+            if (!(key in target)) {
+              Object.assign(output, _defineProperty({}, key, source[key]));
+            } else {
+              output[key] = mergeDeep(target[key], source[key]);
+            }
+          } else {
+            Object.assign(output, _defineProperty({}, key, source[key]));
+          }
+        });
+      }
+
+      return output;
+    }
+    /**
+     * @fileoverview added by tsickle
+     * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @abstract
+     */
+
+
+    var TranslateParser = function TranslateParser() {
+      _classCallCheck(this, TranslateParser);
+    };
+
+    if (false) {}
+
+    var TranslateDefaultParser = /*#__PURE__*/function (_TranslateParser) {
+      _inherits(TranslateDefaultParser, _TranslateParser);
+
+      var _super53 = _createSuper(TranslateDefaultParser);
+
+      function TranslateDefaultParser() {
+        var _this118;
+
+        _classCallCheck(this, TranslateDefaultParser);
+
+        _this118 = _super53.apply(this, arguments);
+        _this118.templateMatcher = /{{\s?([^{}\s]*)\s?}}/g;
+        return _this118;
+      }
+      /**
+       * @param {?} expr
+       * @param {?=} params
+       * @return {?}
+       */
+
+
+      _createClass2(TranslateDefaultParser, [{
+        key: "interpolate",
+        value: function interpolate(expr, params) {
+          /** @type {?} */
+          var result;
+
+          if (typeof expr === 'string') {
+            result = this.interpolateString(expr, params);
+          } else if (typeof expr === 'function') {
+            result = this.interpolateFunction(expr, params);
+          } else {
+            // this should not happen, but an unrelated TranslateService test depends on it
+            result =
+            /** @type {?} */
+            expr;
+          }
+
+          return result;
+        }
+        /**
+         * @param {?} target
+         * @param {?} key
+         * @return {?}
+         */
+
+      }, {
+        key: "getValue",
+        value: function getValue(target, key) {
+          /** @type {?} */
+          var keys = typeof key === 'string' ? key.split('.') : [key];
+          key = '';
+
+          do {
+            key += keys.shift();
+
+            if (isDefined(target) && isDefined(target[key]) && (typeof target[key] === 'object' || !keys.length)) {
+              target = target[key];
+              key = '';
+            } else if (!keys.length) {
+              target = undefined;
+            } else {
+              key += '.';
+            }
+          } while (keys.length);
+
+          return target;
+        }
+        /**
+         * @private
+         * @param {?} fn
+         * @param {?=} params
+         * @return {?}
+         */
+
+      }, {
+        key: "interpolateFunction",
+        value: function interpolateFunction(fn, params) {
+          return fn(params);
+        }
+        /**
+         * @private
+         * @param {?} expr
+         * @param {?=} params
+         * @return {?}
+         */
+
+      }, {
+        key: "interpolateString",
+        value: function interpolateString(expr, params) {
+          var _this119 = this;
+
+          if (!params) {
+            return expr;
+          }
+
+          return expr.replace(this.templateMatcher,
+          /**
+          * @param {?} substring
+          * @param {?} b
+          * @return {?}
+          */
+          function (substring, b) {
+            /** @type {?} */
+            var r = _this119.getValue(params, b);
+
+            return isDefined(r) ? r : substring;
+          });
+        }
+      }]);
+
+      return TranslateDefaultParser;
+    }(TranslateParser);
+
+    TranslateDefaultParser.ɵfac = function TranslateDefaultParser_Factory(t) {
+      return ɵTranslateDefaultParser_BaseFactory(t || TranslateDefaultParser);
+    };
+
+    TranslateDefaultParser.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: TranslateDefaultParser,
+      factory: TranslateDefaultParser.ɵfac
+    });
+
+    var ɵTranslateDefaultParser_BaseFactory = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetInheritedFactory"](TranslateDefaultParser);
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TranslateDefaultParser, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], null, null);
+    })();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @abstract
+     */
+
+
+    var TranslateCompiler = function TranslateCompiler() {
+      _classCallCheck(this, TranslateCompiler);
+    };
+
+    if (false) {}
+    /**
+     * This compiler is just a placeholder that does nothing, in case you don't need a compiler at all
+     */
+
+
+    var TranslateFakeCompiler = /*#__PURE__*/function (_TranslateCompiler) {
+      _inherits(TranslateFakeCompiler, _TranslateCompiler);
+
+      var _super54 = _createSuper(TranslateFakeCompiler);
+
+      function TranslateFakeCompiler() {
+        _classCallCheck(this, TranslateFakeCompiler);
+
+        return _super54.apply(this, arguments);
+      }
+
+      _createClass2(TranslateFakeCompiler, [{
+        key: "compile",
+
+        /**
+         * @param {?} value
+         * @param {?} lang
+         * @return {?}
+         */
+        value: function compile(value, lang) {
+          return value;
+        }
+        /**
+         * @param {?} translations
+         * @param {?} lang
+         * @return {?}
+         */
+
+      }, {
+        key: "compileTranslations",
+        value: function compileTranslations(translations, lang) {
+          return translations;
+        }
+      }]);
+
+      return TranslateFakeCompiler;
+    }(TranslateCompiler);
+
+    TranslateFakeCompiler.ɵfac = function TranslateFakeCompiler_Factory(t) {
+      return ɵTranslateFakeCompiler_BaseFactory(t || TranslateFakeCompiler);
+    };
+
+    TranslateFakeCompiler.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: TranslateFakeCompiler,
+      factory: TranslateFakeCompiler.ɵfac
+    });
+
+    var ɵTranslateFakeCompiler_BaseFactory = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetInheritedFactory"](TranslateFakeCompiler);
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TranslateFakeCompiler, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], null, null);
+    })();
+    /**
+     * @fileoverview added by tsickle
+     * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+
+    var TranslateStore = function TranslateStore() {
+      _classCallCheck(this, TranslateStore);
+
+      /**
+       * The lang currently used
+       */
+      this.currentLang = this.defaultLang;
+      /**
+       * a list of translations per lang
+       */
+
+      this.translations = {};
+      /**
+       * an array of langs
+       */
+
+      this.langs = [];
+      /**
+       * An EventEmitter to listen to translation change events
+       * onTranslationChange.subscribe((params: TranslationChangeEvent) => {
+       *     // do something
+       * });
+       */
+
+      this.onTranslationChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+      /**
+       * An EventEmitter to listen to lang change events
+       * onLangChange.subscribe((params: LangChangeEvent) => {
+       *     // do something
+       * });
+       */
+
+      this.onLangChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+      /**
+       * An EventEmitter to listen to default lang change events
+       * onDefaultLangChange.subscribe((params: DefaultLangChangeEvent) => {
+       *     // do something
+       * });
+       */
+
+      this.onDefaultLangChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+    };
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /** @type {?} */
+
+
+    var USE_STORE = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('USE_STORE');
+    /** @type {?} */
+
+    var USE_DEFAULT_LANG = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('USE_DEFAULT_LANG');
+    /** @type {?} */
+
+    var DEFAULT_LANGUAGE = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('DEFAULT_LANGUAGE');
+    /** @type {?} */
+
+    var USE_EXTEND = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["InjectionToken"]('USE_EXTEND');
+    /**
+     * @record
+     */
+
+    function TranslationChangeEvent() {}
+
+    if (false) {}
+    /**
+     * @record
+     */
+
+
+    function LangChangeEvent() {}
+
+    if (false) {}
+    /**
+     * @record
+     */
+
+
+    function DefaultLangChangeEvent() {}
+
+    if (false) {}
+
+    var TranslateService = /*#__PURE__*/function () {
+      /**
+       *
+       * @param {?} store an instance of the store (that is supposed to be unique)
+       * @param {?} currentLoader An instance of the loader currently used
+       * @param {?} compiler An instance of the compiler currently used
+       * @param {?} parser An instance of the parser currently used
+       * @param {?} missingTranslationHandler A handler for missing translations.
+       * @param {?=} useDefaultLang whether we should use default language translation when current language translation is missing.
+       * @param {?=} isolate whether this service should use the store or not
+       * @param {?=} extend To make a child module extend (and use) translations from parent modules.
+       * @param {?=} defaultLanguage Set the default language using configuration
+       */
+      function TranslateService(store, currentLoader, compiler, parser, missingTranslationHandler) {
+        var useDefaultLang = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : true;
+        var isolate = arguments.length > 6 && arguments[6] !== undefined ? arguments[6] : false;
+        var extend = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : false;
+        var defaultLanguage = arguments.length > 8 ? arguments[8] : undefined;
+
+        _classCallCheck(this, TranslateService);
+
+        this.store = store;
+        this.currentLoader = currentLoader;
+        this.compiler = compiler;
+        this.parser = parser;
+        this.missingTranslationHandler = missingTranslationHandler;
+        this.useDefaultLang = useDefaultLang;
+        this.isolate = isolate;
+        this.extend = extend;
+        this.pending = false;
+        this._onTranslationChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this._onLangChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this._onDefaultLangChange = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this._langs = [];
+        this._translations = {};
+        this._translationRequests = {};
+        /** set the default language from configuration */
+
+        if (defaultLanguage) {
+          this.setDefaultLang(defaultLanguage);
+        }
+      }
+      /**
+       * An EventEmitter to listen to translation change events
+       * onTranslationChange.subscribe((params: TranslationChangeEvent) => {
+       *     // do something
+       * });
+       * @return {?}
+       */
+
+
+      _createClass2(TranslateService, [{
+        key: "setDefaultLang",
+
+        /**
+         * Sets the default language to use as a fallback
+         * @param {?} lang
+         * @return {?}
+         */
+        value: function setDefaultLang(lang) {
+          var _this120 = this;
+
+          if (lang === this.defaultLang) {
+            return;
+          }
+          /** @type {?} */
+
+
+          var pending = this.retrieveTranslations(lang);
+
+          if (typeof pending !== "undefined") {
+            // on init set the defaultLang immediately
+            if (this.defaultLang == null) {
+              this.defaultLang = lang;
+            }
+
+            pending.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["take"])(1)).subscribe(
+            /**
+            * @param {?} res
+            * @return {?}
+            */
+            function (res) {
+              _this120.changeDefaultLang(lang);
+            });
+          } else {
+            // we already have this language
+            this.changeDefaultLang(lang);
+          }
+        }
+        /**
+         * Gets the default language used
+         * @return {?}
+         */
+
+      }, {
+        key: "getDefaultLang",
+        value: function getDefaultLang() {
+          return this.defaultLang;
+        }
+        /**
+         * Changes the lang currently used
+         * @param {?} lang
+         * @return {?}
+         */
+
+      }, {
+        key: "use",
+        value: function use(lang) {
+          var _this121 = this;
+
+          // don't change the language if the language given is already selected
+          if (lang === this.currentLang) {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(this.translations[lang]);
+          }
+          /** @type {?} */
+
+
+          var pending = this.retrieveTranslations(lang);
+
+          if (typeof pending !== "undefined") {
+            // on init set the currentLang immediately
+            if (!this.currentLang) {
+              this.currentLang = lang;
+            }
+
+            pending.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["take"])(1)).subscribe(
+            /**
+            * @param {?} res
+            * @return {?}
+            */
+            function (res) {
+              _this121.changeLang(lang);
+            });
+            return pending;
+          } else {
+            // we have this language, return an Observable
+            this.changeLang(lang);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(this.translations[lang]);
+          }
+        }
+        /**
+         * Retrieves the given translations
+         * @private
+         * @param {?} lang
+         * @return {?}
+         */
+
+      }, {
+        key: "retrieveTranslations",
+        value: function retrieveTranslations(lang) {
+          /** @type {?} */
+          var pending; // if this language is unavailable or extend is true, ask for it
+
+          if (typeof this.translations[lang] === "undefined" || this.extend) {
+            this._translationRequests[lang] = this._translationRequests[lang] || this.getTranslation(lang);
+            pending = this._translationRequests[lang];
+          }
+
+          return pending;
+        }
+        /**
+         * Gets an object of translations for a given language with the current loader
+         * and passes it through the compiler
+         * @param {?} lang
+         * @return {?}
+         */
+
+      }, {
+        key: "getTranslation",
+        value: function getTranslation(lang) {
+          var _this122 = this;
+
+          this.pending = true;
+          /** @type {?} */
+
+          var loadingTranslations = this.currentLoader.getTranslation(lang).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["shareReplay"])(1), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["take"])(1));
+          this.loadingTranslations = loadingTranslations.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(
+          /**
+          * @param {?} res
+          * @return {?}
+          */
+          function (res) {
+            return _this122.compiler.compileTranslations(res, lang);
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["shareReplay"])(1), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["take"])(1));
+          this.loadingTranslations.subscribe({
+            next:
+            /**
+            * @param {?} res
+            * @return {?}
+            */
+            function next(res) {
+              _this122.translations[lang] = _this122.extend && _this122.translations[lang] ? Object.assign(Object.assign({}, res), _this122.translations[lang]) : res;
+
+              _this122.updateLangs();
+
+              _this122.pending = false;
+            },
+            error:
+            /**
+            * @param {?} err
+            * @return {?}
+            */
+            function error(err) {
+              _this122.pending = false;
+            }
+          });
+          return loadingTranslations;
+        }
+        /**
+         * Manually sets an object of translations for a given language
+         * after passing it through the compiler
+         * @param {?} lang
+         * @param {?} translations
+         * @param {?=} shouldMerge
+         * @return {?}
+         */
+
+      }, {
+        key: "setTranslation",
+        value: function setTranslation(lang, translations) {
+          var shouldMerge = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+          translations = this.compiler.compileTranslations(translations, lang);
+
+          if ((shouldMerge || this.extend) && this.translations[lang]) {
+            this.translations[lang] = mergeDeep(this.translations[lang], translations);
+          } else {
+            this.translations[lang] = translations;
+          }
+
+          this.updateLangs();
+          this.onTranslationChange.emit({
+            lang: lang,
+            translations: this.translations[lang]
+          });
+        }
+        /**
+         * Returns an array of currently available langs
+         * @return {?}
+         */
+
+      }, {
+        key: "getLangs",
+        value: function getLangs() {
+          return this.langs;
+        }
+        /**
+         * Add available langs
+         * @param {?} langs
+         * @return {?}
+         */
+
+      }, {
+        key: "addLangs",
+        value: function addLangs(langs) {
+          var _this123 = this;
+
+          langs.forEach(
+          /**
+          * @param {?} lang
+          * @return {?}
+          */
+          function (lang) {
+            if (_this123.langs.indexOf(lang) === -1) {
+              _this123.langs.push(lang);
+            }
+          });
+        }
+        /**
+         * Update the list of available langs
+         * @private
+         * @return {?}
+         */
+
+      }, {
+        key: "updateLangs",
+        value: function updateLangs() {
+          this.addLangs(Object.keys(this.translations));
+        }
+        /**
+         * Returns the parsed result of the translations
+         * @param {?} translations
+         * @param {?} key
+         * @param {?=} interpolateParams
+         * @return {?}
+         */
+
+      }, {
+        key: "getParsedResult",
+        value: function getParsedResult(translations, key, interpolateParams) {
+          /** @type {?} */
+          var res;
+
+          if (key instanceof Array) {
+            /** @type {?} */
+            var result = {};
+            /** @type {?} */
+
+            var observables = false;
+
+            var _iterator19 = _createForOfIteratorHelper(key),
+                _step19;
+
+            try {
+              for (_iterator19.s(); !(_step19 = _iterator19.n()).done;) {
+                var k = _step19.value;
+                result[k] = this.getParsedResult(translations, k, interpolateParams);
+
+                if (Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["isObservable"])(result[k])) {
+                  observables = true;
+                }
+              }
+            } catch (err) {
+              _iterator19.e(err);
+            } finally {
+              _iterator19.f();
+            }
+
+            if (observables) {
+              /** @type {?} */
+              var sources = key.map(
+              /**
+              * @param {?} k
+              * @return {?}
+              */
+              function (k) {
+                return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["isObservable"])(result[k]) ? result[k] : Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(
+                /** @type {?} */
+                result[k]);
+              });
+              return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["forkJoin"])(sources).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["map"])(
+              /**
+              * @param {?} arr
+              * @return {?}
+              */
+              function (arr) {
+                /** @type {?} */
+                var obj = {};
+                arr.forEach(
+                /**
+                * @param {?} value
+                * @param {?} index
+                * @return {?}
+                */
+                function (value, index) {
+                  obj[key[index]] = value;
+                });
+                return obj;
+              }));
+            }
+
+            return result;
+          }
+
+          if (translations) {
+            res = this.parser.interpolate(this.parser.getValue(translations, key), interpolateParams);
+          }
+
+          if (typeof res === "undefined" && this.defaultLang != null && this.defaultLang !== this.currentLang && this.useDefaultLang) {
+            res = this.parser.interpolate(this.parser.getValue(this.translations[this.defaultLang], key), interpolateParams);
+          }
+
+          if (typeof res === "undefined") {
+            /** @type {?} */
+            var params = {
+              key: key,
+              translateService: this
+            };
+
+            if (typeof interpolateParams !== 'undefined') {
+              params.interpolateParams = interpolateParams;
+            }
+
+            res = this.missingTranslationHandler.handle(params);
+          }
+
+          return typeof res !== "undefined" ? res : key;
+        }
+        /**
+         * Gets the translated value of a key (or an array of keys)
+         * @param {?} key
+         * @param {?=} interpolateParams
+         * @return {?} the translated key, or an object of translated keys
+         */
+
+      }, {
+        key: "get",
+        value: function get(key, interpolateParams) {
+          var _this124 = this;
+
+          if (!isDefined(key) || !key.length) {
+            throw new Error("Parameter \"key\" required");
+          } // check if we are loading a new translation to use
+
+
+          if (this.pending) {
+            return this.loadingTranslations.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["concatMap"])(
+            /**
+            * @param {?} res
+            * @return {?}
+            */
+            function (res) {
+              res = _this124.getParsedResult(res, key, interpolateParams);
+              return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["isObservable"])(res) ? res : Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(res);
+            }));
+          } else {
+            /** @type {?} */
+            var res = this.getParsedResult(this.translations[this.currentLang], key, interpolateParams);
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["isObservable"])(res) ? res : Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(res);
+          }
+        }
+        /**
+         * Returns a stream of translated values of a key (or an array of keys) which updates
+         * whenever the translation changes.
+         * @param {?} key
+         * @param {?=} interpolateParams
+         * @return {?} A stream of the translated key, or an object of translated keys
+         */
+
+      }, {
+        key: "getStreamOnTranslationChange",
+        value: function getStreamOnTranslationChange(key, interpolateParams) {
+          var _this125 = this;
+
+          if (!isDefined(key) || !key.length) {
+            throw new Error("Parameter \"key\" required");
+          }
+
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["concat"])(Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["defer"])(
+          /**
+          * @return {?}
+          */
+          function () {
+            return _this125.get(key, interpolateParams);
+          }), this.onTranslationChange.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["switchMap"])(
+          /**
+          * @param {?} event
+          * @return {?}
+          */
+          function (event) {
+            /** @type {?} */
+            var res = _this125.getParsedResult(event.translations, key, interpolateParams);
+
+            if (typeof res.subscribe === 'function') {
+              return res;
+            } else {
+              return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(res);
+            }
+          })));
+        }
+        /**
+         * Returns a stream of translated values of a key (or an array of keys) which updates
+         * whenever the language changes.
+         * @param {?} key
+         * @param {?=} interpolateParams
+         * @return {?} A stream of the translated key, or an object of translated keys
+         */
+
+      }, {
+        key: "stream",
+        value: function stream(key, interpolateParams) {
+          var _this126 = this;
+
+          if (!isDefined(key) || !key.length) {
+            throw new Error("Parameter \"key\" required");
+          }
+
+          return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["concat"])(Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["defer"])(
+          /**
+          * @return {?}
+          */
+          function () {
+            return _this126.get(key, interpolateParams);
+          }), this.onLangChange.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["switchMap"])(
+          /**
+          * @param {?} event
+          * @return {?}
+          */
+          function (event) {
+            /** @type {?} */
+            var res = _this126.getParsedResult(event.translations, key, interpolateParams);
+
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["isObservable"])(res) ? res : Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["of"])(res);
+          })));
+        }
+        /**
+         * Returns a translation instantly from the internal state of loaded translation.
+         * All rules regarding the current language, the preferred language of even fallback languages will be used except any promise handling.
+         * @param {?} key
+         * @param {?=} interpolateParams
+         * @return {?}
+         */
+
+      }, {
+        key: "instant",
+        value: function instant(key, interpolateParams) {
+          if (!isDefined(key) || !key.length) {
+            throw new Error("Parameter \"key\" required");
+          }
+          /** @type {?} */
+
+
+          var res = this.getParsedResult(this.translations[this.currentLang], key, interpolateParams);
+
+          if (Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["isObservable"])(res)) {
+            if (key instanceof Array) {
+              /** @type {?} */
+              var obj = {};
+              key.forEach(
+              /**
+              * @param {?} value
+              * @param {?} index
+              * @return {?}
+              */
+              function (value, index) {
+                obj[key[index]] = key[index];
+              });
+              return obj;
+            }
+
+            return key;
+          } else {
+            return res;
+          }
+        }
+        /**
+         * Sets the translated value of a key, after compiling it
+         * @param {?} key
+         * @param {?} value
+         * @param {?=} lang
+         * @return {?}
+         */
+
+      }, {
+        key: "set",
+        value: function set(key, value) {
+          var lang = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : this.currentLang;
+          this.translations[lang][key] = this.compiler.compile(value, lang);
+          this.updateLangs();
+          this.onTranslationChange.emit({
+            lang: lang,
+            translations: this.translations[lang]
+          });
+        }
+        /**
+         * Changes the current lang
+         * @private
+         * @param {?} lang
+         * @return {?}
+         */
+
+      }, {
+        key: "changeLang",
+        value: function changeLang(lang) {
+          this.currentLang = lang;
+          this.onLangChange.emit({
+            lang: lang,
+            translations: this.translations[lang]
+          }); // if there is no default lang, use the one that we just set
+
+          if (this.defaultLang == null) {
+            this.changeDefaultLang(lang);
+          }
+        }
+        /**
+         * Changes the default lang
+         * @private
+         * @param {?} lang
+         * @return {?}
+         */
+
+      }, {
+        key: "changeDefaultLang",
+        value: function changeDefaultLang(lang) {
+          this.defaultLang = lang;
+          this.onDefaultLangChange.emit({
+            lang: lang,
+            translations: this.translations[lang]
+          });
+        }
+        /**
+         * Allows to reload the lang file from the file
+         * @param {?} lang
+         * @return {?}
+         */
+
+      }, {
+        key: "reloadLang",
+        value: function reloadLang(lang) {
+          this.resetLang(lang);
+          return this.getTranslation(lang);
+        }
+        /**
+         * Deletes inner translation
+         * @param {?} lang
+         * @return {?}
+         */
+
+      }, {
+        key: "resetLang",
+        value: function resetLang(lang) {
+          this._translationRequests[lang] = undefined;
+          this.translations[lang] = undefined;
+        }
+        /**
+         * Returns the language code name from the browser, e.g. "de"
+         * @return {?}
+         */
+
+      }, {
+        key: "getBrowserLang",
+        value: function getBrowserLang() {
+          if (typeof window === 'undefined' || typeof window.navigator === 'undefined') {
+            return undefined;
+          }
+          /** @type {?} */
+
+
+          var browserLang = window.navigator.languages ? window.navigator.languages[0] : null;
+          browserLang = browserLang || window.navigator.language || window.navigator.browserLanguage || window.navigator.userLanguage;
+
+          if (typeof browserLang === 'undefined') {
+            return undefined;
+          }
+
+          if (browserLang.indexOf('-') !== -1) {
+            browserLang = browserLang.split('-')[0];
+          }
+
+          if (browserLang.indexOf('_') !== -1) {
+            browserLang = browserLang.split('_')[0];
+          }
+
+          return browserLang;
+        }
+        /**
+         * Returns the culture language code name from the browser, e.g. "de-DE"
+         * @return {?}
+         */
+
+      }, {
+        key: "getBrowserCultureLang",
+        value: function getBrowserCultureLang() {
+          if (typeof window === 'undefined' || typeof window.navigator === 'undefined') {
+            return undefined;
+          }
+          /** @type {?} */
+
+
+          var browserCultureLang = window.navigator.languages ? window.navigator.languages[0] : null;
+          browserCultureLang = browserCultureLang || window.navigator.language || window.navigator.browserLanguage || window.navigator.userLanguage;
+          return browserCultureLang;
+        }
+      }, {
+        key: "onTranslationChange",
+        get: function get() {
+          return this.isolate ? this._onTranslationChange : this.store.onTranslationChange;
+        }
+        /**
+         * An EventEmitter to listen to lang change events
+         * onLangChange.subscribe((params: LangChangeEvent) => {
+         *     // do something
+         * });
+         * @return {?}
+         */
+
+      }, {
+        key: "onLangChange",
+        get: function get() {
+          return this.isolate ? this._onLangChange : this.store.onLangChange;
+        }
+        /**
+         * An EventEmitter to listen to default lang change events
+         * onDefaultLangChange.subscribe((params: DefaultLangChangeEvent) => {
+         *     // do something
+         * });
+         * @return {?}
+         */
+
+      }, {
+        key: "onDefaultLangChange",
+        get: function get() {
+          return this.isolate ? this._onDefaultLangChange : this.store.onDefaultLangChange;
+        }
+        /**
+         * The default lang to fallback when translations are missing on the current lang
+         * @return {?}
+         */
+
+      }, {
+        key: "defaultLang",
+        get: function get() {
+          return this.isolate ? this._defaultLang : this.store.defaultLang;
+        }
+        /**
+         * @param {?} defaultLang
+         * @return {?}
+         */
+        ,
+        set: function set(defaultLang) {
+          if (this.isolate) {
+            this._defaultLang = defaultLang;
+          } else {
+            this.store.defaultLang = defaultLang;
+          }
+        }
+        /**
+         * The lang currently used
+         * @return {?}
+         */
+
+      }, {
+        key: "currentLang",
+        get: function get() {
+          return this.isolate ? this._currentLang : this.store.currentLang;
+        }
+        /**
+         * @param {?} currentLang
+         * @return {?}
+         */
+        ,
+        set: function set(currentLang) {
+          if (this.isolate) {
+            this._currentLang = currentLang;
+          } else {
+            this.store.currentLang = currentLang;
+          }
+        }
+        /**
+         * an array of langs
+         * @return {?}
+         */
+
+      }, {
+        key: "langs",
+        get: function get() {
+          return this.isolate ? this._langs : this.store.langs;
+        }
+        /**
+         * @param {?} langs
+         * @return {?}
+         */
+        ,
+        set: function set(langs) {
+          if (this.isolate) {
+            this._langs = langs;
+          } else {
+            this.store.langs = langs;
+          }
+        }
+        /**
+         * a list of translations per lang
+         * @return {?}
+         */
+
+      }, {
+        key: "translations",
+        get: function get() {
+          return this.isolate ? this._translations : this.store.translations;
+        }
+        /**
+         * @param {?} translations
+         * @return {?}
+         */
+        ,
+        set: function set(translations) {
+          if (this.isolate) {
+            this._translations = translations;
+          } else {
+            this.store.translations = translations;
+          }
+        }
+      }]);
+
+      return TranslateService;
+    }();
+
+    TranslateService.ɵfac = function TranslateService_Factory(t) {
+      return new (t || TranslateService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](TranslateStore), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](TranslateLoader), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](TranslateCompiler), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](TranslateParser), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](MissingTranslationHandler), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](USE_DEFAULT_LANG), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](USE_STORE), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](USE_EXTEND), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](DEFAULT_LANGUAGE));
+    };
+
+    TranslateService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: TranslateService,
+      factory: TranslateService.ɵfac
+    });
+    /** @nocollapse */
+
+    TranslateService.ctorParameters = function () {
+      return [{
+        type: TranslateStore
+      }, {
+        type: TranslateLoader
+      }, {
+        type: TranslateCompiler
+      }, {
+        type: TranslateParser
+      }, {
+        type: MissingTranslationHandler
+      }, {
+        type: Boolean,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [USE_DEFAULT_LANG]
+        }]
+      }, {
+        type: Boolean,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [USE_STORE]
+        }]
+      }, {
+        type: Boolean,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [USE_EXTEND]
+        }]
+      }, {
+        type: String,
+        decorators: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+          args: [DEFAULT_LANGUAGE]
+        }]
+      }];
+    };
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TranslateService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }], function () {
+        return [{
+          type: TranslateStore
+        }, {
+          type: TranslateLoader
+        }, {
+          type: TranslateCompiler
+        }, {
+          type: TranslateParser
+        }, {
+          type: MissingTranslationHandler
+        }, {
+          type: Boolean,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [USE_DEFAULT_LANG]
+          }]
+        }, {
+          type: Boolean,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [USE_STORE]
+          }]
+        }, {
+          type: Boolean,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [USE_EXTEND]
+          }]
+        }, {
+          type: String,
+          decorators: [{
+            type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Inject"],
+            args: [DEFAULT_LANGUAGE]
+          }]
+        }];
+      }, null);
+    })();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+
+    var TranslateDirective = /*#__PURE__*/function () {
+      /**
+       * @param {?} translateService
+       * @param {?} element
+       * @param {?} _ref
+       */
+      function TranslateDirective(translateService, element, _ref) {
+        var _this127 = this;
+
+        _classCallCheck(this, TranslateDirective);
+
+        this.translateService = translateService;
+        this.element = element;
+        this._ref = _ref; // subscribe to onTranslationChange event, in case the translations of the current lang change
+
+        if (!this.onTranslationChangeSub) {
+          this.onTranslationChangeSub = this.translateService.onTranslationChange.subscribe(
+          /**
+          * @param {?} event
+          * @return {?}
+          */
+          function (event) {
+            if (event.lang === _this127.translateService.currentLang) {
+              _this127.checkNodes(true, event.translations);
+            }
+          });
+        } // subscribe to onLangChange event, in case the language changes
+
+
+        if (!this.onLangChangeSub) {
+          this.onLangChangeSub = this.translateService.onLangChange.subscribe(
+          /**
+          * @param {?} event
+          * @return {?}
+          */
+          function (event) {
+            _this127.checkNodes(true, event.translations);
+          });
+        } // subscribe to onDefaultLangChange event, in case the default language changes
+
+
+        if (!this.onDefaultLangChangeSub) {
+          this.onDefaultLangChangeSub = this.translateService.onDefaultLangChange.subscribe(
+          /**
+          * @param {?} event
+          * @return {?}
+          */
+          function (event) {
+            _this127.checkNodes(true);
+          });
+        }
+      }
+      /**
+       * @param {?} key
+       * @return {?}
+       */
+
+
+      _createClass2(TranslateDirective, [{
+        key: "ngAfterViewChecked",
+
+        /**
+         * @return {?}
+         */
+        value: function ngAfterViewChecked() {
+          this.checkNodes();
+        }
+        /**
+         * @param {?=} forceUpdate
+         * @param {?=} translations
+         * @return {?}
+         */
+
+      }, {
+        key: "checkNodes",
+        value: function checkNodes() {
+          var forceUpdate = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+          var translations = arguments.length > 1 ? arguments[1] : undefined;
+
+          /** @type {?} */
+          var nodes = this.element.nativeElement.childNodes; // if the element is empty
+
+          if (!nodes.length) {
+            // we add the key as content
+            this.setContent(this.element.nativeElement, this.key);
+            nodes = this.element.nativeElement.childNodes;
+          }
+
+          for (var i = 0; i < nodes.length; ++i) {
+            /** @type {?} */
+            var node = nodes[i];
+
+            if (node.nodeType === 3) {
+              // node type 3 is a text node
+              // node type 3 is a text node
+
+              /** @type {?} */
+              var key = void 0;
+
+              if (forceUpdate) {
+                node.lastKey = null;
+              }
+
+              if (isDefined(node.lookupKey)) {
+                key = node.lookupKey;
+              } else if (this.key) {
+                key = this.key;
+              } else {
+                /** @type {?} */
+                var content = this.getContent(node);
+                /** @type {?} */
+
+                var trimmedContent = content.trim();
+
+                if (trimmedContent.length) {
+                  node.lookupKey = trimmedContent; // we want to use the content as a key, not the translation value
+
+                  if (content !== node.currentValue) {
+                    key = trimmedContent; // the content was changed from the user, we'll use it as a reference if needed
+
+                    node.originalContent = content || node.originalContent;
+                  } else if (node.originalContent) {
+                    // the content seems ok, but the lang has changed
+                    // the current content is the translation, not the key, use the last real content as key
+                    key = node.originalContent.trim();
+                  } else if (content !== node.currentValue) {
+                    // we want to use the content as a key, not the translation value
+                    key = trimmedContent; // the content was changed from the user, we'll use it as a reference if needed
+
+                    node.originalContent = content || node.originalContent;
+                  }
+                }
+              }
+
+              this.updateValue(key, node, translations);
+            }
+          }
+        }
+        /**
+         * @param {?} key
+         * @param {?} node
+         * @param {?} translations
+         * @return {?}
+         */
+
+      }, {
+        key: "updateValue",
+        value: function updateValue(key, node, translations) {
+          var _this128 = this;
+
+          if (key) {
+            if (node.lastKey === key && this.lastParams === this.currentParams) {
+              return;
+            }
+
+            this.lastParams = this.currentParams;
+            /** @type {?} */
+
+            var onTranslation =
+            /**
+            * @param {?} res
+            * @return {?}
+            */
+            function onTranslation(res) {
+              if (res !== key) {
+                node.lastKey = key;
+              }
+
+              if (!node.originalContent) {
+                node.originalContent = _this128.getContent(node);
+              }
+
+              node.currentValue = isDefined(res) ? res : node.originalContent || key; // we replace in the original content to preserve spaces that we might have trimmed
+
+              _this128.setContent(node, _this128.key ? node.currentValue : node.originalContent.replace(key, node.currentValue));
+
+              _this128._ref.markForCheck();
+            };
+
+            if (isDefined(translations)) {
+              /** @type {?} */
+              var res = this.translateService.getParsedResult(translations, key, this.currentParams);
+
+              if (Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["isObservable"])(res)) {
+                res.subscribe(onTranslation);
+              } else {
+                onTranslation(res);
+              }
+            } else {
+              this.translateService.get(key, this.currentParams).subscribe(onTranslation);
+            }
+          }
+        }
+        /**
+         * @param {?} node
+         * @return {?}
+         */
+
+      }, {
+        key: "getContent",
+        value: function getContent(node) {
+          return isDefined(node.textContent) ? node.textContent : node.data;
+        }
+        /**
+         * @param {?} node
+         * @param {?} content
+         * @return {?}
+         */
+
+      }, {
+        key: "setContent",
+        value: function setContent(node, content) {
+          if (isDefined(node.textContent)) {
+            node.textContent = content;
+          } else {
+            node.data = content;
+          }
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "ngOnDestroy",
+        value: function ngOnDestroy() {
+          if (this.onLangChangeSub) {
+            this.onLangChangeSub.unsubscribe();
+          }
+
+          if (this.onDefaultLangChangeSub) {
+            this.onDefaultLangChangeSub.unsubscribe();
+          }
+
+          if (this.onTranslationChangeSub) {
+            this.onTranslationChangeSub.unsubscribe();
+          }
+        }
+      }, {
+        key: "translate",
+        set: function set(key) {
+          if (key) {
+            this.key = key;
+            this.checkNodes();
+          }
+        }
+        /**
+         * @param {?} params
+         * @return {?}
+         */
+
+      }, {
+        key: "translateParams",
+        set: function set(params) {
+          if (!equals(this.currentParams, params)) {
+            this.currentParams = params;
+            this.checkNodes(true);
+          }
+        }
+      }]);
+
+      return TranslateDirective;
+    }();
+
+    TranslateDirective.ɵfac = function TranslateDirective_Factory(t) {
+      return new (t || TranslateDirective)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](TranslateService), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]));
+    };
+
+    TranslateDirective.ɵdir = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineDirective"]({
+      type: TranslateDirective,
+      selectors: [["", "translate", ""], ["", "ngx-translate", ""]],
+      inputs: {
+        translate: "translate",
+        translateParams: "translateParams"
+      }
+    });
+    /** @nocollapse */
+
+    TranslateDirective.ctorParameters = function () {
+      return [{
+        type: TranslateService
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]
+      }];
+    };
+
+    TranslateDirective.propDecorators = {
+      translate: [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+      }],
+      translateParams: [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+      }]
+    };
+    /*@__PURE__*/
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TranslateDirective, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Directive"],
+        args: [{
+          selector: '[translate],[ngx-translate]'
+        }]
+      }], function () {
+        return [{
+          type: TranslateService
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"]
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]
+        }];
+      }, {
+        translate: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }],
+        translateParams: [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Input"]
+        }]
+      });
+    })();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+
+    var TranslatePipe = /*#__PURE__*/function () {
+      /**
+       * @param {?} translate
+       * @param {?} _ref
+       */
+      function TranslatePipe(translate, _ref) {
+        _classCallCheck(this, TranslatePipe);
+
+        this.translate = translate;
+        this._ref = _ref;
+        this.value = '';
+      }
+      /**
+       * @param {?} key
+       * @param {?=} interpolateParams
+       * @param {?=} translations
+       * @return {?}
+       */
+
+
+      _createClass2(TranslatePipe, [{
+        key: "updateValue",
+        value: function updateValue(key, interpolateParams, translations) {
+          var _this129 = this;
+
+          /** @type {?} */
+          var onTranslation =
+          /**
+          * @param {?} res
+          * @return {?}
+          */
+          function onTranslation(res) {
+            _this129.value = res !== undefined ? res : key;
+            _this129.lastKey = key;
+
+            _this129._ref.markForCheck();
+          };
+
+          if (translations) {
+            /** @type {?} */
+            var res = this.translate.getParsedResult(translations, key, interpolateParams);
+
+            if (Object(rxjs__WEBPACK_IMPORTED_MODULE_1__["isObservable"])(res.subscribe)) {
+              res.subscribe(onTranslation);
+            } else {
+              onTranslation(res);
+            }
+          }
+
+          this.translate.get(key, interpolateParams).subscribe(onTranslation);
+        }
+        /**
+         * @param {?} query
+         * @param {...?} args
+         * @return {?}
+         */
+
+      }, {
+        key: "transform",
+        value: function transform(query) {
+          var _this130 = this;
+
+          if (!query || !query.length) {
+            return query;
+          } // if we ask another time for the same key, return the last value
+
+
+          for (var _len15 = arguments.length, args = new Array(_len15 > 1 ? _len15 - 1 : 0), _key15 = 1; _key15 < _len15; _key15++) {
+            args[_key15 - 1] = arguments[_key15];
+          }
+
+          if (equals(query, this.lastKey) && equals(args, this.lastParams)) {
+            return this.value;
+          }
+          /** @type {?} */
+
+
+          var interpolateParams;
+
+          if (isDefined(args[0]) && args.length) {
+            if (typeof args[0] === 'string' && args[0].length) {
+              // we accept objects written in the template such as {n:1}, {'n':1}, {n:'v'}
+              // which is why we might need to change it to real JSON objects such as {"n":1} or {"n":"v"}
+
+              /** @type {?} */
+              var validArgs = args[0].replace(/(\')?([a-zA-Z0-9_]+)(\')?(\s)?:/g, '"$2":').replace(/:(\s)?(\')(.*?)(\')/g, ':"$3"');
+
+              try {
+                interpolateParams = JSON.parse(validArgs);
+              } catch (e) {
+                throw new SyntaxError("Wrong parameter in TranslatePipe. Expected a valid Object, received: ".concat(args[0]));
+              }
+            } else if (typeof args[0] === 'object' && !Array.isArray(args[0])) {
+              interpolateParams = args[0];
+            }
+          } // store the query, in case it changes
+
+
+          this.lastKey = query; // store the params, in case they change
+
+          this.lastParams = args; // set the value
+
+          this.updateValue(query, interpolateParams); // if there is a subscription to onLangChange, clean it
+
+          this._dispose(); // subscribe to onTranslationChange event, in case the translations change
+
+
+          if (!this.onTranslationChange) {
+            this.onTranslationChange = this.translate.onTranslationChange.subscribe(
+            /**
+            * @param {?} event
+            * @return {?}
+            */
+            function (event) {
+              if (_this130.lastKey && event.lang === _this130.translate.currentLang) {
+                _this130.lastKey = null;
+
+                _this130.updateValue(query, interpolateParams, event.translations);
+              }
+            });
+          } // subscribe to onLangChange event, in case the language changes
+
+
+          if (!this.onLangChange) {
+            this.onLangChange = this.translate.onLangChange.subscribe(
+            /**
+            * @param {?} event
+            * @return {?}
+            */
+            function (event) {
+              if (_this130.lastKey) {
+                _this130.lastKey = null; // we want to make sure it doesn't return the same value until it's been updated
+
+                _this130.updateValue(query, interpolateParams, event.translations);
+              }
+            });
+          } // subscribe to onDefaultLangChange event, in case the default language changes
+
+
+          if (!this.onDefaultLangChange) {
+            this.onDefaultLangChange = this.translate.onDefaultLangChange.subscribe(
+            /**
+            * @return {?}
+            */
+            function () {
+              if (_this130.lastKey) {
+                _this130.lastKey = null; // we want to make sure it doesn't return the same value until it's been updated
+
+                _this130.updateValue(query, interpolateParams);
+              }
+            });
+          }
+
+          return this.value;
+        }
+        /**
+         * Clean any existing subscription to change events
+         * @private
+         * @return {?}
+         */
+
+      }, {
+        key: "_dispose",
+        value: function _dispose() {
+          if (typeof this.onTranslationChange !== 'undefined') {
+            this.onTranslationChange.unsubscribe();
+            this.onTranslationChange = undefined;
+          }
+
+          if (typeof this.onLangChange !== 'undefined') {
+            this.onLangChange.unsubscribe();
+            this.onLangChange = undefined;
+          }
+
+          if (typeof this.onDefaultLangChange !== 'undefined') {
+            this.onDefaultLangChange.unsubscribe();
+            this.onDefaultLangChange = undefined;
+          }
+        }
+        /**
+         * @return {?}
+         */
+
+      }, {
+        key: "ngOnDestroy",
+        value: function ngOnDestroy() {
+          this._dispose();
+        }
+      }]);
+
+      return TranslatePipe;
+    }();
+
+    TranslatePipe.ɵfac = function TranslatePipe_Factory(t) {
+      return new (t || TranslatePipe)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](TranslateService), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinjectPipeChangeDetectorRef"]());
+    };
+
+    TranslatePipe.ɵpipe = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefinePipe"]({
+      name: "translate",
+      type: TranslatePipe,
+      pure: false
+    });
+    TranslatePipe.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({
+      token: TranslatePipe,
+      factory: TranslatePipe.ɵfac
+    });
+    /** @nocollapse */
+
+    TranslatePipe.ctorParameters = function () {
+      return [{
+        type: TranslateService
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]
+      }];
+    };
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TranslatePipe, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"]
+      }, {
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Pipe"],
+        args: [{
+          name: 'translate',
+          pure: false // required to update the value when the promise is resolved
+
+        }]
+      }], function () {
+        return [{
+          type: TranslateService
+        }, {
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ChangeDetectorRef"]
+        }];
+      }, null);
+    })();
+
+    if (false) {}
+    /**
+     * @fileoverview added by tsickle
+     * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+
+    /**
+     * @record
+     */
+
+
+    function TranslateModuleConfig() {}
+
+    if (false) {}
+
+    var TranslateModule = /*#__PURE__*/function () {
+      function TranslateModule() {
+        _classCallCheck(this, TranslateModule);
+      }
+
+      _createClass2(TranslateModule, null, [{
+        key: "forRoot",
+
+        /**
+         * Use this method in your root module to provide the TranslateService
+         * @param {?=} config
+         * @return {?}
+         */
+        value: function forRoot() {
+          var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+          return {
+            ngModule: TranslateModule,
+            providers: [config.loader || {
+              provide: TranslateLoader,
+              useClass: TranslateFakeLoader
+            }, config.compiler || {
+              provide: TranslateCompiler,
+              useClass: TranslateFakeCompiler
+            }, config.parser || {
+              provide: TranslateParser,
+              useClass: TranslateDefaultParser
+            }, config.missingTranslationHandler || {
+              provide: MissingTranslationHandler,
+              useClass: FakeMissingTranslationHandler
+            }, TranslateStore, {
+              provide: USE_STORE,
+              useValue: config.isolate
+            }, {
+              provide: USE_DEFAULT_LANG,
+              useValue: config.useDefaultLang
+            }, {
+              provide: USE_EXTEND,
+              useValue: config.extend
+            }, {
+              provide: DEFAULT_LANGUAGE,
+              useValue: config.defaultLanguage
+            }, TranslateService]
+          };
+        }
+        /**
+         * Use this method in your other (non root) modules to import the directive/pipe
+         * @param {?=} config
+         * @return {?}
+         */
+
+      }, {
+        key: "forChild",
+        value: function forChild() {
+          var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+          return {
+            ngModule: TranslateModule,
+            providers: [config.loader || {
+              provide: TranslateLoader,
+              useClass: TranslateFakeLoader
+            }, config.compiler || {
+              provide: TranslateCompiler,
+              useClass: TranslateFakeCompiler
+            }, config.parser || {
+              provide: TranslateParser,
+              useClass: TranslateDefaultParser
+            }, config.missingTranslationHandler || {
+              provide: MissingTranslationHandler,
+              useClass: FakeMissingTranslationHandler
+            }, {
+              provide: USE_STORE,
+              useValue: config.isolate
+            }, {
+              provide: USE_DEFAULT_LANG,
+              useValue: config.useDefaultLang
+            }, {
+              provide: USE_EXTEND,
+              useValue: config.extend
+            }, {
+              provide: DEFAULT_LANGUAGE,
+              useValue: config.defaultLanguage
+            }, TranslateService]
+          };
+        }
+      }]);
+
+      return TranslateModule;
+    }();
+
+    TranslateModule.ɵmod = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineNgModule"]({
+      type: TranslateModule
+    });
+    TranslateModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjector"]({
+      factory: function TranslateModule_Factory(t) {
+        return new (t || TranslateModule)();
+      }
+    });
+
+    (function () {
+      (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsetNgModuleScope"](TranslateModule, {
+        declarations: [TranslatePipe, TranslateDirective],
+        exports: [TranslatePipe, TranslateDirective]
+      });
+    })();
+    /*@__PURE__*/
+
+
+    (function () {
+      _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](TranslateModule, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"],
+        args: [{
+          declarations: [TranslatePipe, TranslateDirective],
+          exports: [TranslatePipe, TranslateDirective]
+        }]
+      }], null, null);
+    })();
+    /**
+     * @fileoverview added by tsickle
+     * @suppress {checkTypes,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+     */
+    //# sourceMappingURL=ngx-translate-core.js.map
+
+    /***/
+
+  },
+
+  /***/
+  "./node_modules/@ngx-translate/http-loader/__ivy_ngcc__/fesm2015/ngx-translate-http-loader.js":
+  /*!****************************************************************************************************!*\
+    !*** ./node_modules/@ngx-translate/http-loader/__ivy_ngcc__/fesm2015/ngx-translate-http-loader.js ***!
+    \****************************************************************************************************/
+
+  /*! exports provided: TranslateHttpLoader */
+
+  /***/
+  function node_modulesNgxTranslateHttpLoader__ivy_ngcc__Fesm2015NgxTranslateHttpLoaderJs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "TranslateHttpLoader", function () {
+      return TranslateHttpLoader;
+    });
+    /**
+     * @fileoverview added by tsickle
+     * @suppress {checkTypes,extraRequire,missingReturn,uselessCode} checked by tsc
+     */
+
+
+    var TranslateHttpLoader = /*#__PURE__*/function () {
+      /**
+       * @param {?} http
+       * @param {?=} prefix
+       * @param {?=} suffix
+       */
+      function TranslateHttpLoader(http) {
+        var prefix = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "/assets/i18n/";
+        var suffix = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ".json";
+
+        _classCallCheck(this, TranslateHttpLoader);
+
+        this.http = http;
+        this.prefix = prefix;
+        this.suffix = suffix;
+      }
+      /**
+       * Gets the translations from the server
+       * @param {?} lang
+       * @return {?}
+       */
+
+
+      _createClass2(TranslateHttpLoader, [{
+        key: "getTranslation",
+        value: function getTranslation(lang) {
+          return this.http.get("".concat(this.prefix).concat(lang).concat(this.suffix));
+        }
+      }]);
+
+      return TranslateHttpLoader;
+    }();
+    /**
+     * @fileoverview added by tsickle
+     * @suppress {checkTypes,extraRequire,missingReturn,uselessCode} checked by tsc
+     */
+
+    /**
+     * @fileoverview added by tsickle
+     * @suppress {checkTypes,extraRequire,missingReturn,uselessCode} checked by tsc
+     */
+    //# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibmd4LXRyYW5zbGF0ZS1odHRwLWxvYWRlci5qcyIsInNvdXJjZXMiOlsibmc6L0BuZ3gtdHJhbnNsYXRlL2h0dHAtbG9hZGVyL2xpYi9odHRwLWxvYWRlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7O0FBSUEsTUFBYSxtQkFBbUIsekJBQWhDLE1BQWEsbUJBQW1CO0FBQUc7QUFBUTtBQUN2QztBQUEwQjtBQUEwQjtJQUF0RCxZQUFvQixJQUFnQixFQUFTLFNBQWlCLGVBQWUsRUFBUyxTQUFpQixPQUFPLGhFQUFoRCxJQUE5RCxZQUFvQixJQUFnQixFQUFTLFNBQWlCLGVBQWUsRUFBUyxTQUFpQixPQUFPO1FBQTFGLFNBQUksR0FBSixJQUFJLENBQVksekJBQThFLFFBQTlGLFNBQUksR0FBSixJQUFJLENBQVk7UUFBUyxXQUFNLEdBQU4sTUFBTSxDQUEwQiw3QkFBeEMsUUFBUSxXQUFNLEdBQU4sTUFBTSxDQUEwQjtRQUFTLFdBQU0sR0FBTixNQUFNLENBQWtCLDdCQUFoQyxRQUFRLFdBQU0sR0FBTixNQUFNLENBQWtCO0tBQUksTEFBSCxLQUFHO0FBQ3BIO0FBRUM7QUFDRTs7QUFDb0M7SUFBOUIsY0FBYyxDQUFDLElBQVksdkJBQVcsSUFBdEMsY0FBYyxDQUFDLElBQVk7UUFDaEMsT0FBTyxJQUFJLENBQUMsSUFBSSxDQUFDLEdBQUcsQ0FBQyxHQUFHLElBQUksQ0FBQyxNQUFNLEdBQUcsSUFBSSxHQUFHLElBQUksQ0FBQyxNQUFNLEVBQUUsQ0FBQyxDQUFDLHBFQUR4QixRQUNwQyxPQUFPLElBQUksQ0FBQyxJQUFJLENBQUMsR0FBRyxDQUFDLEdBQUcsSUFBSSxDQUFDLE1BQU0sR0FBRyxJQUFJLEdBQUcsSUFBSSxDQUFDLE1BQU0sRUFBRSxDQUFDLENBQUM7S0FDN0QsTEFBSCxLQUFHO0NBQ0YsREFBRCxDQUFDO0FBQ0Q7QUFBQztBQUFJO0FBQWtDO0FBQWdGO0FBQUk7QUFBQztBQUFJO0FBQWtDO0FBQWdGO0FBQUk7QUFBQyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7SHR0cENsaWVudH0gZnJvbSBcIkBhbmd1bGFyL2NvbW1vbi9odHRwXCI7XG5pbXBvcnQge1RyYW5zbGF0ZUxvYWRlcn0gZnJvbSBcIkBuZ3gtdHJhbnNsYXRlL2NvcmVcIjtcbmltcG9ydCB7T2JzZXJ2YWJsZX0gZnJvbSAncnhqcyc7XG5cbmV4cG9ydCBjbGFzcyBUcmFuc2xhdGVIdHRwTG9hZGVyIGltcGxlbWVudHMgVHJhbnNsYXRlTG9hZGVyIHtcbiAgY29uc3RydWN0b3IocHJpdmF0ZSBodHRwOiBIdHRwQ2xpZW50LCBwdWJsaWMgcHJlZml4OiBzdHJpbmcgPSBcIi9hc3NldHMvaTE4bi9cIiwgcHVibGljIHN1ZmZpeDogc3RyaW5nID0gXCIuanNvblwiKSB7fVxuXG4gIC8qKlxuICAgKiBHZXRzIHRoZSB0cmFuc2xhdGlvbnMgZnJvbSB0aGUgc2VydmVyXG4gICAqL1xuICBwdWJsaWMgZ2V0VHJhbnNsYXRpb24obGFuZzogc3RyaW5nKTogT2JzZXJ2YWJsZTxPYmplY3Q+IHtcbiAgICByZXR1cm4gdGhpcy5odHRwLmdldChgJHt0aGlzLnByZWZpeH0ke2xhbmd9JHt0aGlzLnN1ZmZpeH1gKTtcbiAgfVxufVxuIl19
+
+    /***/
+
   },
 
   /***/
@@ -87082,18 +93491,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AsyncSubject = /*#__PURE__*/function (_Subject__WEBPACK_IMP) {
       _inherits(AsyncSubject, _Subject__WEBPACK_IMP);
 
-      var _super49 = _createSuper(AsyncSubject);
+      var _super55 = _createSuper(AsyncSubject);
 
       function AsyncSubject() {
-        var _this105;
+        var _this131;
 
         _classCallCheck(this, AsyncSubject);
 
-        _this105 = _super49.apply(this, arguments);
-        _this105.value = null;
-        _this105.hasNext = false;
-        _this105.hasCompleted = false;
-        return _this105;
+        _this131 = _super55.apply(this, arguments);
+        _this131.value = null;
+        _this131.hasNext = false;
+        _this131.hasCompleted = false;
+        return _this131;
       }
 
       _createClass2(AsyncSubject, [{
@@ -87180,16 +93589,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BehaviorSubject = /*#__PURE__*/function (_Subject__WEBPACK_IMP2) {
       _inherits(BehaviorSubject, _Subject__WEBPACK_IMP2);
 
-      var _super50 = _createSuper(BehaviorSubject);
+      var _super56 = _createSuper(BehaviorSubject);
 
       function BehaviorSubject(_value) {
-        var _this106;
+        var _this132;
 
         _classCallCheck(this, BehaviorSubject);
 
-        _this106 = _super50.call(this);
-        _this106._value = _value;
-        return _this106;
+        _this132 = _super56.call(this);
+        _this132._value = _value;
+        return _this132;
       }
 
       _createClass2(BehaviorSubject, [{
@@ -87262,19 +93671,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var InnerSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_) {
       _inherits(InnerSubscriber, _Subscriber__WEBPACK_);
 
-      var _super51 = _createSuper(InnerSubscriber);
+      var _super57 = _createSuper(InnerSubscriber);
 
       function InnerSubscriber(parent, outerValue, outerIndex) {
-        var _this107;
+        var _this133;
 
         _classCallCheck(this, InnerSubscriber);
 
-        _this107 = _super51.call(this);
-        _this107.parent = parent;
-        _this107.outerValue = outerValue;
-        _this107.outerIndex = outerIndex;
-        _this107.index = 0;
-        return _this107;
+        _this133 = _super57.call(this);
+        _this133.parent = parent;
+        _this133.outerValue = outerValue;
+        _this133.outerIndex = outerIndex;
+        _this133.index = 0;
+        return _this133;
       }
 
       _createClass2(InnerSubscriber, [{
@@ -87566,12 +93975,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "forEach",
         value: function forEach(next, promiseCtor) {
-          var _this108 = this;
+          var _this134 = this;
 
           promiseCtor = getPromiseCtor(promiseCtor);
           return new promiseCtor(function (resolve, reject) {
             var subscription;
-            subscription = _this108.subscribe(function (value) {
+            subscription = _this134.subscribe(function (value) {
               try {
                 next(value);
               } catch (err) {
@@ -87598,8 +94007,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "pipe",
         value: function pipe() {
-          for (var _len15 = arguments.length, operations = new Array(_len15), _key15 = 0; _key15 < _len15; _key15++) {
-            operations[_key15] = arguments[_key15];
+          for (var _len16 = arguments.length, operations = new Array(_len16), _key16 = 0; _key16 < _len16; _key16++) {
+            operations[_key16] = arguments[_key16];
           }
 
           if (operations.length === 0) {
@@ -87611,13 +94020,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "toPromise",
         value: function toPromise(promiseCtor) {
-          var _this109 = this;
+          var _this135 = this;
 
           promiseCtor = getPromiseCtor(promiseCtor);
           return new promiseCtor(function (resolve, reject) {
             var value;
 
-            _this109.subscribe(function (x) {
+            _this135.subscribe(function (x) {
               return value = x;
             }, function (err) {
               return reject(err);
@@ -87728,12 +94137,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var OuterSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_2) {
       _inherits(OuterSubscriber, _Subscriber__WEBPACK_2);
 
-      var _super52 = _createSuper(OuterSubscriber);
+      var _super58 = _createSuper(OuterSubscriber);
 
       function OuterSubscriber() {
         _classCallCheck(this, OuterSubscriber);
 
-        return _super52.apply(this, arguments);
+        return _super58.apply(this, arguments);
       }
 
       _createClass2(OuterSubscriber, [{
@@ -87819,10 +94228,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ReplaySubject = /*#__PURE__*/function (_Subject__WEBPACK_IMP3) {
       _inherits(ReplaySubject, _Subject__WEBPACK_IMP3);
 
-      var _super53 = _createSuper(ReplaySubject);
+      var _super59 = _createSuper(ReplaySubject);
 
       function ReplaySubject() {
-        var _this110;
+        var _this136;
 
         var bufferSize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : Number.POSITIVE_INFINITY;
         var windowTime = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Number.POSITIVE_INFINITY;
@@ -87830,21 +94239,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         _classCallCheck(this, ReplaySubject);
 
-        _this110 = _super53.call(this);
-        _this110.scheduler = scheduler;
-        _this110._events = [];
-        _this110._infiniteTimeWindow = false;
-        _this110._bufferSize = bufferSize < 1 ? 1 : bufferSize;
-        _this110._windowTime = windowTime < 1 ? 1 : windowTime;
+        _this136 = _super59.call(this);
+        _this136.scheduler = scheduler;
+        _this136._events = [];
+        _this136._infiniteTimeWindow = false;
+        _this136._bufferSize = bufferSize < 1 ? 1 : bufferSize;
+        _this136._windowTime = windowTime < 1 ? 1 : windowTime;
 
         if (windowTime === Number.POSITIVE_INFINITY) {
-          _this110._infiniteTimeWindow = true;
-          _this110.next = _this110.nextInfiniteTimeWindow;
+          _this136._infiniteTimeWindow = true;
+          _this136.next = _this136.nextInfiniteTimeWindow;
         } else {
-          _this110.next = _this110.nextTimeWindow;
+          _this136.next = _this136.nextTimeWindow;
         }
 
-        return _this110;
+        return _this136;
       }
 
       _createClass2(ReplaySubject, [{
@@ -88082,16 +94491,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SubjectSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_3) {
       _inherits(SubjectSubscriber, _Subscriber__WEBPACK_3);
 
-      var _super54 = _createSuper(SubjectSubscriber);
+      var _super60 = _createSuper(SubjectSubscriber);
 
       function SubjectSubscriber(destination) {
-        var _this111;
+        var _this137;
 
         _classCallCheck(this, SubjectSubscriber);
 
-        _this111 = _super54.call(this, destination);
-        _this111.destination = destination;
-        return _this111;
+        _this137 = _super60.call(this, destination);
+        _this137.destination = destination;
+        return _this137;
       }
 
       return SubjectSubscriber;
@@ -88100,20 +94509,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var Subject = /*#__PURE__*/function (_Observable__WEBPACK_) {
       _inherits(Subject, _Observable__WEBPACK_);
 
-      var _super55 = _createSuper(Subject);
+      var _super61 = _createSuper(Subject);
 
       function Subject() {
-        var _this112;
+        var _this138;
 
         _classCallCheck(this, Subject);
 
-        _this112 = _super55.call(this);
-        _this112.observers = [];
-        _this112.closed = false;
-        _this112.isStopped = false;
-        _this112.hasError = false;
-        _this112.thrownError = null;
-        return _this112;
+        _this138 = _super61.call(this);
+        _this138.observers = [];
+        _this138.closed = false;
+        _this138.isStopped = false;
+        _this138.hasError = false;
+        _this138.thrownError = null;
+        return _this138;
       }
 
       _createClass2(Subject, [{
@@ -88137,10 +94546,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (!this.isStopped) {
             var observers = this.observers;
-            var _len16 = observers.length;
+            var _len17 = observers.length;
             var copy = observers.slice();
 
-            for (var i = 0; i < _len16; i++) {
+            for (var i = 0; i < _len17; i++) {
               copy[i].next(value);
             }
           }
@@ -88234,17 +94643,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AnonymousSubject = /*#__PURE__*/function (_Subject) {
       _inherits(AnonymousSubject, _Subject);
 
-      var _super56 = _createSuper(AnonymousSubject);
+      var _super62 = _createSuper(AnonymousSubject);
 
       function AnonymousSubject(destination, source) {
-        var _this113;
+        var _this139;
 
         _classCallCheck(this, AnonymousSubject);
 
-        _this113 = _super56.call(this);
-        _this113.destination = destination;
-        _this113.source = source;
-        return _this113;
+        _this139 = _super62.call(this);
+        _this139.destination = destination;
+        _this139.source = source;
+        return _this139;
       }
 
       _createClass2(AnonymousSubject, [{
@@ -88323,18 +94732,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SubjectSubscription = /*#__PURE__*/function (_Subscription__WEBPAC) {
       _inherits(SubjectSubscription, _Subscription__WEBPAC);
 
-      var _super57 = _createSuper(SubjectSubscription);
+      var _super63 = _createSuper(SubjectSubscription);
 
       function SubjectSubscription(subject, subscriber) {
-        var _this114;
+        var _this140;
 
         _classCallCheck(this, SubjectSubscription);
 
-        _this114 = _super57.call(this);
-        _this114.subject = subject;
-        _this114.subscriber = subscriber;
-        _this114.closed = false;
-        return _this114;
+        _this140 = _super63.call(this);
+        _this140.subject = subject;
+        _this140.subscriber = subscriber;
+        _this140.closed = false;
+        return _this140;
       }
 
       _createClass2(SubjectSubscription, [{
@@ -88433,50 +94842,50 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var Subscriber = /*#__PURE__*/function (_Subscription__WEBPAC2) {
       _inherits(Subscriber, _Subscription__WEBPAC2);
 
-      var _super58 = _createSuper(Subscriber);
+      var _super64 = _createSuper(Subscriber);
 
       function Subscriber(destinationOrNext, error, complete) {
-        var _this115;
+        var _this141;
 
         _classCallCheck(this, Subscriber);
 
-        _this115 = _super58.call(this);
-        _this115.syncErrorValue = null;
-        _this115.syncErrorThrown = false;
-        _this115.syncErrorThrowable = false;
-        _this115.isStopped = false;
+        _this141 = _super64.call(this);
+        _this141.syncErrorValue = null;
+        _this141.syncErrorThrown = false;
+        _this141.syncErrorThrowable = false;
+        _this141.isStopped = false;
 
         switch (arguments.length) {
           case 0:
-            _this115.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
+            _this141.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
             break;
 
           case 1:
             if (!destinationOrNext) {
-              _this115.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
+              _this141.destination = _Observer__WEBPACK_IMPORTED_MODULE_1__["empty"];
               break;
             }
 
             if (typeof destinationOrNext === 'object') {
               if (destinationOrNext instanceof Subscriber) {
-                _this115.syncErrorThrowable = destinationOrNext.syncErrorThrowable;
-                _this115.destination = destinationOrNext;
-                destinationOrNext.add(_assertThisInitialized(_this115));
+                _this141.syncErrorThrowable = destinationOrNext.syncErrorThrowable;
+                _this141.destination = destinationOrNext;
+                destinationOrNext.add(_assertThisInitialized(_this141));
               } else {
-                _this115.syncErrorThrowable = true;
-                _this115.destination = new SafeSubscriber(_assertThisInitialized(_this115), destinationOrNext);
+                _this141.syncErrorThrowable = true;
+                _this141.destination = new SafeSubscriber(_assertThisInitialized(_this141), destinationOrNext);
               }
 
               break;
             }
 
           default:
-            _this115.syncErrorThrowable = true;
-            _this115.destination = new SafeSubscriber(_assertThisInitialized(_this115), destinationOrNext, error, complete);
+            _this141.syncErrorThrowable = true;
+            _this141.destination = new SafeSubscriber(_assertThisInitialized(_this141), destinationOrNext, error, complete);
             break;
         }
 
-        return _this115;
+        return _this141;
       }
 
       _createClass2(Subscriber, [{
@@ -88563,18 +94972,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SafeSubscriber = /*#__PURE__*/function (_Subscriber) {
       _inherits(SafeSubscriber, _Subscriber);
 
-      var _super59 = _createSuper(SafeSubscriber);
+      var _super65 = _createSuper(SafeSubscriber);
 
       function SafeSubscriber(_parentSubscriber, observerOrNext, error, complete) {
-        var _this116;
+        var _this142;
 
         _classCallCheck(this, SafeSubscriber);
 
-        _this116 = _super59.call(this);
-        _this116._parentSubscriber = _parentSubscriber;
+        _this142 = _super65.call(this);
+        _this142._parentSubscriber = _parentSubscriber;
         var next;
 
-        var context = _assertThisInitialized(_this116);
+        var context = _assertThisInitialized(_this142);
 
         if (Object(_util_isFunction__WEBPACK_IMPORTED_MODULE_0__["isFunction"])(observerOrNext)) {
           next = observerOrNext;
@@ -88587,18 +94996,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             context = Object.create(observerOrNext);
 
             if (Object(_util_isFunction__WEBPACK_IMPORTED_MODULE_0__["isFunction"])(context.unsubscribe)) {
-              _this116.add(context.unsubscribe.bind(context));
+              _this142.add(context.unsubscribe.bind(context));
             }
 
-            context.unsubscribe = _this116.unsubscribe.bind(_assertThisInitialized(_this116));
+            context.unsubscribe = _this142.unsubscribe.bind(_assertThisInitialized(_this142));
           }
         }
 
-        _this116._context = context;
-        _this116._next = next;
-        _this116._error = error;
-        _this116._complete = complete;
-        return _this116;
+        _this142._context = context;
+        _this142._next = next;
+        _this142._error = error;
+        _this142._complete = complete;
+        return _this142;
       }
 
       _createClass2(SafeSubscriber, [{
@@ -88654,14 +95063,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "complete",
         value: function complete() {
-          var _this117 = this;
+          var _this143 = this;
 
           if (!this.isStopped) {
             var _parentSubscriber = this._parentSubscriber;
 
             if (this._complete) {
               var wrappedComplete = function wrappedComplete() {
-                return _this117._complete.call(_this117._context);
+                return _this143._complete.call(_this143._context);
               };
 
               if (!_config__WEBPACK_IMPORTED_MODULE_4__["config"].useDeprecatedSynchronousErrorHandling || !_parentSubscriber.syncErrorThrowable) {
@@ -88826,9 +95235,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           if (Object(_util_isArray__WEBPACK_IMPORTED_MODULE_0__["isArray"])(_subscriptions)) {
             var _index2 = -1;
 
-            var _len17 = _subscriptions.length;
+            var _len18 = _subscriptions.length;
 
-            while (++_index2 < _len17) {
+            while (++_index2 < _len18) {
               var sub = _subscriptions[_index2];
 
               if (Object(_util_isObject__WEBPACK_IMPORTED_MODULE_1__["isObject"])(sub)) {
@@ -89047,19 +95456,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ConnectableObservable = /*#__PURE__*/function (_Observable__WEBPACK_2) {
       _inherits(ConnectableObservable, _Observable__WEBPACK_2);
 
-      var _super60 = _createSuper(ConnectableObservable);
+      var _super66 = _createSuper(ConnectableObservable);
 
       function ConnectableObservable(source, subjectFactory) {
-        var _this118;
+        var _this144;
 
         _classCallCheck(this, ConnectableObservable);
 
-        _this118 = _super60.call(this);
-        _this118.source = source;
-        _this118.subjectFactory = subjectFactory;
-        _this118._refCount = 0;
-        _this118._isComplete = false;
-        return _this118;
+        _this144 = _super66.call(this);
+        _this144.source = source;
+        _this144.subjectFactory = subjectFactory;
+        _this144._refCount = 0;
+        _this144._isComplete = false;
+        return _this144;
       }
 
       _createClass2(ConnectableObservable, [{
@@ -89146,16 +95555,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ConnectableSubscriber = /*#__PURE__*/function (_Subject__WEBPACK_IMP4) {
       _inherits(ConnectableSubscriber, _Subject__WEBPACK_IMP4);
 
-      var _super61 = _createSuper(ConnectableSubscriber);
+      var _super67 = _createSuper(ConnectableSubscriber);
 
       function ConnectableSubscriber(destination, connectable) {
-        var _this119;
+        var _this145;
 
         _classCallCheck(this, ConnectableSubscriber);
 
-        _this119 = _super61.call(this, destination);
-        _this119.connectable = connectable;
-        return _this119;
+        _this145 = _super67.call(this, destination);
+        _this145.connectable = connectable;
+        return _this145;
       }
 
       _createClass2(ConnectableSubscriber, [{
@@ -89225,16 +95634,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RefCountSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_4) {
       _inherits(RefCountSubscriber, _Subscriber__WEBPACK_4);
 
-      var _super62 = _createSuper(RefCountSubscriber);
+      var _super68 = _createSuper(RefCountSubscriber);
 
       function RefCountSubscriber(destination, connectable) {
-        var _this120;
+        var _this146;
 
         _classCallCheck(this, RefCountSubscriber);
 
-        _this120 = _super62.call(this, destination);
-        _this120.connectable = connectable;
-        return _this120;
+        _this146 = _super68.call(this, destination);
+        _this146.connectable = connectable;
+        return _this146;
       }
 
       _createClass2(RefCountSubscriber, [{
@@ -89320,30 +95729,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SubscribeOnObservable = /*#__PURE__*/function (_Observable__WEBPACK_3) {
       _inherits(SubscribeOnObservable, _Observable__WEBPACK_3);
 
-      var _super63 = _createSuper(SubscribeOnObservable);
+      var _super69 = _createSuper(SubscribeOnObservable);
 
       function SubscribeOnObservable(source) {
-        var _this121;
+        var _this147;
 
         var delayTime = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
         var scheduler = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : _scheduler_asap__WEBPACK_IMPORTED_MODULE_1__["asap"];
 
         _classCallCheck(this, SubscribeOnObservable);
 
-        _this121 = _super63.call(this);
-        _this121.source = source;
-        _this121.delayTime = delayTime;
-        _this121.scheduler = scheduler;
+        _this147 = _super69.call(this);
+        _this147.source = source;
+        _this147.delayTime = delayTime;
+        _this147.scheduler = scheduler;
 
         if (!Object(_util_isNumeric__WEBPACK_IMPORTED_MODULE_2__["isNumeric"])(delayTime) || delayTime < 0) {
-          _this121.delayTime = 0;
+          _this147.delayTime = 0;
         }
 
         if (!scheduler || typeof scheduler.schedule !== 'function') {
-          _this121.scheduler = _scheduler_asap__WEBPACK_IMPORTED_MODULE_1__["asap"];
+          _this147.scheduler = _scheduler_asap__WEBPACK_IMPORTED_MODULE_1__["asap"];
         }
 
-        return _this121;
+        return _this147;
       }
 
       _createClass2(SubscribeOnObservable, [{
@@ -89450,8 +95859,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       return function () {
-        for (var _len18 = arguments.length, args = new Array(_len18), _key16 = 0; _key16 < _len18; _key16++) {
-          args[_key16] = arguments[_key16];
+        for (var _len19 = arguments.length, args = new Array(_len19), _key17 = 0; _key17 < _len19; _key17++) {
+          args[_key17] = arguments[_key17];
         }
 
         var context = this;
@@ -89468,8 +95877,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               subject = new _AsyncSubject__WEBPACK_IMPORTED_MODULE_1__["AsyncSubject"]();
 
               var handler = function handler() {
-                for (var _len19 = arguments.length, innerArgs = new Array(_len19), _key17 = 0; _key17 < _len19; _key17++) {
-                  innerArgs[_key17] = arguments[_key17];
+                for (var _len20 = arguments.length, innerArgs = new Array(_len20), _key18 = 0; _key18 < _len20; _key18++) {
+                  innerArgs[_key18] = arguments[_key18];
                 }
 
                 subject.next(innerArgs.length <= 1 ? innerArgs[0] : innerArgs);
@@ -89501,7 +95910,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function dispatch(state) {
-      var _this122 = this;
+      var _this148 = this;
 
       var self = this;
       var args = state.args,
@@ -89516,13 +95925,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         subject = params.subject = new _AsyncSubject__WEBPACK_IMPORTED_MODULE_1__["AsyncSubject"]();
 
         var handler = function handler() {
-          for (var _len20 = arguments.length, innerArgs = new Array(_len20), _key18 = 0; _key18 < _len20; _key18++) {
-            innerArgs[_key18] = arguments[_key18];
+          for (var _len21 = arguments.length, innerArgs = new Array(_len21), _key19 = 0; _key19 < _len21; _key19++) {
+            innerArgs[_key19] = arguments[_key19];
           }
 
           var value = innerArgs.length <= 1 ? innerArgs[0] : innerArgs;
 
-          _this122.add(scheduler.schedule(dispatchNext, 0, {
+          _this148.add(scheduler.schedule(dispatchNext, 0, {
             value: value,
             subject: subject
           }));
@@ -89625,8 +96034,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       return function () {
-        for (var _len21 = arguments.length, args = new Array(_len21), _key19 = 0; _key19 < _len21; _key19++) {
-          args[_key19] = arguments[_key19];
+        for (var _len22 = arguments.length, args = new Array(_len22), _key20 = 0; _key20 < _len22; _key20++) {
+          args[_key20] = arguments[_key20];
         }
 
         var params = {
@@ -89645,8 +96054,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               subject = params.subject = new _AsyncSubject__WEBPACK_IMPORTED_MODULE_1__["AsyncSubject"]();
 
               var handler = function handler() {
-                for (var _len22 = arguments.length, innerArgs = new Array(_len22), _key20 = 0; _key20 < _len22; _key20++) {
-                  innerArgs[_key20] = arguments[_key20];
+                for (var _len23 = arguments.length, innerArgs = new Array(_len23), _key21 = 0; _key21 < _len23; _key21++) {
+                  innerArgs[_key21] = arguments[_key21];
                 }
 
                 var err = innerArgs.shift();
@@ -89684,7 +96093,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function dispatch(state) {
-      var _this123 = this;
+      var _this149 = this;
 
       var params = state.params,
           subscriber = state.subscriber,
@@ -89698,21 +96107,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         subject = params.subject = new _AsyncSubject__WEBPACK_IMPORTED_MODULE_1__["AsyncSubject"]();
 
         var handler = function handler() {
-          for (var _len23 = arguments.length, innerArgs = new Array(_len23), _key21 = 0; _key21 < _len23; _key21++) {
-            innerArgs[_key21] = arguments[_key21];
+          for (var _len24 = arguments.length, innerArgs = new Array(_len24), _key22 = 0; _key22 < _len24; _key22++) {
+            innerArgs[_key22] = arguments[_key22];
           }
 
           var err = innerArgs.shift();
 
           if (err) {
-            _this123.add(scheduler.schedule(dispatchError, 0, {
+            _this149.add(scheduler.schedule(dispatchError, 0, {
               err: err,
               subject: subject
             }));
           } else {
             var value = innerArgs.length <= 1 ? innerArgs[0] : innerArgs;
 
-            _this123.add(scheduler.schedule(dispatchNext, 0, {
+            _this149.add(scheduler.schedule(dispatchNext, 0, {
               value: value,
               subject: subject
             }));
@@ -89814,8 +96223,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var NONE = {};
 
     function combineLatest() {
-      for (var _len24 = arguments.length, observables = new Array(_len24), _key22 = 0; _key22 < _len24; _key22++) {
-        observables[_key22] = arguments[_key22];
+      for (var _len25 = arguments.length, observables = new Array(_len25), _key23 = 0; _key23 < _len25; _key23++) {
+        observables[_key23] = arguments[_key23];
       }
 
       var resultSelector = null;
@@ -89856,19 +96265,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var CombineLatestSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB) {
       _inherits(CombineLatestSubscriber, _OuterSubscriber__WEB);
 
-      var _super64 = _createSuper(CombineLatestSubscriber);
+      var _super70 = _createSuper(CombineLatestSubscriber);
 
       function CombineLatestSubscriber(destination, resultSelector) {
-        var _this124;
+        var _this150;
 
         _classCallCheck(this, CombineLatestSubscriber);
 
-        _this124 = _super64.call(this, destination);
-        _this124.resultSelector = resultSelector;
-        _this124.active = 0;
-        _this124.values = [];
-        _this124.observables = [];
-        return _this124;
+        _this150 = _super70.call(this, destination);
+        _this150.resultSelector = resultSelector;
+        _this150.active = 0;
+        _this150.values = [];
+        _this150.observables = [];
+        return _this150;
       }
 
       _createClass2(CombineLatestSubscriber, [{
@@ -90142,8 +96551,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/observable/from.js");
 
     function forkJoin() {
-      for (var _len25 = arguments.length, sources = new Array(_len25), _key23 = 0; _key23 < _len25; _key23++) {
-        sources[_key23] = arguments[_key23];
+      for (var _len26 = arguments.length, sources = new Array(_len26), _key24 = 0; _key24 < _len26; _key24++) {
+        sources[_key24] = arguments[_key24];
       }
 
       if (sources.length === 1) {
@@ -90428,7 +96837,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return _source2.removeListener(eventName, handler);
         };
       } else if (sourceObj && sourceObj.length) {
-        for (var i = 0, _len26 = sourceObj.length; i < _len26; i++) {
+        for (var i = 0, _len27 = sourceObj.length; i < _len27; i++) {
           setupSubscription(sourceObj[i], eventName, handler, subscriber, options);
         }
       } else {
@@ -90507,8 +96916,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
       return new _Observable__WEBPACK_IMPORTED_MODULE_0__["Observable"](function (subscriber) {
         var handler = function handler() {
-          for (var _len27 = arguments.length, e = new Array(_len27), _key24 = 0; _key24 < _len27; _key24++) {
-            e[_key24] = arguments[_key24];
+          for (var _len28 = arguments.length, e = new Array(_len28), _key25 = 0; _key25 < _len28; _key25++) {
+            e[_key25] = arguments[_key25];
           }
 
           return subscriber.next(e.length === 1 ? e[0] : e);
@@ -90885,8 +97294,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var concurrent = Number.POSITIVE_INFINITY;
       var scheduler = null;
 
-      for (var _len28 = arguments.length, observables = new Array(_len28), _key25 = 0; _key25 < _len28; _key25++) {
-        observables[_key25] = arguments[_key25];
+      for (var _len29 = arguments.length, observables = new Array(_len29), _key26 = 0; _key26 < _len29; _key26++) {
+        observables[_key26] = arguments[_key26];
       }
 
       var last = observables[observables.length - 1];
@@ -90999,8 +97408,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/scheduled/scheduleArray.js");
 
     function of() {
-      for (var _len29 = arguments.length, args = new Array(_len29), _key26 = 0; _key26 < _len29; _key26++) {
-        args[_key26] = arguments[_key26];
+      for (var _len30 = arguments.length, args = new Array(_len30), _key27 = 0; _key27 < _len30; _key27++) {
+        args[_key27] = arguments[_key27];
       }
 
       var scheduler = args[args.length - 1];
@@ -91062,8 +97471,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/observable/empty.js");
 
     function onErrorResumeNext() {
-      for (var _len30 = arguments.length, sources = new Array(_len30), _key27 = 0; _key27 < _len30; _key27++) {
-        sources[_key27] = arguments[_key27];
+      for (var _len31 = arguments.length, sources = new Array(_len31), _key28 = 0; _key28 < _len31; _key28++) {
+        sources[_key28] = arguments[_key28];
       }
 
       if (sources.length === 0) {
@@ -91302,8 +97711,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/util/subscribeToResult.js");
 
     function race() {
-      for (var _len31 = arguments.length, observables = new Array(_len31), _key28 = 0; _key28 < _len31; _key28++) {
-        observables[_key28] = arguments[_key28];
+      for (var _len32 = arguments.length, observables = new Array(_len32), _key29 = 0; _key29 < _len32; _key29++) {
+        observables[_key29] = arguments[_key29];
       }
 
       if (observables.length === 1) {
@@ -91335,18 +97744,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RaceSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB2) {
       _inherits(RaceSubscriber, _OuterSubscriber__WEB2);
 
-      var _super65 = _createSuper(RaceSubscriber);
+      var _super71 = _createSuper(RaceSubscriber);
 
       function RaceSubscriber(destination) {
-        var _this125;
+        var _this151;
 
         _classCallCheck(this, RaceSubscriber);
 
-        _this125 = _super65.call(this, destination);
-        _this125.hasFirst = false;
-        _this125.observables = [];
-        _this125.subscriptions = [];
-        return _this125;
+        _this151 = _super71.call(this, destination);
+        _this151.hasFirst = false;
+        _this151.observables = [];
+        _this151.subscriptions = [];
+        return _this151;
       }
 
       _createClass2(RaceSubscriber, [{
@@ -91543,9 +97952,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
     }
 
-    function dispatch(_ref12) {
-      var error = _ref12.error,
-          subscriber = _ref12.subscriber;
+    function dispatch(_ref14) {
+      var error = _ref14.error,
+          subscriber = _ref14.subscriber;
       subscriber.error(error);
     } //# sourceMappingURL=throwError.js.map
 
@@ -91786,8 +98195,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/symbol/iterator.js");
 
     function zip() {
-      for (var _len32 = arguments.length, observables = new Array(_len32), _key29 = 0; _key29 < _len32; _key29++) {
-        observables[_key29] = arguments[_key29];
+      for (var _len33 = arguments.length, observables = new Array(_len33), _key30 = 0; _key30 < _len33; _key30++) {
+        observables[_key30] = arguments[_key30];
       }
 
       var resultSelector = observables[observables.length - 1];
@@ -91819,21 +98228,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ZipSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_5) {
       _inherits(ZipSubscriber, _Subscriber__WEBPACK_5);
 
-      var _super66 = _createSuper(ZipSubscriber);
+      var _super72 = _createSuper(ZipSubscriber);
 
       function ZipSubscriber(destination, resultSelector) {
-        var _this126;
+        var _this152;
 
         var values = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : Object.create(null);
 
         _classCallCheck(this, ZipSubscriber);
 
-        _this126 = _super66.call(this, destination);
-        _this126.iterators = [];
-        _this126.active = 0;
-        _this126.resultSelector = typeof resultSelector === 'function' ? resultSelector : null;
-        _this126.values = values;
-        return _this126;
+        _this152 = _super72.call(this, destination);
+        _this152.iterators = [];
+        _this152.active = 0;
+        _this152.resultSelector = typeof resultSelector === 'function' ? resultSelector : null;
+        _this152.values = values;
+        return _this152;
       }
 
       _createClass2(ZipSubscriber, [{
@@ -91902,11 +98311,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var args = [];
 
           for (var _i20 = 0; _i20 < len; _i20++) {
-            var _iterator19 = iterators[_i20];
+            var _iterator20 = iterators[_i20];
 
-            var result = _iterator19.next();
+            var result = _iterator20.next();
 
-            if (_iterator19.hasCompleted()) {
+            if (_iterator20.hasCompleted()) {
               shouldComplete = true;
             }
 
@@ -92024,20 +98433,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ZipBufferIterator = /*#__PURE__*/function (_OuterSubscriber__WEB3) {
       _inherits(ZipBufferIterator, _OuterSubscriber__WEB3);
 
-      var _super67 = _createSuper(ZipBufferIterator);
+      var _super73 = _createSuper(ZipBufferIterator);
 
       function ZipBufferIterator(destination, parent, observable) {
-        var _this127;
+        var _this153;
 
         _classCallCheck(this, ZipBufferIterator);
 
-        _this127 = _super67.call(this, destination);
-        _this127.parent = parent;
-        _this127.observable = observable;
-        _this127.stillUnsubscribed = true;
-        _this127.buffer = [];
-        _this127.isComplete = false;
-        return _this127;
+        _this153 = _super73.call(this, destination);
+        _this153.parent = parent;
+        _this153.observable = observable;
+        _this153.stillUnsubscribed = true;
+        _this153.buffer = [];
+        _this153.isComplete = false;
+        return _this153;
       }
 
       _createClass2(ZipBufferIterator, [{
@@ -92160,17 +98569,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AuditSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB4) {
       _inherits(AuditSubscriber, _OuterSubscriber__WEB4);
 
-      var _super68 = _createSuper(AuditSubscriber);
+      var _super74 = _createSuper(AuditSubscriber);
 
       function AuditSubscriber(destination, durationSelector) {
-        var _this128;
+        var _this154;
 
         _classCallCheck(this, AuditSubscriber);
 
-        _this128 = _super68.call(this, destination);
-        _this128.durationSelector = durationSelector;
-        _this128.hasValue = false;
-        return _this128;
+        _this154 = _super74.call(this, destination);
+        _this154.durationSelector = durationSelector;
+        _this154.hasValue = false;
+        return _this154;
       }
 
       _createClass2(AuditSubscriber, [{
@@ -92343,19 +98752,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BufferSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB5) {
       _inherits(BufferSubscriber, _OuterSubscriber__WEB5);
 
-      var _super69 = _createSuper(BufferSubscriber);
+      var _super75 = _createSuper(BufferSubscriber);
 
       function BufferSubscriber(destination, closingNotifier) {
-        var _this129;
+        var _this155;
 
         _classCallCheck(this, BufferSubscriber);
 
-        _this129 = _super69.call(this, destination);
-        _this129.buffer = [];
+        _this155 = _super75.call(this, destination);
+        _this155.buffer = [];
 
-        _this129.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this129), closingNotifier));
+        _this155.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this155), closingNotifier));
 
-        return _this129;
+        return _this155;
       }
 
       _createClass2(BufferSubscriber, [{
@@ -92439,17 +98848,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BufferCountSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_6) {
       _inherits(BufferCountSubscriber, _Subscriber__WEBPACK_6);
 
-      var _super70 = _createSuper(BufferCountSubscriber);
+      var _super76 = _createSuper(BufferCountSubscriber);
 
       function BufferCountSubscriber(destination, bufferSize) {
-        var _this130;
+        var _this156;
 
         _classCallCheck(this, BufferCountSubscriber);
 
-        _this130 = _super70.call(this, destination);
-        _this130.bufferSize = bufferSize;
-        _this130.buffer = [];
-        return _this130;
+        _this156 = _super76.call(this, destination);
+        _this156.bufferSize = bufferSize;
+        _this156.buffer = [];
+        return _this156;
       }
 
       _createClass2(BufferCountSubscriber, [{
@@ -92482,19 +98891,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BufferSkipCountSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_7) {
       _inherits(BufferSkipCountSubscriber, _Subscriber__WEBPACK_7);
 
-      var _super71 = _createSuper(BufferSkipCountSubscriber);
+      var _super77 = _createSuper(BufferSkipCountSubscriber);
 
       function BufferSkipCountSubscriber(destination, bufferSize, startBufferEvery) {
-        var _this131;
+        var _this157;
 
         _classCallCheck(this, BufferSkipCountSubscriber);
 
-        _this131 = _super71.call(this, destination);
-        _this131.bufferSize = bufferSize;
-        _this131.startBufferEvery = startBufferEvery;
-        _this131.buffers = [];
-        _this131.count = 0;
-        return _this131;
+        _this157 = _super77.call(this, destination);
+        _this157.bufferSize = bufferSize;
+        _this157.startBufferEvery = startBufferEvery;
+        _this157.buffers = [];
+        _this157.count = 0;
+        return _this157;
       }
 
       _createClass2(BufferSkipCountSubscriber, [{
@@ -92638,50 +99047,50 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BufferTimeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_8) {
       _inherits(BufferTimeSubscriber, _Subscriber__WEBPACK_8);
 
-      var _super72 = _createSuper(BufferTimeSubscriber);
+      var _super78 = _createSuper(BufferTimeSubscriber);
 
       function BufferTimeSubscriber(destination, bufferTimeSpan, bufferCreationInterval, maxBufferSize, scheduler) {
-        var _this132;
+        var _this158;
 
         _classCallCheck(this, BufferTimeSubscriber);
 
-        _this132 = _super72.call(this, destination);
-        _this132.bufferTimeSpan = bufferTimeSpan;
-        _this132.bufferCreationInterval = bufferCreationInterval;
-        _this132.maxBufferSize = maxBufferSize;
-        _this132.scheduler = scheduler;
-        _this132.contexts = [];
+        _this158 = _super78.call(this, destination);
+        _this158.bufferTimeSpan = bufferTimeSpan;
+        _this158.bufferCreationInterval = bufferCreationInterval;
+        _this158.maxBufferSize = maxBufferSize;
+        _this158.scheduler = scheduler;
+        _this158.contexts = [];
 
-        var context = _this132.openContext();
+        var context = _this158.openContext();
 
-        _this132.timespanOnly = bufferCreationInterval == null || bufferCreationInterval < 0;
+        _this158.timespanOnly = bufferCreationInterval == null || bufferCreationInterval < 0;
 
-        if (_this132.timespanOnly) {
+        if (_this158.timespanOnly) {
           var timeSpanOnlyState = {
-            subscriber: _assertThisInitialized(_this132),
+            subscriber: _assertThisInitialized(_this158),
             context: context,
             bufferTimeSpan: bufferTimeSpan
           };
 
-          _this132.add(context.closeAction = scheduler.schedule(dispatchBufferTimeSpanOnly, bufferTimeSpan, timeSpanOnlyState));
+          _this158.add(context.closeAction = scheduler.schedule(dispatchBufferTimeSpanOnly, bufferTimeSpan, timeSpanOnlyState));
         } else {
           var closeState = {
-            subscriber: _assertThisInitialized(_this132),
+            subscriber: _assertThisInitialized(_this158),
             context: context
           };
           var creationState = {
             bufferTimeSpan: bufferTimeSpan,
             bufferCreationInterval: bufferCreationInterval,
-            subscriber: _assertThisInitialized(_this132),
+            subscriber: _assertThisInitialized(_this158),
             scheduler: scheduler
           };
 
-          _this132.add(context.closeAction = scheduler.schedule(dispatchBufferClose, bufferTimeSpan, closeState));
+          _this158.add(context.closeAction = scheduler.schedule(dispatchBufferClose, bufferTimeSpan, closeState));
 
-          _this132.add(scheduler.schedule(dispatchBufferCreation, bufferCreationInterval, creationState));
+          _this158.add(scheduler.schedule(dispatchBufferCreation, bufferCreationInterval, creationState));
         }
 
-        return _this132;
+        return _this158;
       }
 
       _createClass2(BufferTimeSubscriber, [{
@@ -92878,21 +99287,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BufferToggleSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB6) {
       _inherits(BufferToggleSubscriber, _OuterSubscriber__WEB6);
 
-      var _super73 = _createSuper(BufferToggleSubscriber);
+      var _super79 = _createSuper(BufferToggleSubscriber);
 
       function BufferToggleSubscriber(destination, openings, closingSelector) {
-        var _this133;
+        var _this159;
 
         _classCallCheck(this, BufferToggleSubscriber);
 
-        _this133 = _super73.call(this, destination);
-        _this133.openings = openings;
-        _this133.closingSelector = closingSelector;
-        _this133.contexts = [];
+        _this159 = _super79.call(this, destination);
+        _this159.openings = openings;
+        _this159.closingSelector = closingSelector;
+        _this159.contexts = [];
 
-        _this133.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this133), openings));
+        _this159.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this159), openings));
 
-        return _this133;
+        return _this159;
       }
 
       _createClass2(BufferToggleSubscriber, [{
@@ -93070,20 +99479,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var BufferWhenSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB7) {
       _inherits(BufferWhenSubscriber, _OuterSubscriber__WEB7);
 
-      var _super74 = _createSuper(BufferWhenSubscriber);
+      var _super80 = _createSuper(BufferWhenSubscriber);
 
       function BufferWhenSubscriber(destination, closingSelector) {
-        var _this134;
+        var _this160;
 
         _classCallCheck(this, BufferWhenSubscriber);
 
-        _this134 = _super74.call(this, destination);
-        _this134.closingSelector = closingSelector;
-        _this134.subscribing = false;
+        _this160 = _super80.call(this, destination);
+        _this160.closingSelector = closingSelector;
+        _this160.subscribing = false;
 
-        _this134.openBuffer();
+        _this160.openBuffer();
 
-        return _this134;
+        return _this160;
       }
 
       _createClass2(BufferWhenSubscriber, [{
@@ -93230,17 +99639,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var CatchSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB8) {
       _inherits(CatchSubscriber, _OuterSubscriber__WEB8);
 
-      var _super75 = _createSuper(CatchSubscriber);
+      var _super81 = _createSuper(CatchSubscriber);
 
       function CatchSubscriber(destination, selector, caught) {
-        var _this135;
+        var _this161;
 
         _classCallCheck(this, CatchSubscriber);
 
-        _this135 = _super75.call(this, destination);
-        _this135.selector = selector;
-        _this135.caught = caught;
-        return _this135;
+        _this161 = _super81.call(this, destination);
+        _this161.selector = selector;
+        _this161.caught = caught;
+        return _this161;
       }
 
       _createClass2(CatchSubscriber, [{
@@ -93354,8 +99763,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var none = {};
 
     function combineLatest() {
-      for (var _len33 = arguments.length, observables = new Array(_len33), _key30 = 0; _key30 < _len33; _key30++) {
-        observables[_key30] = arguments[_key30];
+      for (var _len34 = arguments.length, observables = new Array(_len34), _key31 = 0; _key31 < _len34; _key31++) {
+        observables[_key31] = arguments[_key31];
       }
 
       var project = null;
@@ -93404,8 +99813,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/observable/concat.js");
 
     function concat() {
-      for (var _len34 = arguments.length, observables = new Array(_len34), _key31 = 0; _key31 < _len34; _key31++) {
-        observables[_key31] = arguments[_key31];
+      for (var _len35 = arguments.length, observables = new Array(_len35), _key32 = 0; _key32 < _len35; _key32++) {
+        observables[_key32] = arguments[_key32];
       }
 
       return function (source) {
@@ -93574,19 +99983,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var CountSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_9) {
       _inherits(CountSubscriber, _Subscriber__WEBPACK_9);
 
-      var _super76 = _createSuper(CountSubscriber);
+      var _super82 = _createSuper(CountSubscriber);
 
       function CountSubscriber(destination, predicate, source) {
-        var _this136;
+        var _this162;
 
         _classCallCheck(this, CountSubscriber);
 
-        _this136 = _super76.call(this, destination);
-        _this136.predicate = predicate;
-        _this136.source = source;
-        _this136.count = 0;
-        _this136.index = 0;
-        return _this136;
+        _this162 = _super82.call(this, destination);
+        _this162.predicate = predicate;
+        _this162.source = source;
+        _this162.count = 0;
+        _this162.index = 0;
+        return _this162;
       }
 
       _createClass2(CountSubscriber, [{
@@ -93687,18 +100096,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DebounceSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB9) {
       _inherits(DebounceSubscriber, _OuterSubscriber__WEB9);
 
-      var _super77 = _createSuper(DebounceSubscriber);
+      var _super83 = _createSuper(DebounceSubscriber);
 
       function DebounceSubscriber(destination, durationSelector) {
-        var _this137;
+        var _this163;
 
         _classCallCheck(this, DebounceSubscriber);
 
-        _this137 = _super77.call(this, destination);
-        _this137.durationSelector = durationSelector;
-        _this137.hasValue = false;
-        _this137.durationSubscription = null;
-        return _this137;
+        _this163 = _super83.call(this, destination);
+        _this163.durationSelector = durationSelector;
+        _this163.hasValue = false;
+        _this163.durationSubscription = null;
+        return _this163;
       }
 
       _createClass2(DebounceSubscriber, [{
@@ -93836,20 +100245,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DebounceTimeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_10) {
       _inherits(DebounceTimeSubscriber, _Subscriber__WEBPACK_10);
 
-      var _super78 = _createSuper(DebounceTimeSubscriber);
+      var _super84 = _createSuper(DebounceTimeSubscriber);
 
       function DebounceTimeSubscriber(destination, dueTime, scheduler) {
-        var _this138;
+        var _this164;
 
         _classCallCheck(this, DebounceTimeSubscriber);
 
-        _this138 = _super78.call(this, destination);
-        _this138.dueTime = dueTime;
-        _this138.scheduler = scheduler;
-        _this138.debouncedSubscription = null;
-        _this138.lastValue = null;
-        _this138.hasValue = false;
-        return _this138;
+        _this164 = _super84.call(this, destination);
+        _this164.dueTime = dueTime;
+        _this164.scheduler = scheduler;
+        _this164.debouncedSubscription = null;
+        _this164.lastValue = null;
+        _this164.hasValue = false;
+        return _this164;
       }
 
       _createClass2(DebounceTimeSubscriber, [{
@@ -93955,17 +100364,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DefaultIfEmptySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_11) {
       _inherits(DefaultIfEmptySubscriber, _Subscriber__WEBPACK_11);
 
-      var _super79 = _createSuper(DefaultIfEmptySubscriber);
+      var _super85 = _createSuper(DefaultIfEmptySubscriber);
 
       function DefaultIfEmptySubscriber(destination, defaultValue) {
-        var _this139;
+        var _this165;
 
         _classCallCheck(this, DefaultIfEmptySubscriber);
 
-        _this139 = _super79.call(this, destination);
-        _this139.defaultValue = defaultValue;
-        _this139.isEmpty = true;
-        return _this139;
+        _this165 = _super85.call(this, destination);
+        _this165.defaultValue = defaultValue;
+        _this165.isEmpty = true;
+        return _this165;
       }
 
       _createClass2(DefaultIfEmptySubscriber, [{
@@ -94066,20 +100475,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DelaySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_12) {
       _inherits(DelaySubscriber, _Subscriber__WEBPACK_12);
 
-      var _super80 = _createSuper(DelaySubscriber);
+      var _super86 = _createSuper(DelaySubscriber);
 
       function DelaySubscriber(destination, delay, scheduler) {
-        var _this140;
+        var _this166;
 
         _classCallCheck(this, DelaySubscriber);
 
-        _this140 = _super80.call(this, destination);
-        _this140.delay = delay;
-        _this140.scheduler = scheduler;
-        _this140.queue = [];
-        _this140.active = false;
-        _this140.errored = false;
-        return _this140;
+        _this166 = _super86.call(this, destination);
+        _this166.delay = delay;
+        _this166.scheduler = scheduler;
+        _this166.queue = [];
+        _this166.active = false;
+        _this166.errored = false;
+        return _this166;
       }
 
       _createClass2(DelaySubscriber, [{
@@ -94240,19 +100649,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DelayWhenSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB10) {
       _inherits(DelayWhenSubscriber, _OuterSubscriber__WEB10);
 
-      var _super81 = _createSuper(DelayWhenSubscriber);
+      var _super87 = _createSuper(DelayWhenSubscriber);
 
       function DelayWhenSubscriber(destination, delayDurationSelector) {
-        var _this141;
+        var _this167;
 
         _classCallCheck(this, DelayWhenSubscriber);
 
-        _this141 = _super81.call(this, destination);
-        _this141.delayDurationSelector = delayDurationSelector;
-        _this141.completed = false;
-        _this141.delayNotifierSubscriptions = [];
-        _this141.index = 0;
-        return _this141;
+        _this167 = _super87.call(this, destination);
+        _this167.delayDurationSelector = delayDurationSelector;
+        _this167.completed = false;
+        _this167.delayNotifierSubscriptions = [];
+        _this167.index = 0;
+        return _this167;
       }
 
       _createClass2(DelayWhenSubscriber, [{
@@ -94338,17 +100747,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SubscriptionDelayObservable = /*#__PURE__*/function (_Observable__WEBPACK_4) {
       _inherits(SubscriptionDelayObservable, _Observable__WEBPACK_4);
 
-      var _super82 = _createSuper(SubscriptionDelayObservable);
+      var _super88 = _createSuper(SubscriptionDelayObservable);
 
       function SubscriptionDelayObservable(source, subscriptionDelay) {
-        var _this142;
+        var _this168;
 
         _classCallCheck(this, SubscriptionDelayObservable);
 
-        _this142 = _super82.call(this);
-        _this142.source = source;
-        _this142.subscriptionDelay = subscriptionDelay;
-        return _this142;
+        _this168 = _super88.call(this);
+        _this168.source = source;
+        _this168.subscriptionDelay = subscriptionDelay;
+        return _this168;
       }
 
       _createClass2(SubscriptionDelayObservable, [{
@@ -94364,18 +100773,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SubscriptionDelaySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_13) {
       _inherits(SubscriptionDelaySubscriber, _Subscriber__WEBPACK_13);
 
-      var _super83 = _createSuper(SubscriptionDelaySubscriber);
+      var _super89 = _createSuper(SubscriptionDelaySubscriber);
 
       function SubscriptionDelaySubscriber(parent, source) {
-        var _this143;
+        var _this169;
 
         _classCallCheck(this, SubscriptionDelaySubscriber);
 
-        _this143 = _super83.call(this);
-        _this143.parent = parent;
-        _this143.source = source;
-        _this143.sourceSubscribed = false;
-        return _this143;
+        _this169 = _super89.call(this);
+        _this169.parent = parent;
+        _this169.source = source;
+        _this169.sourceSubscribed = false;
+        return _this169;
       }
 
       _createClass2(SubscriptionDelaySubscriber, [{
@@ -94463,12 +100872,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DeMaterializeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_14) {
       _inherits(DeMaterializeSubscriber, _Subscriber__WEBPACK_14);
 
-      var _super84 = _createSuper(DeMaterializeSubscriber);
+      var _super90 = _createSuper(DeMaterializeSubscriber);
 
       function DeMaterializeSubscriber(destination) {
         _classCallCheck(this, DeMaterializeSubscriber);
 
-        return _super84.call(this, destination);
+        return _super90.call(this, destination);
       }
 
       _createClass2(DeMaterializeSubscriber, [{
@@ -94550,22 +100959,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DistinctSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB11) {
       _inherits(DistinctSubscriber, _OuterSubscriber__WEB11);
 
-      var _super85 = _createSuper(DistinctSubscriber);
+      var _super91 = _createSuper(DistinctSubscriber);
 
       function DistinctSubscriber(destination, keySelector, flushes) {
-        var _this144;
+        var _this170;
 
         _classCallCheck(this, DistinctSubscriber);
 
-        _this144 = _super85.call(this, destination);
-        _this144.keySelector = keySelector;
-        _this144.values = new Set();
+        _this170 = _super91.call(this, destination);
+        _this170.keySelector = keySelector;
+        _this170.values = new Set();
 
         if (flushes) {
-          _this144.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this144), flushes));
+          _this170.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this170), flushes));
         }
 
-        return _this144;
+        return _this170;
       }
 
       _createClass2(DistinctSubscriber, [{
@@ -94674,22 +101083,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var DistinctUntilChangedSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_15) {
       _inherits(DistinctUntilChangedSubscriber, _Subscriber__WEBPACK_15);
 
-      var _super86 = _createSuper(DistinctUntilChangedSubscriber);
+      var _super92 = _createSuper(DistinctUntilChangedSubscriber);
 
       function DistinctUntilChangedSubscriber(destination, compare, keySelector) {
-        var _this145;
+        var _this171;
 
         _classCallCheck(this, DistinctUntilChangedSubscriber);
 
-        _this145 = _super86.call(this, destination);
-        _this145.keySelector = keySelector;
-        _this145.hasKey = false;
+        _this171 = _super92.call(this, destination);
+        _this171.keySelector = keySelector;
+        _this171.hasKey = false;
 
         if (typeof compare === 'function') {
-          _this145.compare = compare;
+          _this171.compare = compare;
         }
 
-        return _this145;
+        return _this171;
       }
 
       _createClass2(DistinctUntilChangedSubscriber, [{
@@ -94874,8 +101283,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/observable/of.js");
 
     function endWith() {
-      for (var _len35 = arguments.length, array = new Array(_len35), _key32 = 0; _key32 < _len35; _key32++) {
-        array[_key32] = arguments[_key32];
+      for (var _len36 = arguments.length, array = new Array(_len36), _key33 = 0; _key33 < _len36; _key33++) {
+        array[_key33] = arguments[_key33];
       }
 
       return function (source) {
@@ -94941,20 +101350,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var EverySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_16) {
       _inherits(EverySubscriber, _Subscriber__WEBPACK_16);
 
-      var _super87 = _createSuper(EverySubscriber);
+      var _super93 = _createSuper(EverySubscriber);
 
       function EverySubscriber(destination, predicate, thisArg, source) {
-        var _this146;
+        var _this172;
 
         _classCallCheck(this, EverySubscriber);
 
-        _this146 = _super87.call(this, destination);
-        _this146.predicate = predicate;
-        _this146.thisArg = thisArg;
-        _this146.source = source;
-        _this146.index = 0;
-        _this146.thisArg = thisArg || _assertThisInitialized(_this146);
-        return _this146;
+        _this172 = _super93.call(this, destination);
+        _this172.predicate = predicate;
+        _this172.thisArg = thisArg;
+        _this172.source = source;
+        _this172.index = 0;
+        _this172.thisArg = thisArg || _assertThisInitialized(_this172);
+        return _this172;
       }
 
       _createClass2(EverySubscriber, [{
@@ -95049,17 +101458,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SwitchFirstSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB12) {
       _inherits(SwitchFirstSubscriber, _OuterSubscriber__WEB12);
 
-      var _super88 = _createSuper(SwitchFirstSubscriber);
+      var _super94 = _createSuper(SwitchFirstSubscriber);
 
       function SwitchFirstSubscriber(destination) {
-        var _this147;
+        var _this173;
 
         _classCallCheck(this, SwitchFirstSubscriber);
 
-        _this147 = _super88.call(this, destination);
-        _this147.hasCompleted = false;
-        _this147.hasSubscription = false;
-        return _this147;
+        _this173 = _super94.call(this, destination);
+        _this173.hasCompleted = false;
+        _this173.hasSubscription = false;
+        return _this173;
       }
 
       _createClass2(SwitchFirstSubscriber, [{
@@ -95184,19 +101593,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ExhaustMapSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB13) {
       _inherits(ExhaustMapSubscriber, _OuterSubscriber__WEB13);
 
-      var _super89 = _createSuper(ExhaustMapSubscriber);
+      var _super95 = _createSuper(ExhaustMapSubscriber);
 
       function ExhaustMapSubscriber(destination, project) {
-        var _this148;
+        var _this174;
 
         _classCallCheck(this, ExhaustMapSubscriber);
 
-        _this148 = _super89.call(this, destination);
-        _this148.project = project;
-        _this148.hasSubscription = false;
-        _this148.hasCompleted = false;
-        _this148.index = 0;
-        return _this148;
+        _this174 = _super95.call(this, destination);
+        _this174.project = project;
+        _this174.hasSubscription = false;
+        _this174.hasCompleted = false;
+        _this174.index = 0;
+        return _this174;
       }
 
       _createClass2(ExhaustMapSubscriber, [{
@@ -95351,26 +101760,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ExpandSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB14) {
       _inherits(ExpandSubscriber, _OuterSubscriber__WEB14);
 
-      var _super90 = _createSuper(ExpandSubscriber);
+      var _super96 = _createSuper(ExpandSubscriber);
 
       function ExpandSubscriber(destination, project, concurrent, scheduler) {
-        var _this149;
+        var _this175;
 
         _classCallCheck(this, ExpandSubscriber);
 
-        _this149 = _super90.call(this, destination);
-        _this149.project = project;
-        _this149.concurrent = concurrent;
-        _this149.scheduler = scheduler;
-        _this149.index = 0;
-        _this149.active = 0;
-        _this149.hasCompleted = false;
+        _this175 = _super96.call(this, destination);
+        _this175.project = project;
+        _this175.concurrent = concurrent;
+        _this175.scheduler = scheduler;
+        _this175.index = 0;
+        _this175.active = 0;
+        _this175.hasCompleted = false;
 
         if (concurrent < Number.POSITIVE_INFINITY) {
-          _this149.buffer = [];
+          _this175.buffer = [];
         }
 
-        return _this149;
+        return _this175;
       }
 
       _createClass2(ExpandSubscriber, [{
@@ -95523,18 +101932,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var FilterSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_17) {
       _inherits(FilterSubscriber, _Subscriber__WEBPACK_17);
 
-      var _super91 = _createSuper(FilterSubscriber);
+      var _super97 = _createSuper(FilterSubscriber);
 
       function FilterSubscriber(destination, predicate, thisArg) {
-        var _this150;
+        var _this176;
 
         _classCallCheck(this, FilterSubscriber);
 
-        _this150 = _super91.call(this, destination);
-        _this150.predicate = predicate;
-        _this150.thisArg = thisArg;
-        _this150.count = 0;
-        return _this150;
+        _this176 = _super97.call(this, destination);
+        _this176.predicate = predicate;
+        _this176.thisArg = thisArg;
+        _this176.count = 0;
+        return _this176;
       }
 
       _createClass2(FilterSubscriber, [{
@@ -95620,18 +102029,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var FinallySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_18) {
       _inherits(FinallySubscriber, _Subscriber__WEBPACK_18);
 
-      var _super92 = _createSuper(FinallySubscriber);
+      var _super98 = _createSuper(FinallySubscriber);
 
       function FinallySubscriber(destination, callback) {
-        var _this151;
+        var _this177;
 
         _classCallCheck(this, FinallySubscriber);
 
-        _this151 = _super92.call(this, destination);
+        _this177 = _super98.call(this, destination);
 
-        _this151.add(new _Subscription__WEBPACK_IMPORTED_MODULE_1__["Subscription"](callback));
+        _this177.add(new _Subscription__WEBPACK_IMPORTED_MODULE_1__["Subscription"](callback));
 
-        return _this151;
+        return _this177;
       }
 
       return FinallySubscriber;
@@ -95712,20 +102121,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var FindValueSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_19) {
       _inherits(FindValueSubscriber, _Subscriber__WEBPACK_19);
 
-      var _super93 = _createSuper(FindValueSubscriber);
+      var _super99 = _createSuper(FindValueSubscriber);
 
       function FindValueSubscriber(destination, predicate, source, yieldIndex, thisArg) {
-        var _this152;
+        var _this178;
 
         _classCallCheck(this, FindValueSubscriber);
 
-        _this152 = _super93.call(this, destination);
-        _this152.predicate = predicate;
-        _this152.source = source;
-        _this152.yieldIndex = yieldIndex;
-        _this152.thisArg = thisArg;
-        _this152.index = 0;
-        return _this152;
+        _this178 = _super99.call(this, destination);
+        _this178.predicate = predicate;
+        _this178.source = source;
+        _this178.yieldIndex = yieldIndex;
+        _this178.thisArg = thisArg;
+        _this178.index = 0;
+        return _this178;
       }
 
       _createClass2(FindValueSubscriber, [{
@@ -95953,22 +102362,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var GroupBySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_20) {
       _inherits(GroupBySubscriber, _Subscriber__WEBPACK_20);
 
-      var _super94 = _createSuper(GroupBySubscriber);
+      var _super100 = _createSuper(GroupBySubscriber);
 
       function GroupBySubscriber(destination, keySelector, elementSelector, durationSelector, subjectSelector) {
-        var _this153;
+        var _this179;
 
         _classCallCheck(this, GroupBySubscriber);
 
-        _this153 = _super94.call(this, destination);
-        _this153.keySelector = keySelector;
-        _this153.elementSelector = elementSelector;
-        _this153.durationSelector = durationSelector;
-        _this153.subjectSelector = subjectSelector;
-        _this153.groups = null;
-        _this153.attemptedToUnsubscribe = false;
-        _this153.count = 0;
-        return _this153;
+        _this179 = _super100.call(this, destination);
+        _this179.keySelector = keySelector;
+        _this179.elementSelector = elementSelector;
+        _this179.durationSelector = durationSelector;
+        _this179.subjectSelector = subjectSelector;
+        _this179.groups = null;
+        _this179.attemptedToUnsubscribe = false;
+        _this179.count = 0;
+        return _this179;
       }
 
       _createClass2(GroupBySubscriber, [{
@@ -96083,18 +102492,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var GroupDurationSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_21) {
       _inherits(GroupDurationSubscriber, _Subscriber__WEBPACK_21);
 
-      var _super95 = _createSuper(GroupDurationSubscriber);
+      var _super101 = _createSuper(GroupDurationSubscriber);
 
       function GroupDurationSubscriber(key, group, parent) {
-        var _this154;
+        var _this180;
 
         _classCallCheck(this, GroupDurationSubscriber);
 
-        _this154 = _super95.call(this, group);
-        _this154.key = key;
-        _this154.group = group;
-        _this154.parent = parent;
-        return _this154;
+        _this180 = _super101.call(this, group);
+        _this180.key = key;
+        _this180.group = group;
+        _this180.parent = parent;
+        return _this180;
       }
 
       _createClass2(GroupDurationSubscriber, [{
@@ -96121,18 +102530,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var GroupedObservable = /*#__PURE__*/function (_Observable__WEBPACK_5) {
       _inherits(GroupedObservable, _Observable__WEBPACK_5);
 
-      var _super96 = _createSuper(GroupedObservable);
+      var _super102 = _createSuper(GroupedObservable);
 
       function GroupedObservable(key, groupSubject, refCountSubscription) {
-        var _this155;
+        var _this181;
 
         _classCallCheck(this, GroupedObservable);
 
-        _this155 = _super96.call(this);
-        _this155.key = key;
-        _this155.groupSubject = groupSubject;
-        _this155.refCountSubscription = refCountSubscription;
-        return _this155;
+        _this181 = _super102.call(this);
+        _this181.key = key;
+        _this181.groupSubject = groupSubject;
+        _this181.refCountSubscription = refCountSubscription;
+        return _this181;
       }
 
       _createClass2(GroupedObservable, [{
@@ -96157,17 +102566,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var InnerRefCountSubscription = /*#__PURE__*/function (_Subscription__WEBPAC3) {
       _inherits(InnerRefCountSubscription, _Subscription__WEBPAC3);
 
-      var _super97 = _createSuper(InnerRefCountSubscription);
+      var _super103 = _createSuper(InnerRefCountSubscription);
 
       function InnerRefCountSubscription(parent) {
-        var _this156;
+        var _this182;
 
         _classCallCheck(this, InnerRefCountSubscription);
 
-        _this156 = _super97.call(this);
-        _this156.parent = parent;
+        _this182 = _super103.call(this);
+        _this182.parent = parent;
         parent.count++;
-        return _this156;
+        return _this182;
       }
 
       _createClass2(InnerRefCountSubscription, [{
@@ -96244,12 +102653,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var IgnoreElementsSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_22) {
       _inherits(IgnoreElementsSubscriber, _Subscriber__WEBPACK_22);
 
-      var _super98 = _createSuper(IgnoreElementsSubscriber);
+      var _super104 = _createSuper(IgnoreElementsSubscriber);
 
       function IgnoreElementsSubscriber() {
         _classCallCheck(this, IgnoreElementsSubscriber);
 
-        return _super98.apply(this, arguments);
+        return _super104.apply(this, arguments);
       }
 
       _createClass2(IgnoreElementsSubscriber, [{
@@ -96314,12 +102723,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var IsEmptySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_23) {
       _inherits(IsEmptySubscriber, _Subscriber__WEBPACK_23);
 
-      var _super99 = _createSuper(IsEmptySubscriber);
+      var _super105 = _createSuper(IsEmptySubscriber);
 
       function IsEmptySubscriber(destination) {
         _classCallCheck(this, IsEmptySubscriber);
 
-        return _super99.call(this, destination);
+        return _super105.call(this, destination);
       }
 
       _createClass2(IsEmptySubscriber, [{
@@ -96482,18 +102891,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var MapSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_24) {
       _inherits(MapSubscriber, _Subscriber__WEBPACK_24);
 
-      var _super100 = _createSuper(MapSubscriber);
+      var _super106 = _createSuper(MapSubscriber);
 
       function MapSubscriber(destination, project, thisArg) {
-        var _this157;
+        var _this183;
 
         _classCallCheck(this, MapSubscriber);
 
-        _this157 = _super100.call(this, destination);
-        _this157.project = project;
-        _this157.count = 0;
-        _this157.thisArg = thisArg || _assertThisInitialized(_this157);
-        return _this157;
+        _this183 = _super106.call(this, destination);
+        _this183.project = project;
+        _this183.count = 0;
+        _this183.thisArg = thisArg || _assertThisInitialized(_this183);
+        return _this183;
       }
 
       _createClass2(MapSubscriber, [{
@@ -96571,16 +102980,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var MapToSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_25) {
       _inherits(MapToSubscriber, _Subscriber__WEBPACK_25);
 
-      var _super101 = _createSuper(MapToSubscriber);
+      var _super107 = _createSuper(MapToSubscriber);
 
       function MapToSubscriber(destination, value) {
-        var _this158;
+        var _this184;
 
         _classCallCheck(this, MapToSubscriber);
 
-        _this158 = _super101.call(this, destination);
-        _this158.value = value;
-        return _this158;
+        _this184 = _super107.call(this, destination);
+        _this184.value = value;
+        return _this184;
       }
 
       _createClass2(MapToSubscriber, [{
@@ -96653,12 +103062,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var MaterializeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_26) {
       _inherits(MaterializeSubscriber, _Subscriber__WEBPACK_26);
 
-      var _super102 = _createSuper(MaterializeSubscriber);
+      var _super108 = _createSuper(MaterializeSubscriber);
 
       function MaterializeSubscriber(destination) {
         _classCallCheck(this, MaterializeSubscriber);
 
-        return _super102.call(this, destination);
+        return _super108.call(this, destination);
       }
 
       _createClass2(MaterializeSubscriber, [{
@@ -96755,8 +103164,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/observable/merge.js");
 
     function merge() {
-      for (var _len36 = arguments.length, observables = new Array(_len36), _key33 = 0; _key33 < _len36; _key33++) {
-        observables[_key33] = arguments[_key33];
+      for (var _len37 = arguments.length, observables = new Array(_len37), _key34 = 0; _key34 < _len37; _key34++) {
+        observables[_key34] = arguments[_key34];
       }
 
       return function (source) {
@@ -96914,23 +103323,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var MergeMapSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB15) {
       _inherits(MergeMapSubscriber, _OuterSubscriber__WEB15);
 
-      var _super103 = _createSuper(MergeMapSubscriber);
+      var _super109 = _createSuper(MergeMapSubscriber);
 
       function MergeMapSubscriber(destination, project) {
-        var _this159;
+        var _this185;
 
         var concurrent = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : Number.POSITIVE_INFINITY;
 
         _classCallCheck(this, MergeMapSubscriber);
 
-        _this159 = _super103.call(this, destination);
-        _this159.project = project;
-        _this159.concurrent = concurrent;
-        _this159.hasCompleted = false;
-        _this159.buffer = [];
-        _this159.active = 0;
-        _this159.index = 0;
-        return _this159;
+        _this185 = _super109.call(this, destination);
+        _this185.project = project;
+        _this185.concurrent = concurrent;
+        _this185.hasCompleted = false;
+        _this185.buffer = [];
+        _this185.active = 0;
+        _this185.index = 0;
+        return _this185;
       }
 
       _createClass2(MergeMapSubscriber, [{
@@ -97136,23 +103545,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var MergeScanSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB16) {
       _inherits(MergeScanSubscriber, _OuterSubscriber__WEB16);
 
-      var _super104 = _createSuper(MergeScanSubscriber);
+      var _super110 = _createSuper(MergeScanSubscriber);
 
       function MergeScanSubscriber(destination, accumulator, acc, concurrent) {
-        var _this160;
+        var _this186;
 
         _classCallCheck(this, MergeScanSubscriber);
 
-        _this160 = _super104.call(this, destination);
-        _this160.accumulator = accumulator;
-        _this160.acc = acc;
-        _this160.concurrent = concurrent;
-        _this160.hasValue = false;
-        _this160.hasCompleted = false;
-        _this160.buffer = [];
-        _this160.active = 0;
-        _this160.index = 0;
-        return _this160;
+        _this186 = _super110.call(this, destination);
+        _this186.accumulator = accumulator;
+        _this186.acc = acc;
+        _this186.concurrent = concurrent;
+        _this186.hasValue = false;
+        _this186.hasCompleted = false;
+        _this186.buffer = [];
+        _this186.active = 0;
+        _this186.index = 0;
+        return _this186;
       }
 
       _createClass2(MergeScanSubscriber, [{
@@ -97439,19 +103848,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ObserveOnSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_27) {
       _inherits(ObserveOnSubscriber, _Subscriber__WEBPACK_27);
 
-      var _super105 = _createSuper(ObserveOnSubscriber);
+      var _super111 = _createSuper(ObserveOnSubscriber);
 
       function ObserveOnSubscriber(destination, scheduler) {
-        var _this161;
+        var _this187;
 
         var delay = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
 
         _classCallCheck(this, ObserveOnSubscriber);
 
-        _this161 = _super105.call(this, destination);
-        _this161.scheduler = scheduler;
-        _this161.delay = delay;
-        return _this161;
+        _this187 = _super111.call(this, destination);
+        _this187.scheduler = scheduler;
+        _this187.delay = delay;
+        return _this187;
       }
 
       _createClass2(ObserveOnSubscriber, [{
@@ -97558,8 +103967,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/util/subscribeToResult.js");
 
     function onErrorResumeNext() {
-      for (var _len37 = arguments.length, nextSources = new Array(_len37), _key34 = 0; _key34 < _len37; _key34++) {
-        nextSources[_key34] = arguments[_key34];
+      for (var _len38 = arguments.length, nextSources = new Array(_len38), _key35 = 0; _key35 < _len38; _key35++) {
+        nextSources[_key35] = arguments[_key35];
       }
 
       if (nextSources.length === 1 && Object(_util_isArray__WEBPACK_IMPORTED_MODULE_1__["isArray"])(nextSources[0])) {
@@ -97572,8 +103981,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     function onErrorResumeNextStatic() {
-      for (var _len38 = arguments.length, nextSources = new Array(_len38), _key35 = 0; _key35 < _len38; _key35++) {
-        nextSources[_key35] = arguments[_key35];
+      for (var _len39 = arguments.length, nextSources = new Array(_len39), _key36 = 0; _key36 < _len39; _key36++) {
+        nextSources[_key36] = arguments[_key36];
       }
 
       var source = null;
@@ -97606,17 +104015,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var OnErrorResumeNextSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB17) {
       _inherits(OnErrorResumeNextSubscriber, _OuterSubscriber__WEB17);
 
-      var _super106 = _createSuper(OnErrorResumeNextSubscriber);
+      var _super112 = _createSuper(OnErrorResumeNextSubscriber);
 
       function OnErrorResumeNextSubscriber(destination, nextSources) {
-        var _this162;
+        var _this188;
 
         _classCallCheck(this, OnErrorResumeNextSubscriber);
 
-        _this162 = _super106.call(this, destination);
-        _this162.destination = destination;
-        _this162.nextSources = nextSources;
-        return _this162;
+        _this188 = _super112.call(this, destination);
+        _this188.destination = destination;
+        _this188.nextSources = nextSources;
+        return _this188;
       }
 
       _createClass2(OnErrorResumeNextSubscriber, [{
@@ -97718,16 +104127,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var PairwiseSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_28) {
       _inherits(PairwiseSubscriber, _Subscriber__WEBPACK_28);
 
-      var _super107 = _createSuper(PairwiseSubscriber);
+      var _super113 = _createSuper(PairwiseSubscriber);
 
       function PairwiseSubscriber(destination) {
-        var _this163;
+        var _this189;
 
         _classCallCheck(this, PairwiseSubscriber);
 
-        _this163 = _super107.call(this, destination);
-        _this163.hasPrev = false;
-        return _this163;
+        _this189 = _super113.call(this, destination);
+        _this189.hasPrev = false;
+        return _this189;
       }
 
       _createClass2(PairwiseSubscriber, [{
@@ -97825,8 +104234,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/operators/map.js");
 
     function pluck() {
-      for (var _len39 = arguments.length, properties = new Array(_len39), _key36 = 0; _key36 < _len39; _key36++) {
-        properties[_key36] = arguments[_key36];
+      for (var _len40 = arguments.length, properties = new Array(_len40), _key37 = 0; _key37 < _len40; _key37++) {
+        properties[_key37] = arguments[_key37];
       }
 
       var length = properties.length;
@@ -98073,8 +104482,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/observable/race.js");
 
     function race() {
-      for (var _len40 = arguments.length, observables = new Array(_len40), _key37 = 0; _key37 < _len40; _key37++) {
-        observables[_key37] = arguments[_key37];
+      for (var _len41 = arguments.length, observables = new Array(_len41), _key38 = 0; _key38 < _len41; _key38++) {
+        observables[_key38] = arguments[_key38];
       }
 
       return function raceOperatorFunction(source) {
@@ -98213,16 +104622,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RefCountSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_29) {
       _inherits(RefCountSubscriber, _Subscriber__WEBPACK_29);
 
-      var _super108 = _createSuper(RefCountSubscriber);
+      var _super114 = _createSuper(RefCountSubscriber);
 
       function RefCountSubscriber(destination, connectable) {
-        var _this164;
+        var _this190;
 
         _classCallCheck(this, RefCountSubscriber);
 
-        _this164 = _super108.call(this, destination);
-        _this164.connectable = connectable;
-        return _this164;
+        _this190 = _super114.call(this, destination);
+        _this190.connectable = connectable;
+        return _this190;
       }
 
       _createClass2(RefCountSubscriber, [{
@@ -98333,17 +104742,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RepeatSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_30) {
       _inherits(RepeatSubscriber, _Subscriber__WEBPACK_30);
 
-      var _super109 = _createSuper(RepeatSubscriber);
+      var _super115 = _createSuper(RepeatSubscriber);
 
       function RepeatSubscriber(destination, count, source) {
-        var _this165;
+        var _this191;
 
         _classCallCheck(this, RepeatSubscriber);
 
-        _this165 = _super109.call(this, destination);
-        _this165.count = count;
-        _this165.source = source;
-        return _this165;
+        _this191 = _super115.call(this, destination);
+        _this191.count = count;
+        _this191.source = source;
+        return _this191;
       }
 
       _createClass2(RepeatSubscriber, [{
@@ -98435,18 +104844,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RepeatWhenSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB18) {
       _inherits(RepeatWhenSubscriber, _OuterSubscriber__WEB18);
 
-      var _super110 = _createSuper(RepeatWhenSubscriber);
+      var _super116 = _createSuper(RepeatWhenSubscriber);
 
       function RepeatWhenSubscriber(destination, notifier, source) {
-        var _this166;
+        var _this192;
 
         _classCallCheck(this, RepeatWhenSubscriber);
 
-        _this166 = _super110.call(this, destination);
-        _this166.notifier = notifier;
-        _this166.source = source;
-        _this166.sourceIsBeingSubscribedTo = true;
-        return _this166;
+        _this192 = _super116.call(this, destination);
+        _this192.notifier = notifier;
+        _this192.source = source;
+        _this192.sourceIsBeingSubscribedTo = true;
+        return _this192;
       }
 
       _createClass2(RepeatWhenSubscriber, [{
@@ -98589,17 +104998,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RetrySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_31) {
       _inherits(RetrySubscriber, _Subscriber__WEBPACK_31);
 
-      var _super111 = _createSuper(RetrySubscriber);
+      var _super117 = _createSuper(RetrySubscriber);
 
       function RetrySubscriber(destination, count, source) {
-        var _this167;
+        var _this193;
 
         _classCallCheck(this, RetrySubscriber);
 
-        _this167 = _super111.call(this, destination);
-        _this167.count = count;
-        _this167.source = source;
-        return _this167;
+        _this193 = _super117.call(this, destination);
+        _this193.count = count;
+        _this193.source = source;
+        return _this193;
       }
 
       _createClass2(RetrySubscriber, [{
@@ -98692,17 +105101,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var RetryWhenSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB19) {
       _inherits(RetryWhenSubscriber, _OuterSubscriber__WEB19);
 
-      var _super112 = _createSuper(RetryWhenSubscriber);
+      var _super118 = _createSuper(RetryWhenSubscriber);
 
       function RetryWhenSubscriber(destination, notifier, source) {
-        var _this168;
+        var _this194;
 
         _classCallCheck(this, RetryWhenSubscriber);
 
-        _this168 = _super112.call(this, destination);
-        _this168.notifier = notifier;
-        _this168.source = source;
-        return _this168;
+        _this194 = _super118.call(this, destination);
+        _this194.notifier = notifier;
+        _this194.source = source;
+        return _this194;
       }
 
       _createClass2(RetryWhenSubscriber, [{
@@ -98836,16 +105245,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SampleSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB20) {
       _inherits(SampleSubscriber, _OuterSubscriber__WEB20);
 
-      var _super113 = _createSuper(SampleSubscriber);
+      var _super119 = _createSuper(SampleSubscriber);
 
       function SampleSubscriber() {
-        var _this169;
+        var _this195;
 
         _classCallCheck(this, SampleSubscriber);
 
-        _this169 = _super113.apply(this, arguments);
-        _this169.hasValue = false;
-        return _this169;
+        _this195 = _super119.apply(this, arguments);
+        _this195.hasValue = false;
+        return _this195;
       }
 
       _createClass2(SampleSubscriber, [{
@@ -98941,24 +105350,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SampleTimeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_32) {
       _inherits(SampleTimeSubscriber, _Subscriber__WEBPACK_32);
 
-      var _super114 = _createSuper(SampleTimeSubscriber);
+      var _super120 = _createSuper(SampleTimeSubscriber);
 
       function SampleTimeSubscriber(destination, period, scheduler) {
-        var _this170;
+        var _this196;
 
         _classCallCheck(this, SampleTimeSubscriber);
 
-        _this170 = _super114.call(this, destination);
-        _this170.period = period;
-        _this170.scheduler = scheduler;
-        _this170.hasValue = false;
+        _this196 = _super120.call(this, destination);
+        _this196.period = period;
+        _this196.scheduler = scheduler;
+        _this196.hasValue = false;
 
-        _this170.add(scheduler.schedule(dispatchNotification, period, {
-          subscriber: _assertThisInitialized(_this170),
+        _this196.add(scheduler.schedule(dispatchNotification, period, {
+          subscriber: _assertThisInitialized(_this196),
           period: period
         }));
 
-        return _this170;
+        return _this196;
       }
 
       _createClass2(SampleTimeSubscriber, [{
@@ -99053,19 +105462,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ScanSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_33) {
       _inherits(ScanSubscriber, _Subscriber__WEBPACK_33);
 
-      var _super115 = _createSuper(ScanSubscriber);
+      var _super121 = _createSuper(ScanSubscriber);
 
       function ScanSubscriber(destination, accumulator, _seed, hasSeed) {
-        var _this171;
+        var _this197;
 
         _classCallCheck(this, ScanSubscriber);
 
-        _this171 = _super115.call(this, destination);
-        _this171.accumulator = accumulator;
-        _this171._seed = _seed;
-        _this171.hasSeed = hasSeed;
-        _this171.index = 0;
-        return _this171;
+        _this197 = _super121.call(this, destination);
+        _this197.accumulator = accumulator;
+        _this197._seed = _seed;
+        _this197.hasSeed = hasSeed;
+        _this197.index = 0;
+        return _this197;
       }
 
       _createClass2(ScanSubscriber, [{
@@ -99176,23 +105585,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SequenceEqualSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_34) {
       _inherits(SequenceEqualSubscriber, _Subscriber__WEBPACK_34);
 
-      var _super116 = _createSuper(SequenceEqualSubscriber);
+      var _super122 = _createSuper(SequenceEqualSubscriber);
 
       function SequenceEqualSubscriber(destination, compareTo, comparator) {
-        var _this172;
+        var _this198;
 
         _classCallCheck(this, SequenceEqualSubscriber);
 
-        _this172 = _super116.call(this, destination);
-        _this172.compareTo = compareTo;
-        _this172.comparator = comparator;
-        _this172._a = [];
-        _this172._b = [];
-        _this172._oneComplete = false;
+        _this198 = _super122.call(this, destination);
+        _this198.compareTo = compareTo;
+        _this198.comparator = comparator;
+        _this198._a = [];
+        _this198._b = [];
+        _this198._oneComplete = false;
 
-        _this172.destination.add(compareTo.subscribe(new SequenceEqualCompareToSubscriber(destination, _assertThisInitialized(_this172))));
+        _this198.destination.add(compareTo.subscribe(new SequenceEqualCompareToSubscriber(destination, _assertThisInitialized(_this198))));
 
-        return _this172;
+        return _this198;
       }
 
       _createClass2(SequenceEqualSubscriber, [{
@@ -99277,16 +105686,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SequenceEqualCompareToSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_35) {
       _inherits(SequenceEqualCompareToSubscriber, _Subscriber__WEBPACK_35);
 
-      var _super117 = _createSuper(SequenceEqualCompareToSubscriber);
+      var _super123 = _createSuper(SequenceEqualCompareToSubscriber);
 
       function SequenceEqualCompareToSubscriber(destination, parent) {
-        var _this173;
+        var _this199;
 
         _classCallCheck(this, SequenceEqualCompareToSubscriber);
 
-        _this173 = _super117.call(this, destination);
-        _this173.parent = parent;
-        return _this173;
+        _this199 = _super123.call(this, destination);
+        _this199.parent = parent;
+        return _this199;
       }
 
       _createClass2(SequenceEqualCompareToSubscriber, [{
@@ -99412,13 +105821,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       };
     }
 
-    function shareReplayOperator(_ref13) {
-      var _ref13$bufferSize = _ref13.bufferSize,
-          bufferSize = _ref13$bufferSize === void 0 ? Number.POSITIVE_INFINITY : _ref13$bufferSize,
-          _ref13$windowTime = _ref13.windowTime,
-          windowTime = _ref13$windowTime === void 0 ? Number.POSITIVE_INFINITY : _ref13$windowTime,
-          useRefCount = _ref13.refCount,
-          scheduler = _ref13.scheduler;
+    function shareReplayOperator(_ref15) {
+      var _ref15$bufferSize = _ref15.bufferSize,
+          bufferSize = _ref15$bufferSize === void 0 ? Number.POSITIVE_INFINITY : _ref15$bufferSize,
+          _ref15$windowTime = _ref15.windowTime,
+          windowTime = _ref15$windowTime === void 0 ? Number.POSITIVE_INFINITY : _ref15$windowTime,
+          useRefCount = _ref15.refCount,
+          scheduler = _ref15.scheduler;
       var subject;
       var refCount = 0;
       var subscription;
@@ -99523,19 +105932,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SingleSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_36) {
       _inherits(SingleSubscriber, _Subscriber__WEBPACK_36);
 
-      var _super118 = _createSuper(SingleSubscriber);
+      var _super124 = _createSuper(SingleSubscriber);
 
       function SingleSubscriber(destination, predicate, source) {
-        var _this174;
+        var _this200;
 
         _classCallCheck(this, SingleSubscriber);
 
-        _this174 = _super118.call(this, destination);
-        _this174.predicate = predicate;
-        _this174.source = source;
-        _this174.seenValue = false;
-        _this174.index = 0;
-        return _this174;
+        _this200 = _super124.call(this, destination);
+        _this200.predicate = predicate;
+        _this200.source = source;
+        _this200.seenValue = false;
+        _this200.index = 0;
+        return _this200;
       }
 
       _createClass2(SingleSubscriber, [{
@@ -99643,17 +106052,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SkipSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_37) {
       _inherits(SkipSubscriber, _Subscriber__WEBPACK_37);
 
-      var _super119 = _createSuper(SkipSubscriber);
+      var _super125 = _createSuper(SkipSubscriber);
 
       function SkipSubscriber(destination, total) {
-        var _this175;
+        var _this201;
 
         _classCallCheck(this, SkipSubscriber);
 
-        _this175 = _super119.call(this, destination);
-        _this175.total = total;
-        _this175.count = 0;
-        return _this175;
+        _this201 = _super125.call(this, destination);
+        _this201.total = total;
+        _this201.count = 0;
+        return _this201;
       }
 
       _createClass2(SkipSubscriber, [{
@@ -99738,18 +106147,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SkipLastSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_38) {
       _inherits(SkipLastSubscriber, _Subscriber__WEBPACK_38);
 
-      var _super120 = _createSuper(SkipLastSubscriber);
+      var _super126 = _createSuper(SkipLastSubscriber);
 
       function SkipLastSubscriber(destination, _skipCount) {
-        var _this176;
+        var _this202;
 
         _classCallCheck(this, SkipLastSubscriber);
 
-        _this176 = _super120.call(this, destination);
-        _this176._skipCount = _skipCount;
-        _this176._count = 0;
-        _this176._ring = new Array(_skipCount);
-        return _this176;
+        _this202 = _super126.call(this, destination);
+        _this202._skipCount = _skipCount;
+        _this202._count = 0;
+        _this202._ring = new Array(_skipCount);
+        return _this202;
       }
 
       _createClass2(SkipLastSubscriber, [{
@@ -99841,29 +106250,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SkipUntilSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB21) {
       _inherits(SkipUntilSubscriber, _OuterSubscriber__WEB21);
 
-      var _super121 = _createSuper(SkipUntilSubscriber);
+      var _super127 = _createSuper(SkipUntilSubscriber);
 
       function SkipUntilSubscriber(destination, notifier) {
-        var _this177;
+        var _this203;
 
         _classCallCheck(this, SkipUntilSubscriber);
 
-        _this177 = _super121.call(this, destination);
-        _this177.hasValue = false;
-        var innerSubscriber = new _InnerSubscriber__WEBPACK_IMPORTED_MODULE_1__["InnerSubscriber"](_assertThisInitialized(_this177), undefined, undefined);
+        _this203 = _super127.call(this, destination);
+        _this203.hasValue = false;
+        var innerSubscriber = new _InnerSubscriber__WEBPACK_IMPORTED_MODULE_1__["InnerSubscriber"](_assertThisInitialized(_this203), undefined, undefined);
 
-        _this177.add(innerSubscriber);
+        _this203.add(innerSubscriber);
 
-        _this177.innerSubscription = innerSubscriber;
-        var innerSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_2__["subscribeToResult"])(_assertThisInitialized(_this177), notifier, undefined, undefined, innerSubscriber);
+        _this203.innerSubscription = innerSubscriber;
+        var innerSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_2__["subscribeToResult"])(_assertThisInitialized(_this203), notifier, undefined, undefined, innerSubscriber);
 
         if (innerSubscription !== innerSubscriber) {
-          _this177.add(innerSubscription);
+          _this203.add(innerSubscription);
 
-          _this177.innerSubscription = innerSubscription;
+          _this203.innerSubscription = innerSubscription;
         }
 
-        return _this177;
+        return _this203;
       }
 
       _createClass2(SkipUntilSubscriber, [{
@@ -99946,18 +106355,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SkipWhileSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_39) {
       _inherits(SkipWhileSubscriber, _Subscriber__WEBPACK_39);
 
-      var _super122 = _createSuper(SkipWhileSubscriber);
+      var _super128 = _createSuper(SkipWhileSubscriber);
 
       function SkipWhileSubscriber(destination, predicate) {
-        var _this178;
+        var _this204;
 
         _classCallCheck(this, SkipWhileSubscriber);
 
-        _this178 = _super122.call(this, destination);
-        _this178.predicate = predicate;
-        _this178.skipping = true;
-        _this178.index = 0;
-        return _this178;
+        _this204 = _super128.call(this, destination);
+        _this204.predicate = predicate;
+        _this204.skipping = true;
+        _this204.index = 0;
+        return _this204;
       }
 
       _createClass2(SkipWhileSubscriber, [{
@@ -100025,8 +106434,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/util/isScheduler.js");
 
     function startWith() {
-      for (var _len41 = arguments.length, array = new Array(_len41), _key38 = 0; _key38 < _len41; _key38++) {
-        array[_key38] = arguments[_key38];
+      for (var _len42 = arguments.length, array = new Array(_len42), _key39 = 0; _key39 < _len42; _key39++) {
+        array[_key39] = arguments[_key39];
       }
 
       var scheduler = array[array.length - 1];
@@ -100228,17 +106637,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var SwitchMapSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB22) {
       _inherits(SwitchMapSubscriber, _OuterSubscriber__WEB22);
 
-      var _super123 = _createSuper(SwitchMapSubscriber);
+      var _super129 = _createSuper(SwitchMapSubscriber);
 
       function SwitchMapSubscriber(destination, project) {
-        var _this179;
+        var _this205;
 
         _classCallCheck(this, SwitchMapSubscriber);
 
-        _this179 = _super123.call(this, destination);
-        _this179.project = project;
-        _this179.index = 0;
-        return _this179;
+        _this205 = _super129.call(this, destination);
+        _this205.project = project;
+        _this205.index = 0;
+        return _this205;
       }
 
       _createClass2(SwitchMapSubscriber, [{
@@ -100425,17 +106834,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TakeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_40) {
       _inherits(TakeSubscriber, _Subscriber__WEBPACK_40);
 
-      var _super124 = _createSuper(TakeSubscriber);
+      var _super130 = _createSuper(TakeSubscriber);
 
       function TakeSubscriber(destination, total) {
-        var _this180;
+        var _this206;
 
         _classCallCheck(this, TakeSubscriber);
 
-        _this180 = _super124.call(this, destination);
-        _this180.total = total;
-        _this180.count = 0;
-        return _this180;
+        _this206 = _super130.call(this, destination);
+        _this206.total = total;
+        _this206.count = 0;
+        return _this206;
       }
 
       _createClass2(TakeSubscriber, [{
@@ -100534,18 +106943,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TakeLastSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_41) {
       _inherits(TakeLastSubscriber, _Subscriber__WEBPACK_41);
 
-      var _super125 = _createSuper(TakeLastSubscriber);
+      var _super131 = _createSuper(TakeLastSubscriber);
 
       function TakeLastSubscriber(destination, total) {
-        var _this181;
+        var _this207;
 
         _classCallCheck(this, TakeLastSubscriber);
 
-        _this181 = _super125.call(this, destination);
-        _this181.total = total;
-        _this181.ring = new Array();
-        _this181.count = 0;
-        return _this181;
+        _this207 = _super131.call(this, destination);
+        _this207.total = total;
+        _this207.ring = new Array();
+        _this207.count = 0;
+        return _this207;
       }
 
       _createClass2(TakeLastSubscriber, [{
@@ -100655,16 +107064,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TakeUntilSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB23) {
       _inherits(TakeUntilSubscriber, _OuterSubscriber__WEB23);
 
-      var _super126 = _createSuper(TakeUntilSubscriber);
+      var _super132 = _createSuper(TakeUntilSubscriber);
 
       function TakeUntilSubscriber(destination) {
-        var _this182;
+        var _this208;
 
         _classCallCheck(this, TakeUntilSubscriber);
 
-        _this182 = _super126.call(this, destination);
-        _this182.seenValue = false;
-        return _this182;
+        _this208 = _super132.call(this, destination);
+        _this208.seenValue = false;
+        return _this208;
       }
 
       _createClass2(TakeUntilSubscriber, [{
@@ -100739,18 +107148,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TakeWhileSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_42) {
       _inherits(TakeWhileSubscriber, _Subscriber__WEBPACK_42);
 
-      var _super127 = _createSuper(TakeWhileSubscriber);
+      var _super133 = _createSuper(TakeWhileSubscriber);
 
       function TakeWhileSubscriber(destination, predicate, inclusive) {
-        var _this183;
+        var _this209;
 
         _classCallCheck(this, TakeWhileSubscriber);
 
-        _this183 = _super127.call(this, destination);
-        _this183.predicate = predicate;
-        _this183.inclusive = inclusive;
-        _this183.index = 0;
-        return _this183;
+        _this209 = _super133.call(this, destination);
+        _this209.predicate = predicate;
+        _this209.inclusive = inclusive;
+        _this209.index = 0;
+        return _this209;
       }
 
       _createClass2(TakeWhileSubscriber, [{
@@ -100858,31 +107267,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TapSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_43) {
       _inherits(TapSubscriber, _Subscriber__WEBPACK_43);
 
-      var _super128 = _createSuper(TapSubscriber);
+      var _super134 = _createSuper(TapSubscriber);
 
       function TapSubscriber(destination, observerOrNext, error, complete) {
-        var _this184;
+        var _this210;
 
         _classCallCheck(this, TapSubscriber);
 
-        _this184 = _super128.call(this, destination);
-        _this184._tapNext = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this184._tapError = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this184._tapComplete = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this184._tapError = error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-        _this184._tapComplete = complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this210 = _super134.call(this, destination);
+        _this210._tapNext = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this210._tapError = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this210._tapComplete = _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this210._tapError = error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+        _this210._tapComplete = complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
 
         if (Object(_util_isFunction__WEBPACK_IMPORTED_MODULE_2__["isFunction"])(observerOrNext)) {
-          _this184._context = _assertThisInitialized(_this184);
-          _this184._tapNext = observerOrNext;
+          _this210._context = _assertThisInitialized(_this210);
+          _this210._tapNext = observerOrNext;
         } else if (observerOrNext) {
-          _this184._context = observerOrNext;
-          _this184._tapNext = observerOrNext.next || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-          _this184._tapError = observerOrNext.error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
-          _this184._tapComplete = observerOrNext.complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+          _this210._context = observerOrNext;
+          _this210._tapNext = observerOrNext.next || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+          _this210._tapError = observerOrNext.error || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
+          _this210._tapComplete = observerOrNext.complete || _util_noop__WEBPACK_IMPORTED_MODULE_1__["noop"];
         }
 
-        return _this184;
+        return _this210;
       }
 
       _createClass2(TapSubscriber, [{
@@ -101002,20 +107411,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ThrottleSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB24) {
       _inherits(ThrottleSubscriber, _OuterSubscriber__WEB24);
 
-      var _super129 = _createSuper(ThrottleSubscriber);
+      var _super135 = _createSuper(ThrottleSubscriber);
 
       function ThrottleSubscriber(destination, durationSelector, _leading, _trailing) {
-        var _this185;
+        var _this211;
 
         _classCallCheck(this, ThrottleSubscriber);
 
-        _this185 = _super129.call(this, destination);
-        _this185.destination = destination;
-        _this185.durationSelector = durationSelector;
-        _this185._leading = _leading;
-        _this185._trailing = _trailing;
-        _this185._hasValue = false;
-        return _this185;
+        _this211 = _super135.call(this, destination);
+        _this211.destination = destination;
+        _this211.durationSelector = durationSelector;
+        _this211._leading = _leading;
+        _this211._trailing = _trailing;
+        _this211._hasValue = false;
+        return _this211;
       }
 
       _createClass2(ThrottleSubscriber, [{
@@ -101169,21 +107578,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ThrottleTimeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_44) {
       _inherits(ThrottleTimeSubscriber, _Subscriber__WEBPACK_44);
 
-      var _super130 = _createSuper(ThrottleTimeSubscriber);
+      var _super136 = _createSuper(ThrottleTimeSubscriber);
 
       function ThrottleTimeSubscriber(destination, duration, scheduler, leading, trailing) {
-        var _this186;
+        var _this212;
 
         _classCallCheck(this, ThrottleTimeSubscriber);
 
-        _this186 = _super130.call(this, destination);
-        _this186.duration = duration;
-        _this186.scheduler = scheduler;
-        _this186.leading = leading;
-        _this186.trailing = trailing;
-        _this186._hasTrailingValue = false;
-        _this186._trailingValue = null;
-        return _this186;
+        _this212 = _super136.call(this, destination);
+        _this212.duration = duration;
+        _this212.scheduler = scheduler;
+        _this212.leading = leading;
+        _this212.trailing = trailing;
+        _this212._hasTrailingValue = false;
+        _this212._trailingValue = null;
+        return _this212;
       }
 
       _createClass2(ThrottleTimeSubscriber, [{
@@ -101307,17 +107716,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var ThrowIfEmptySubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_45) {
       _inherits(ThrowIfEmptySubscriber, _Subscriber__WEBPACK_45);
 
-      var _super131 = _createSuper(ThrowIfEmptySubscriber);
+      var _super137 = _createSuper(ThrowIfEmptySubscriber);
 
       function ThrowIfEmptySubscriber(destination, errorFactory) {
-        var _this187;
+        var _this213;
 
         _classCallCheck(this, ThrowIfEmptySubscriber);
 
-        _this187 = _super131.call(this, destination);
-        _this187.errorFactory = errorFactory;
-        _this187.hasValue = false;
-        return _this187;
+        _this213 = _super137.call(this, destination);
+        _this213.errorFactory = errorFactory;
+        _this213.hasValue = false;
+        return _this213;
       }
 
       _createClass2(ThrowIfEmptySubscriber, [{
@@ -101410,8 +107819,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       var scheduler = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : _scheduler_async__WEBPACK_IMPORTED_MODULE_0__["async"];
       return function (source) {
         return Object(_observable_defer__WEBPACK_IMPORTED_MODULE_2__["defer"])(function () {
-          return source.pipe(Object(_scan__WEBPACK_IMPORTED_MODULE_1__["scan"])(function (_ref14, value) {
-            var current = _ref14.current;
+          return source.pipe(Object(_scan__WEBPACK_IMPORTED_MODULE_1__["scan"])(function (_ref16, value) {
+            var current = _ref16.current;
             return {
               value: value,
               current: scheduler.now(),
@@ -101421,10 +107830,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             current: scheduler.now(),
             value: undefined,
             last: undefined
-          }), Object(_map__WEBPACK_IMPORTED_MODULE_3__["map"])(function (_ref15) {
-            var current = _ref15.current,
-                last = _ref15.last,
-                value = _ref15.value;
+          }), Object(_map__WEBPACK_IMPORTED_MODULE_3__["map"])(function (_ref17) {
+            var current = _ref17.current,
+                last = _ref17.last,
+                value = _ref17.value;
             return new TimeInterval(value, current - last);
           }));
         });
@@ -101571,23 +107980,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TimeoutWithSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB25) {
       _inherits(TimeoutWithSubscriber, _OuterSubscriber__WEB25);
 
-      var _super132 = _createSuper(TimeoutWithSubscriber);
+      var _super138 = _createSuper(TimeoutWithSubscriber);
 
       function TimeoutWithSubscriber(destination, absoluteTimeout, waitFor, withObservable, scheduler) {
-        var _this188;
+        var _this214;
 
         _classCallCheck(this, TimeoutWithSubscriber);
 
-        _this188 = _super132.call(this, destination);
-        _this188.absoluteTimeout = absoluteTimeout;
-        _this188.waitFor = waitFor;
-        _this188.withObservable = withObservable;
-        _this188.scheduler = scheduler;
-        _this188.action = null;
+        _this214 = _super138.call(this, destination);
+        _this214.absoluteTimeout = absoluteTimeout;
+        _this214.waitFor = waitFor;
+        _this214.withObservable = withObservable;
+        _this214.scheduler = scheduler;
+        _this214.action = null;
 
-        _this188.scheduleTimeout();
+        _this214.scheduleTimeout();
 
-        return _this188;
+        return _this214;
       }
 
       _createClass2(TimeoutWithSubscriber, [{
@@ -101805,17 +108214,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var WindowSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB26) {
       _inherits(WindowSubscriber, _OuterSubscriber__WEB26);
 
-      var _super133 = _createSuper(WindowSubscriber);
+      var _super139 = _createSuper(WindowSubscriber);
 
       function WindowSubscriber(destination) {
-        var _this189;
+        var _this215;
 
         _classCallCheck(this, WindowSubscriber);
 
-        _this189 = _super133.call(this, destination);
-        _this189.window = new _Subject__WEBPACK_IMPORTED_MODULE_0__["Subject"]();
-        destination.next(_this189.window);
-        return _this189;
+        _this215 = _super139.call(this, destination);
+        _this215.window = new _Subject__WEBPACK_IMPORTED_MODULE_0__["Subject"]();
+        destination.next(_this215.window);
+        return _this215;
       }
 
       _createClass2(WindowSubscriber, [{
@@ -101937,21 +108346,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var WindowCountSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_46) {
       _inherits(WindowCountSubscriber, _Subscriber__WEBPACK_46);
 
-      var _super134 = _createSuper(WindowCountSubscriber);
+      var _super140 = _createSuper(WindowCountSubscriber);
 
       function WindowCountSubscriber(destination, windowSize, startWindowEvery) {
-        var _this190;
+        var _this216;
 
         _classCallCheck(this, WindowCountSubscriber);
 
-        _this190 = _super134.call(this, destination);
-        _this190.destination = destination;
-        _this190.windowSize = windowSize;
-        _this190.startWindowEvery = startWindowEvery;
-        _this190.windows = [new _Subject__WEBPACK_IMPORTED_MODULE_1__["Subject"]()];
-        _this190.count = 0;
-        destination.next(_this190.windows[0]);
-        return _this190;
+        _this216 = _super140.call(this, destination);
+        _this216.destination = destination;
+        _this216.windowSize = windowSize;
+        _this216.startWindowEvery = startWindowEvery;
+        _this216.windows = [new _Subject__WEBPACK_IMPORTED_MODULE_1__["Subject"]()];
+        _this216.count = 0;
+        destination.next(_this216.windows[0]);
+        return _this216;
       }
 
       _createClass2(WindowCountSubscriber, [{
@@ -102120,16 +108529,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var CountedSubject = /*#__PURE__*/function (_Subject__WEBPACK_IMP5) {
       _inherits(CountedSubject, _Subject__WEBPACK_IMP5);
 
-      var _super135 = _createSuper(CountedSubject);
+      var _super141 = _createSuper(CountedSubject);
 
       function CountedSubject() {
-        var _this191;
+        var _this217;
 
         _classCallCheck(this, CountedSubject);
 
-        _this191 = _super135.apply(this, arguments);
-        _this191._numberOfNextedValues = 0;
-        return _this191;
+        _this217 = _super141.apply(this, arguments);
+        _this217._numberOfNextedValues = 0;
+        return _this217;
       }
 
       _createClass2(CountedSubject, [{
@@ -102152,50 +108561,50 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var WindowTimeSubscriber = /*#__PURE__*/function (_Subscriber__WEBPACK_47) {
       _inherits(WindowTimeSubscriber, _Subscriber__WEBPACK_47);
 
-      var _super136 = _createSuper(WindowTimeSubscriber);
+      var _super142 = _createSuper(WindowTimeSubscriber);
 
       function WindowTimeSubscriber(destination, windowTimeSpan, windowCreationInterval, maxWindowSize, scheduler) {
-        var _this192;
+        var _this218;
 
         _classCallCheck(this, WindowTimeSubscriber);
 
-        _this192 = _super136.call(this, destination);
-        _this192.destination = destination;
-        _this192.windowTimeSpan = windowTimeSpan;
-        _this192.windowCreationInterval = windowCreationInterval;
-        _this192.maxWindowSize = maxWindowSize;
-        _this192.scheduler = scheduler;
-        _this192.windows = [];
+        _this218 = _super142.call(this, destination);
+        _this218.destination = destination;
+        _this218.windowTimeSpan = windowTimeSpan;
+        _this218.windowCreationInterval = windowCreationInterval;
+        _this218.maxWindowSize = maxWindowSize;
+        _this218.scheduler = scheduler;
+        _this218.windows = [];
 
-        var window = _this192.openWindow();
+        var window = _this218.openWindow();
 
         if (windowCreationInterval !== null && windowCreationInterval >= 0) {
           var closeState = {
-            subscriber: _assertThisInitialized(_this192),
+            subscriber: _assertThisInitialized(_this218),
             window: window,
             context: null
           };
           var creationState = {
             windowTimeSpan: windowTimeSpan,
             windowCreationInterval: windowCreationInterval,
-            subscriber: _assertThisInitialized(_this192),
+            subscriber: _assertThisInitialized(_this218),
             scheduler: scheduler
           };
 
-          _this192.add(scheduler.schedule(dispatchWindowClose, windowTimeSpan, closeState));
+          _this218.add(scheduler.schedule(dispatchWindowClose, windowTimeSpan, closeState));
 
-          _this192.add(scheduler.schedule(dispatchWindowCreation, windowCreationInterval, creationState));
+          _this218.add(scheduler.schedule(dispatchWindowCreation, windowCreationInterval, creationState));
         } else {
           var timeSpanOnlyState = {
-            subscriber: _assertThisInitialized(_this192),
+            subscriber: _assertThisInitialized(_this218),
             window: window,
             windowTimeSpan: windowTimeSpan
           };
 
-          _this192.add(scheduler.schedule(dispatchWindowTimeSpanOnly, windowTimeSpan, timeSpanOnlyState));
+          _this218.add(scheduler.schedule(dispatchWindowTimeSpanOnly, windowTimeSpan, timeSpanOnlyState));
         }
 
-        return _this192;
+        return _this218;
       }
 
       _createClass2(WindowTimeSubscriber, [{
@@ -102384,21 +108793,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var WindowToggleSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB27) {
       _inherits(WindowToggleSubscriber, _OuterSubscriber__WEB27);
 
-      var _super137 = _createSuper(WindowToggleSubscriber);
+      var _super143 = _createSuper(WindowToggleSubscriber);
 
       function WindowToggleSubscriber(destination, openings, closingSelector) {
-        var _this193;
+        var _this219;
 
         _classCallCheck(this, WindowToggleSubscriber);
 
-        _this193 = _super137.call(this, destination);
-        _this193.openings = openings;
-        _this193.closingSelector = closingSelector;
-        _this193.contexts = [];
+        _this219 = _super143.call(this, destination);
+        _this219.openings = openings;
+        _this219.closingSelector = closingSelector;
+        _this219.contexts = [];
 
-        _this193.add(_this193.openSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_3__["subscribeToResult"])(_assertThisInitialized(_this193), openings, openings));
+        _this219.add(_this219.openSubscription = Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_3__["subscribeToResult"])(_assertThisInitialized(_this219), openings, openings));
 
-        return _this193;
+        return _this219;
       }
 
       _createClass2(WindowToggleSubscriber, [{
@@ -102407,9 +108816,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var contexts = this.contexts;
 
           if (contexts) {
-            var _len42 = contexts.length;
+            var _len43 = contexts.length;
 
-            for (var i = 0; i < _len42; i++) {
+            for (var i = 0; i < _len43; i++) {
               contexts[i].window.next(value);
             }
           }
@@ -102421,10 +108830,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.contexts = null;
 
           if (contexts) {
-            var _len43 = contexts.length;
+            var _len44 = contexts.length;
             var index = -1;
 
-            while (++index < _len43) {
+            while (++index < _len44) {
               var context = contexts[index];
               context.window.error(err);
               context.subscription.unsubscribe();
@@ -102440,10 +108849,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.contexts = null;
 
           if (contexts) {
-            var _len44 = contexts.length;
+            var _len45 = contexts.length;
             var index = -1;
 
-            while (++index < _len44) {
+            while (++index < _len45) {
               var context = contexts[index];
               context.window.complete();
               context.subscription.unsubscribe();
@@ -102459,10 +108868,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.contexts = null;
 
           if (contexts) {
-            var _len45 = contexts.length;
+            var _len46 = contexts.length;
             var index = -1;
 
-            while (++index < _len45) {
+            while (++index < _len46) {
               var context = contexts[index];
               context.window.unsubscribe();
               context.subscription.unsubscribe();
@@ -102604,20 +109013,20 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var WindowSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB28) {
       _inherits(WindowSubscriber, _OuterSubscriber__WEB28);
 
-      var _super138 = _createSuper(WindowSubscriber);
+      var _super144 = _createSuper(WindowSubscriber);
 
       function WindowSubscriber(destination, closingSelector) {
-        var _this194;
+        var _this220;
 
         _classCallCheck(this, WindowSubscriber);
 
-        _this194 = _super138.call(this, destination);
-        _this194.destination = destination;
-        _this194.closingSelector = closingSelector;
+        _this220 = _super144.call(this, destination);
+        _this220.destination = destination;
+        _this220.closingSelector = closingSelector;
 
-        _this194.openWindow();
+        _this220.openWindow();
 
-        return _this194;
+        return _this220;
       }
 
       _createClass2(WindowSubscriber, [{
@@ -102734,8 +109143,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/util/subscribeToResult.js");
 
     function withLatestFrom() {
-      for (var _len46 = arguments.length, args = new Array(_len46), _key39 = 0; _key39 < _len46; _key39++) {
-        args[_key39] = arguments[_key39];
+      for (var _len47 = arguments.length, args = new Array(_len47), _key40 = 0; _key40 < _len47; _key40++) {
+        args[_key40] = arguments[_key40];
       }
 
       return function (source) {
@@ -102771,31 +109180,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var WithLatestFromSubscriber = /*#__PURE__*/function (_OuterSubscriber__WEB29) {
       _inherits(WithLatestFromSubscriber, _OuterSubscriber__WEB29);
 
-      var _super139 = _createSuper(WithLatestFromSubscriber);
+      var _super145 = _createSuper(WithLatestFromSubscriber);
 
       function WithLatestFromSubscriber(destination, observables, project) {
-        var _this195;
+        var _this221;
 
         _classCallCheck(this, WithLatestFromSubscriber);
 
-        _this195 = _super139.call(this, destination);
-        _this195.observables = observables;
-        _this195.project = project;
-        _this195.toRespond = [];
+        _this221 = _super145.call(this, destination);
+        _this221.observables = observables;
+        _this221.project = project;
+        _this221.toRespond = [];
         var len = observables.length;
-        _this195.values = new Array(len);
+        _this221.values = new Array(len);
 
         for (var i = 0; i < len; i++) {
-          _this195.toRespond.push(i);
+          _this221.toRespond.push(i);
         }
 
         for (var _i21 = 0; _i21 < len; _i21++) {
           var observable = observables[_i21];
 
-          _this195.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this195), observable, observable, _i21));
+          _this221.add(Object(_util_subscribeToResult__WEBPACK_IMPORTED_MODULE_1__["subscribeToResult"])(_assertThisInitialized(_this221), observable, observable, _i21));
         }
 
-        return _this195;
+        return _this221;
       }
 
       _createClass2(WithLatestFromSubscriber, [{
@@ -102878,8 +109287,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/observable/zip.js");
 
     function zip() {
-      for (var _len47 = arguments.length, observables = new Array(_len47), _key40 = 0; _key40 < _len47; _key40++) {
-        observables[_key40] = arguments[_key40];
+      for (var _len48 = arguments.length, observables = new Array(_len48), _key41 = 0; _key41 < _len48; _key41++) {
+        observables[_key41] = arguments[_key41];
       }
 
       return function zipOperatorFunction(source) {
@@ -103313,12 +109722,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var Action = /*#__PURE__*/function (_Subscription__WEBPAC4) {
       _inherits(Action, _Subscription__WEBPAC4);
 
-      var _super140 = _createSuper(Action);
+      var _super146 = _createSuper(Action);
 
       function Action(scheduler, work) {
         _classCallCheck(this, Action);
 
-        return _super140.call(this);
+        return _super146.call(this);
       }
 
       _createClass2(Action, [{
@@ -103365,17 +109774,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AnimationFrameAction = /*#__PURE__*/function (_AsyncAction__WEBPACK) {
       _inherits(AnimationFrameAction, _AsyncAction__WEBPACK);
 
-      var _super141 = _createSuper(AnimationFrameAction);
+      var _super147 = _createSuper(AnimationFrameAction);
 
       function AnimationFrameAction(scheduler, work) {
-        var _this196;
+        var _this222;
 
         _classCallCheck(this, AnimationFrameAction);
 
-        _this196 = _super141.call(this, scheduler, work);
-        _this196.scheduler = scheduler;
-        _this196.work = work;
-        return _this196;
+        _this222 = _super147.call(this, scheduler, work);
+        _this222.scheduler = scheduler;
+        _this222.work = work;
+        return _this222;
       }
 
       _createClass2(AnimationFrameAction, [{
@@ -103446,12 +109855,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AnimationFrameScheduler = /*#__PURE__*/function (_AsyncScheduler__WEBP) {
       _inherits(AnimationFrameScheduler, _AsyncScheduler__WEBP);
 
-      var _super142 = _createSuper(AnimationFrameScheduler);
+      var _super148 = _createSuper(AnimationFrameScheduler);
 
       function AnimationFrameScheduler() {
         _classCallCheck(this, AnimationFrameScheduler);
 
-        return _super142.apply(this, arguments);
+        return _super148.apply(this, arguments);
       }
 
       _createClass2(AnimationFrameScheduler, [{
@@ -103525,17 +109934,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AsapAction = /*#__PURE__*/function (_AsyncAction__WEBPACK2) {
       _inherits(AsapAction, _AsyncAction__WEBPACK2);
 
-      var _super143 = _createSuper(AsapAction);
+      var _super149 = _createSuper(AsapAction);
 
       function AsapAction(scheduler, work) {
-        var _this197;
+        var _this223;
 
         _classCallCheck(this, AsapAction);
 
-        _this197 = _super143.call(this, scheduler, work);
-        _this197.scheduler = scheduler;
-        _this197.work = work;
-        return _this197;
+        _this223 = _super149.call(this, scheduler, work);
+        _this223.scheduler = scheduler;
+        _this223.work = work;
+        return _this223;
       }
 
       _createClass2(AsapAction, [{
@@ -103605,12 +110014,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AsapScheduler = /*#__PURE__*/function (_AsyncScheduler__WEBP2) {
       _inherits(AsapScheduler, _AsyncScheduler__WEBP2);
 
-      var _super144 = _createSuper(AsapScheduler);
+      var _super150 = _createSuper(AsapScheduler);
 
       function AsapScheduler() {
         _classCallCheck(this, AsapScheduler);
 
-        return _super144.apply(this, arguments);
+        return _super150.apply(this, arguments);
       }
 
       _createClass2(AsapScheduler, [{
@@ -103678,18 +110087,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AsyncAction = /*#__PURE__*/function (_Action__WEBPACK_IMPO) {
       _inherits(AsyncAction, _Action__WEBPACK_IMPO);
 
-      var _super145 = _createSuper(AsyncAction);
+      var _super151 = _createSuper(AsyncAction);
 
       function AsyncAction(scheduler, work) {
-        var _this198;
+        var _this224;
 
         _classCallCheck(this, AsyncAction);
 
-        _this198 = _super145.call(this, scheduler, work);
-        _this198.scheduler = scheduler;
-        _this198.work = work;
-        _this198.pending = false;
-        return _this198;
+        _this224 = _super151.call(this, scheduler, work);
+        _this224.scheduler = scheduler;
+        _this224.work = work;
+        _this224.pending = false;
+        return _this224;
       }
 
       _createClass2(AsyncAction, [{
@@ -103827,26 +110236,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AsyncScheduler = /*#__PURE__*/function (_Scheduler__WEBPACK_I) {
       _inherits(AsyncScheduler, _Scheduler__WEBPACK_I);
 
-      var _super146 = _createSuper(AsyncScheduler);
+      var _super152 = _createSuper(AsyncScheduler);
 
       function AsyncScheduler(SchedulerAction) {
-        var _this199;
+        var _this225;
 
         var now = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : _Scheduler__WEBPACK_IMPORTED_MODULE_0__["Scheduler"].now;
 
         _classCallCheck(this, AsyncScheduler);
 
-        _this199 = _super146.call(this, SchedulerAction, function () {
-          if (AsyncScheduler.delegate && AsyncScheduler.delegate !== _assertThisInitialized(_this199)) {
+        _this225 = _super152.call(this, SchedulerAction, function () {
+          if (AsyncScheduler.delegate && AsyncScheduler.delegate !== _assertThisInitialized(_this225)) {
             return AsyncScheduler.delegate.now();
           } else {
             return now();
           }
         });
-        _this199.actions = [];
-        _this199.active = false;
-        _this199.scheduled = undefined;
-        return _this199;
+        _this225.actions = [];
+        _this225.active = false;
+        _this225.scheduled = undefined;
+        return _this225;
       }
 
       _createClass2(AsyncScheduler, [{
@@ -103928,17 +110337,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var QueueAction = /*#__PURE__*/function (_AsyncAction__WEBPACK3) {
       _inherits(QueueAction, _AsyncAction__WEBPACK3);
 
-      var _super147 = _createSuper(QueueAction);
+      var _super153 = _createSuper(QueueAction);
 
       function QueueAction(scheduler, work) {
-        var _this200;
+        var _this226;
 
         _classCallCheck(this, QueueAction);
 
-        _this200 = _super147.call(this, scheduler, work);
-        _this200.scheduler = scheduler;
-        _this200.work = work;
-        return _this200;
+        _this226 = _super153.call(this, scheduler, work);
+        _this226.scheduler = scheduler;
+        _this226.work = work;
+        return _this226;
       }
 
       _createClass2(QueueAction, [{
@@ -104009,12 +110418,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var QueueScheduler = /*#__PURE__*/function (_AsyncScheduler__WEBP3) {
       _inherits(QueueScheduler, _AsyncScheduler__WEBP3);
 
-      var _super148 = _createSuper(QueueScheduler);
+      var _super154 = _createSuper(QueueScheduler);
 
       function QueueScheduler() {
         _classCallCheck(this, QueueScheduler);
 
-        return _super148.apply(this, arguments);
+        return _super154.apply(this, arguments);
       }
 
       return QueueScheduler;
@@ -104065,23 +110474,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var VirtualTimeScheduler = /*#__PURE__*/function (_AsyncScheduler__WEBP4) {
       _inherits(VirtualTimeScheduler, _AsyncScheduler__WEBP4);
 
-      var _super149 = _createSuper(VirtualTimeScheduler);
+      var _super155 = _createSuper(VirtualTimeScheduler);
 
       function VirtualTimeScheduler() {
-        var _this201;
+        var _this227;
 
         var SchedulerAction = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : VirtualAction;
         var maxFrames = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : Number.POSITIVE_INFINITY;
 
         _classCallCheck(this, VirtualTimeScheduler);
 
-        _this201 = _super149.call(this, SchedulerAction, function () {
-          return _this201.frame;
+        _this227 = _super155.call(this, SchedulerAction, function () {
+          return _this227.frame;
         });
-        _this201.maxFrames = maxFrames;
-        _this201.frame = 0;
-        _this201.index = -1;
-        return _this201;
+        _this227.maxFrames = maxFrames;
+        _this227.frame = 0;
+        _this227.index = -1;
+        return _this227;
       }
 
       _createClass2(VirtualTimeScheduler, [{
@@ -104118,22 +110527,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var VirtualAction = /*#__PURE__*/function (_AsyncAction__WEBPACK4) {
       _inherits(VirtualAction, _AsyncAction__WEBPACK4);
 
-      var _super150 = _createSuper(VirtualAction);
+      var _super156 = _createSuper(VirtualAction);
 
       function VirtualAction(scheduler, work) {
-        var _this202;
+        var _this228;
 
         var index = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : scheduler.index += 1;
 
         _classCallCheck(this, VirtualAction);
 
-        _this202 = _super150.call(this, scheduler, work);
-        _this202.scheduler = scheduler;
-        _this202.work = work;
-        _this202.index = index;
-        _this202.active = true;
-        _this202.index = scheduler.index = index;
-        return _this202;
+        _this228 = _super156.call(this, scheduler, work);
+        _this228.scheduler = scheduler;
+        _this228.work = work;
+        _this228.index = index;
+        _this228.active = true;
+        _this228.index = scheduler.index = index;
+        return _this228;
       }
 
       _createClass2(VirtualAction, [{
@@ -105243,8 +111652,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./node_modules/rxjs/_esm2015/internal/util/identity.js");
 
     function pipe() {
-      for (var _len48 = arguments.length, fns = new Array(_len48), _key41 = 0; _key41 < _len48; _key41++) {
-        fns[_key41] = arguments[_key41];
+      for (var _len49 = arguments.length, fns = new Array(_len49), _key42 = 0; _key42 < _len49; _key42++) {
+        fns[_key42] = arguments[_key42];
       }
 
       return pipeFromArray(fns);
@@ -105386,7 +111795,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var subscribeToArray = function subscribeToArray(array) {
       return function (subscriber) {
-        for (var i = 0, _len49 = array.length; i < _len49 && !subscriber.closed; i++) {
+        for (var i = 0, _len50 = array.length; i < _len50 && !subscriber.closed; i++) {
           subscriber.next(array[i]);
         }
 
