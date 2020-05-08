@@ -1,6 +1,7 @@
 {
-	"app.description": "Démo traduction",
-	"app.select": "sélectionner...",
+	"app.btnAccess": "Accès Component",
+	"app.home": "Accueil",
 	"app.selectLanguage": "Sélectionner votre langue",
-	"app.title": "Bonjour {{name}} {{firstName}}"
+	"test.trad.description": "Démo traduction",
+	"test.trad.title": "Bonjour {{name}} {{firstName}}"
 }
